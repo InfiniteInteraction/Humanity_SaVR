@@ -48,9 +48,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: d2de0bbad21c1314c92458f9cdacb60f
   - enabled: 0
-    path: Assets/Scenes/Programmer Test.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 0
     path: Assets/Scenes/Programmer Test 2.unity
     guid: a516a6fbdf9e9f84297368d6543766bf
   - enabled: 0
