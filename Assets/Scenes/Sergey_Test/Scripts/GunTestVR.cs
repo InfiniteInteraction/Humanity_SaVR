@@ -65,8 +65,11 @@ public class GunTestVR : MonoBehaviour
         }
         if (gameObject.name.Equals("TommyGun"))
         {
+            foreach (Transform child in transform)
+            {
+                child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
+            }
             damageValue = 3;
-            GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
         }
     }
 
@@ -177,7 +180,10 @@ public class GunTestVR : MonoBehaviour
             }
             if (gameObject.name.Equals("TommyGun"))
             {
-                GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunG"), typeof(Material)) as Material;
+                foreach (Transform child in transform)
+                {
+                    child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunG"), typeof(Material)) as Material;
+                }
             }
         }
         else
@@ -197,7 +203,10 @@ public class GunTestVR : MonoBehaviour
             }
             if (gameObject.name.Equals("TommyGun"))
             {
-                GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
+                foreach (Transform child in transform)
+                {
+                    child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
+                }
             }
         }
     }
