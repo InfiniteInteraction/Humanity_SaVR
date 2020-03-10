@@ -16,8 +16,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     int stage;
     bool here;
-    public Transform player { get; private set; }
-    public EnemyState EnemyState => GetComponent<EnemyState>();
+    public Transform player;
     public GameObject greenPos;
     public Transform teleSpawn;
     public float fTimer;
@@ -36,15 +35,9 @@ public class EnemyMovement : MonoBehaviour
         startColor = rend.material.color;
         speed = 5f;
         eRB = GetComponent<Rigidbody>();
-        InitializeStateMachine();
+        
     }
-    private void InitializeStateMachine()
-    {
-        var states = new Dictionary<Type, BaseState>()
-        {
-            typeof(ChaseState), new ChaseState(player: this)}
-        } 
-    }
+   
     public virtual void OnEnable()
     {
         timer = waitTime;
