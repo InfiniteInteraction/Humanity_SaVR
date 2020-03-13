@@ -31,6 +31,8 @@ public class GunTestVR : MonoBehaviour
     GameObject waveBullet;
     public List<GameObject> emissiveObjects = new List<GameObject>();
     public Animator wheelSpin;
+    AudioSource audioSource;
+    AudioClip pistolShot;
 
     private void Awake()
     {
@@ -44,6 +46,8 @@ public class GunTestVR : MonoBehaviour
         redRifleBullet = Resources.Load(("Prefabs/RedRifleBullet"), typeof(GameObject)) as GameObject;
         fullAutoTime = 0.1f;
         wheelSpin = gameObject.GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
+        pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
     }
 
     void Start()
@@ -225,6 +229,7 @@ public class GunTestVR : MonoBehaviour
                 else
                 {
                     Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+                    audioSource.PlayOneShot(pistolShot);
                 }
             }
             if (red.activeSelf)
@@ -236,6 +241,8 @@ public class GunTestVR : MonoBehaviour
                 else
                 {
                     Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+                    audioSource.clip = pistolShot;
+                    audioSource.PlayOneShot(pistolShot);
                 }
             }
             Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
@@ -253,6 +260,7 @@ public class GunTestVR : MonoBehaviour
                 else
                 {
                     Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+                    audioSource.PlayOneShot(pistolShot);
                 }
             }
             if (red.activeSelf)
@@ -264,6 +272,8 @@ public class GunTestVR : MonoBehaviour
                 else
                 {
                     Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+                    audioSource.clip = pistolShot;
+                    audioSource.PlayOneShot(pistolShot);
                 }
             }
             Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
