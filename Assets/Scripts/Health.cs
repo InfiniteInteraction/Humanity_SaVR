@@ -12,6 +12,9 @@ public class Health : MonoBehaviour
     public HealthDelegate onDeath = new HealthDelegate();
     public HealthDelegate onHeal = new HealthDelegate();
 
+    public ESpawner eSpawnerRef;
+    public bool streakBreaker = false;
+
     public bool immune { get => invulnerable; set => invulnerable = value; }
 
     private void Awake()
@@ -21,11 +24,19 @@ public class Health : MonoBehaviour
 
     public virtual void TakeDamage(float damageAmount)
     {
+        streakBreaker = true;
+
+        if (streakBreaker == true && eSpawnerRef != null)
+        {
+            streakBreaker = false;
+            eSpawnerRef.enemyCount = 0;
+        }
+
         if (immune == true) return;
         if (currHealth == 0) return;
         currHealth = Mathf.Clamp(currHealth - damageAmount, 0, maxHealth);
         Debug.Log(damageAmount);
-        if(currHealth == 0)
+        if (currHealth == 0)
         {
             onDeath.CallEvent(0);
         }
@@ -46,7 +57,7 @@ public class Health : MonoBehaviour
         onHeal.CallEvent(0);
         currHealth += healingAmount;
         currHealth = Mathf.Clamp(currHealth, 0, maxHealth);
-        if(currHealth >= maxHealth)
+        if (currHealth >= maxHealth)
         {
             currHealth = maxHealth;
         }

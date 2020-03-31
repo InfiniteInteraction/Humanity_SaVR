@@ -1,4 +1,5 @@
 ﻿using UnityEngine.Audio;
+using System;
 using UnityEngine;
 
 public class Audiomanager : MonoBehaviour
@@ -8,7 +9,7 @@ public class Audiomanager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        foreach (Sound s in sounds)
+        foreach (Sounds s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
@@ -20,7 +21,7 @@ public class Audiomanager : MonoBehaviour
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Sounds s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
     }
 }
