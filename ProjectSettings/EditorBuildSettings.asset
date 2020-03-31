@@ -51,6 +51,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Programmer Test 2.unity
     guid: a516a6fbdf9e9f84297368d6543766bf
   - enabled: 0
-    path: Assets/Scenes/Rohit_TestScene.unity
+    path: Assets/Scenes/Rohit Test/Scenes/Rohit_TestScene.unity
     guid: 78f933b3ab30e9148992423609d587b3
   m_configObjects: {}
