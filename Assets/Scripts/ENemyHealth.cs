@@ -44,6 +44,8 @@ public class ENemyHealth : Health
             {
                 GameManager.gameManager.greenDeaths++;
             }
+            eSpawner.streakCount++;
+            eSpawner.KillStreak();
             pointTimer++;
             eSpawner.killCount++;
             GameManager.gameManager.hits++;
@@ -91,7 +93,7 @@ public class ENemyHealth : Health
         }
         if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
         {
-            
+
         }
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
         {
@@ -117,14 +119,14 @@ public class ENemyHealth : Health
             Instantiate(laserDeathEffect, enemyPos.position, Quaternion.identity);
         }
 
-            //int random = Random.Range(1, 4);
-            //if (random == 1)
-            //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
-            //if (random == 2)
-            //if (random == 3)
-            //else
-            //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
-        
+        //int random = Random.Range(1, 4);
+        //if (random == 1)
+        //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
+        //if (random == 2)
+        //if (random == 3)
+        //else
+        //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
+
     }
 
     void CallMulti()

@@ -42,7 +42,7 @@ public class ESpawner : MonoBehaviour
     {
         if (streakCount == enemyCount && playerHealth.streakBreaker == false)
         {
-            tenKills.Play();
+            KillIncrease();
             enemyCount += 10;
         }
     }
@@ -89,52 +89,52 @@ public class ESpawner : MonoBehaviour
         switch (enemyCount)
         {
             case 10:
-                Debug.Log("PlayAudio1");
+                FindObjectOfType<Audiomanager>().Play("Ridiculousness");
                 enemyCount += 10;
                 break;
 
             case 20:
-                Debug.Log("PlayAudio2");
+                FindObjectOfType<Audiomanager>().Play("Thats20");
                 enemyCount += 10;
                 break;
 
             case 30:
-                Debug.Log("PlayAudio3");
+                FindObjectOfType<Audiomanager>().Play("Spectacular");
                 enemyCount += 10;
                 break;
 
             case 40:
-                Debug.Log("PlayAudio4");
+                FindObjectOfType<Audiomanager>().Play("KillGrind");
                 enemyCount += 10;
                 break;
 
             case 50:
-                Debug.Log("PlayAudio5");
+                FindObjectOfType<Audiomanager>().Play("BulletStorm");
                 enemyCount += 10;
                 break;
 
             case 60:
-                Debug.Log("PlayAudio6");
+                FindObjectOfType<Audiomanager>().Play("Overachiever");
                 enemyCount += 10;
                 break;
 
             case 70:
-                Debug.Log("PlayAudio7");
+                FindObjectOfType<Audiomanager>().Play("HahshfalahThis");
                 enemyCount += 10;
                 break;
 
             case 80:
-                Debug.Log("PlayAudio8");
+                FindObjectOfType<Audiomanager>().Play("MoreBulletsLessProblems");
                 enemyCount += 10;
                 break;
 
             case 90:
-                Debug.Log("PlayAudio9");
+                FindObjectOfType<Audiomanager>().Play("LethalProtector");
                 enemyCount += 10;
                 break;
 
             case 100:
-                Debug.Log("PlayAudio10");
+                FindObjectOfType<Audiomanager>().Play("InvincibleKillingMachine");
                 break;
         }
     }
