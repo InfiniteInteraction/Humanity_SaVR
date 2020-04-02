@@ -1791,17 +1791,15 @@ MonoBehaviour:
   - {fileID: 814153176}
   - {fileID: 575027564}
   - {fileID: 841008507}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1809313542}
   totalToSpawn: 40
   enemyPrefab: {fileID: 8288587923413601841, guid: 206d13ea2ce7a544399dfb02575a0676,
     type: 3}
   enemyGreenPrefab: {fileID: 7338002616494147980, guid: 5fcba750deaf6f9429bf4e5f06c684bc,
     type: 3}
   streakCount: 0
-  enemyCount: 10
   killCount: 0
   killCountMax: 10
-  tenKills: {fileID: 0}
   enemySpeed: 3.5
 --- !u!1 &678019255
 GameObject:
@@ -2459,8 +2457,6 @@ GameObject:
   - component: {fileID: 1809313534}
   - component: {fileID: 1809313541}
   - component: {fileID: 1809313542}
-  - component: {fileID: 1809313540}
-  - component: {fileID: 1809313543}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2574,102 +2570,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!82 &1809313540
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809313533}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!135 &1809313541
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2701,14 +2601,6 @@ MonoBehaviour:
   healingRecieved: 0
   eSpawnerRef: {fileID: 0}
   streakBreaker: 0
---- !u!81 &1809313543
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1809313533}
-  m_Enabled: 1
 --- !u!1 &1868203258
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +2611,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868203259}
   - component: {fileID: 1868203260}
+  - component: {fileID: 1868203261}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -2755,8 +2648,8 @@ MonoBehaviour:
   sounds:
   - name: Ridiculousness
     clip: {fileID: 8300000, guid: b6b310fc751496347a89931d4dd32803, type: 3}
-    volume: 0
-    pitch: 0.1
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Thats20
     clip: {fileID: 8300000, guid: 53aa118ce568d0d44bc59eb57c4c29bf, type: 3}
@@ -2803,6 +2696,14 @@ MonoBehaviour:
     volume: 0
     pitch: 0
     source: {fileID: 0}
+--- !u!81 &1868203261
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868203258}
+  m_Enabled: 1
 --- !u!1 &1895435712
 GameObject:
   m_ObjectHideFlags: 0

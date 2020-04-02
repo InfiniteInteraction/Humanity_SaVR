@@ -17,12 +17,10 @@ public class ESpawner : MonoBehaviour
     public GameObject enemyGreenPrefab;
 
     public int streakCount;
-    public int enemyCount = 10;
 
     public int killCount;
     public int killCountMax = 20;
 
-    public AudioSource tenKills;
 
 
 
@@ -35,17 +33,8 @@ public class ESpawner : MonoBehaviour
         GameManager.gameManager.DifficultySetting();
         InvokeRepeating("DoSpawn", GameManager.gameManager.spawnTime, GameManager.gameManager.repeatTime);
         enemySpeed = GameManager.gameManager.eSpeed;
-        enemyCount = 10;
     }
 
-    public void KillStreak()
-    {
-        if (streakCount == enemyCount && playerHealth.streakBreaker == false)
-        {
-            KillIncrease();
-            enemyCount += 10;
-        }
-    }
 
     //Spawners Area Begin//
     public void Spawn(int _totalToSpawn)
@@ -84,57 +73,48 @@ public class ESpawner : MonoBehaviour
         GameManager.gameManager.Starsystem();
     }
 
-    public void KillIncrease()
+    public void KillStreak()
     {
-        switch (enemyCount)
+        switch (streakCount)
         {
             case 10:
-                FindObjectOfType<Audiomanager>().Play("Ridiculousness");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("Ridiculousness");
                 break;
 
             case 20:
-                FindObjectOfType<Audiomanager>().Play("Thats20");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("Thats20");
                 break;
 
             case 30:
-                FindObjectOfType<Audiomanager>().Play("Spectacular");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("Spectacular");
                 break;
 
             case 40:
-                FindObjectOfType<Audiomanager>().Play("KillGrind");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("KillGrind");
                 break;
 
             case 50:
-                FindObjectOfType<Audiomanager>().Play("BulletStorm");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("BulletStorm"); 
                 break;
 
             case 60:
-                FindObjectOfType<Audiomanager>().Play("Overachiever");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("Overachiever");
                 break;
 
             case 70:
-                FindObjectOfType<Audiomanager>().Play("HahshfalahThis");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("HahshafalahThis");
                 break;
 
             case 80:
-                FindObjectOfType<Audiomanager>().Play("MoreBulletsLessProblems");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("MoreBulletsLessProblems");
                 break;
 
             case 90:
-                FindObjectOfType<Audiomanager>().Play("LethalProtector");
-                enemyCount += 10;
+                Audiomanager.audiomanager.Play("LethalProtector");
                 break;
 
             case 100:
-                FindObjectOfType<Audiomanager>().Play("InvincibleKillingMachine");
+                Audiomanager.audiomanager.Play("InvincibleKillingMachine");
                 break;
         }
     }

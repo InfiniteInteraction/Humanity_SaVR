@@ -29,7 +29,7 @@ public class Health : MonoBehaviour
         if (streakBreaker == true && eSpawnerRef != null)
         {
             streakBreaker = false;
-            eSpawnerRef.enemyCount = 0;
+            eSpawnerRef.streakCount = 0;
         }
 
         if (immune == true) return;
