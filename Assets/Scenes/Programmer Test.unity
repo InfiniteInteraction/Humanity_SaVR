@@ -2653,48 +2653,48 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Thats20
     clip: {fileID: 8300000, guid: 53aa118ce568d0d44bc59eb57c4c29bf, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Spectacular
     clip: {fileID: 8300000, guid: 83180bf2e4559da4dbb74644a8278081, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: KillGrind
     clip: {fileID: 8300000, guid: 6100cc6ce2d814540938fa75f54d0fcd, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: BulletStorm
     clip: {fileID: 8300000, guid: a9354d37f059fe74882bff226808822f, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: Overachiever
     clip: {fileID: 8300000, guid: fb2cad84708102c4bb98ea23ad584bae, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: HahshfalahThis
     clip: {fileID: 8300000, guid: 49d161da49ed9b14eb709ab7cbf6ab3c, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: MoreBulletsLessProblems
     clip: {fileID: 8300000, guid: 582081d334107dc4397a3371e47dfc86, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: LethalProtector
     clip: {fileID: 8300000, guid: b406ed181d612d24c807c4c8e6dc6a1e, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
   - name: InvincibleKillingMachine
     clip: {fileID: 8300000, guid: 4570035d20ad6504a86014e3b6514517, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 1
+    pitch: 1
     source: {fileID: 0}
 --- !u!81 &1868203261
 AudioListener:

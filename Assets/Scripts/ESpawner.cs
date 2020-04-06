@@ -36,7 +36,7 @@ public class ESpawner : MonoBehaviour
     }
 
 
-    //Spawners Area Begin//
+    //Spawners Area Begin
     public void Spawn(int _totalToSpawn)
     {
         totalToSpawn = _totalToSpawn;
@@ -102,7 +102,7 @@ public class ESpawner : MonoBehaviour
                 break;
 
             case 70:
-                Audiomanager.audiomanager.Play("HahshafalahThis");
+                Audiomanager.audiomanager.Play("HahshfalahThis");
                 break;
 
             case 80:
