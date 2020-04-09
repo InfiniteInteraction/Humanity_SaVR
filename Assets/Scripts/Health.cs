@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    public float maxHealth = 5;
+    public float maxHealth = 3;
     public float currHealth = 0;
+    public Image healthBar;
+
     bool invulnerable = false;
     public float damageTaken = 0;
     public float healingRecieved = 0;
@@ -15,13 +18,17 @@ public class Health : MonoBehaviour
     public ESpawner eSpawnerRef;
     public bool streakBreaker = false;
 
+    
+
     public bool immune { get => invulnerable; set => invulnerable = value; }
 
     private void Awake()
     {
         ResetHealth();
+        eSpawnerRef = GameObject.FindGameObjectWithTag("Spawner").GetComponent<ESpawner>();
     }
 
+    
     public virtual void TakeDamage(float damageAmount)
     {
         streakBreaker = true;

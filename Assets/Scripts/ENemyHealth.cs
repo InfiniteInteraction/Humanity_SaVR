@@ -16,10 +16,13 @@ public class ENemyHealth : Health
     Transform enemyPos;
     GameObject bulletType = null;
     public bool enemyHit;
-
+    public static PlayerHealth pHealth;
+    public Gun pewpew;
     #region
 
     #endregion
+
+
 
     private void Awake()
     {
@@ -33,6 +36,8 @@ public class ENemyHealth : Health
         rpDeathEffect = Resources.Load(("Prefabs/EnemyDeathRPEffect"), typeof(GameObject)) as GameObject;
         pointTimer = 0;
         enemyHit = false;
+        pHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
+        pewpew = FindObjectOfType<Gun>();
     }
 
     public override void TakeDamage(float damageAmount)
@@ -44,6 +49,13 @@ public class ENemyHealth : Health
             {
                 GameManager.gameManager.greenDeaths++;
             }
+
+            if (gameObject.tag == "GreenEnemy")
+            {
+                pHealth.Healing(1);
+                pewpew.RegainAmmo();
+            }
+
             eSpawner.streakCount++;
             eSpawner.KillStreak();
             pointTimer++;
@@ -52,7 +64,7 @@ public class ENemyHealth : Health
             eSpawner.totalToSpawn -= 1;
             eSpawner.SpawnGreen();
             CallMulti();
-            DeathEffect();
+            //DeathEffect();
             Destroy(gameObject);
         }
         if (floatingTextPrefab)
@@ -101,33 +113,33 @@ public class ENemyHealth : Health
         }
     }
 
-    void DeathEffect()
-    {
-        if (bulletType.GetComponent<PlasmaBullet>())
-        {
-            if (gameObject.tag == "RedEnemy")
-            {
-                Instantiate(rpDeathEffect, enemyPos.position, Quaternion.identity);
-            }
-            if (gameObject.tag == "GreenEnemy")
-            {
-                Instantiate(gpDeathEffect, enemyPos.position, Quaternion.identity);
-            }
-        }
-        else
-        {
-            Instantiate(laserDeathEffect, enemyPos.position, Quaternion.identity);
-        }
+    //void DeathEffect()
+    //{
+    //    if (bulletType.GetComponent<PlasmaBullet>())
+    //    {
+    //        if (gameObject.tag == "RedEnemy")
+    //        {
+    //            Instantiate(rpDeathEffect, enemyPos.position, Quaternion.identity);
+    //        }
+    //        if (gameObject.tag == "GreenEnemy")
+    //        {
+    //            Instantiate(gpDeathEffect, enemyPos.position, Quaternion.identity);
+    //        }
+    //    }
+    //    else
+    //    {
+    //        Instantiate(laserDeathEffect, enemyPos.position, Quaternion.identity);
+    //    }
 
-        //int random = Random.Range(1, 4);
-        //if (random == 1)
-        //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
-        //if (random == 2)
-        //if (random == 3)
-        //else
-        //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
+    //    //int random = Random.Range(1, 4);
+    //    //if (random == 1)
+    //    //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
+    //    //if (random == 2)
+    //    //if (random == 3)
+    //    //else
+    //    //    Instantiate(deathEffect, enemyPos.position, Quaternion.identity);
 
-    }
+    //}
 
     void CallMulti()
     {

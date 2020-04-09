@@ -17,17 +17,17 @@ public class Gun : MonoBehaviour
     public float shootTime = 0;
     public float fullAutoTime = 0;
     public float semiAutoTime = 0;
-
+    public PlayerHealth regen;
     void Start()
     {
         currAmmo = maxAmmo;
         currTime = shootTime;
         fullAutoMode = false;
         damageValue = 1;
+        regen = GetComponentInParent<PlayerHealth>();
     }
-
     void Update()
-    {        
+    {
         RaycastHit hit;
         if(currTime >= shootTime)
         {
@@ -42,12 +42,12 @@ public class Gun : MonoBehaviour
         {
             GameManager.gameManager.shotsFired++;
             if (Physics.Raycast(spawnPoint.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
-            {
+            {               
                 hit.collider.GetComponent<ENemyHealth>().TakeDamage(20);
                 Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                RegainAmmo();
+                //RegainAmmo();
                 GameManager.gameManager.hits++;
-                Debug.Log("Did Hit");
+                ReduceAmmo();
             }
             else
             {
@@ -59,8 +59,7 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButton(0) && currAmmo <= 0)
         {
             Debug.Log("Out of Ammo");
-        }
-        
+        }        
     }
 
     void ReduceAmmo()
@@ -69,7 +68,7 @@ public class Gun : MonoBehaviour
         currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
     }
 
-    void RegainAmmo()
+    public void RegainAmmo()
     {
         currAmmo += ammoReturn;
         currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
