@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 33980815580169720}
   - component: {fileID: 23745843261653042}
   - component: {fileID: 701628822}
-  - component: {fileID: 765504688}
+  - component: {fileID: 2947224435866612859}
   m_Layer: 0
   m_Name: polySurface1
   m_TagString: Untagged
@@ -459,19 +459,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.03496072, y: 0.08157632, z: 0.03496072}
   m_Center: {x: 0, y: 0.025671594, z: 0}
---- !u!65 &765504688
-BoxCollider:
+--- !u!208 &2947224435866612859
+NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102805635485738}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.03496072, y: 0.08157632, z: 0.03496072}
-  m_Center: {x: 0, y: 0.025671594, z: 0}
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.017, y: 0.041, z: 0.017}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0.026, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1119103947361376
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,14 +970,13 @@ GameObject:
   - component: {fileID: 4944969989328960}
   - component: {fileID: 33159079391656670}
   - component: {fileID: 23694354716694924}
-  - component: {fileID: 701628823}
   - component: {fileID: 765504689}
   m_Layer: 0
   m_Name: pCube75
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4944969989328960
 Transform:
@@ -1036,20 +1038,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &701628823
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328467900387536}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 6193f2d5990699247a0d9a4b146e31a1, type: 3}
 --- !u!64 &765504689
 MeshCollider:
   m_ObjectHideFlags: 0
