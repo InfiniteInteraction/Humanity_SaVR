@@ -9,10 +9,11 @@ public class PlayerMovement : MonoBehaviour
     float mouseX;
     float mouseY;
     CharacterController controller;
-    // Use this for initialization
+
     void Start()
     {
-        controller = GetComponent<CharacterController>();       
+        controller = GetComponent<CharacterController>();
+
     }
 
     // Update is called once per frame
@@ -26,8 +27,7 @@ public class PlayerMovement : MonoBehaviour
         //position.x += moveHorizontal * speed * Time.deltaTime;
         //position.z += moveVertical * speed * Time.deltaTime;
         //transform.position = position;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+
 
         moveFB = Input.GetAxis("Vertical");
         moveLR = Input.GetAxis("Horizontal");

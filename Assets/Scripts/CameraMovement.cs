@@ -2,6 +2,7 @@
 
 public class CameraMovement : MonoBehaviour
 {
+    public static CameraMovement cMove;
     public float speedH = 2;
     public float speedV = 2;
 
@@ -12,6 +13,7 @@ public class CameraMovement : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
+        cMove = this;
     }
 
     void Update()
@@ -20,5 +22,10 @@ public class CameraMovement : MonoBehaviour
         pitch -= speedV * Input.GetAxis("Mouse Y");
 
         transform.eulerAngles = new Vector3(pitch, yaw, 0);
+    }
+
+    void Start()
+    {
+        
     }
 }

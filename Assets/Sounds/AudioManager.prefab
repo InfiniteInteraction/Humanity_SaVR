@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2108238091807722726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2108238091807722723}
+  - component: {fileID: 2108238091807722720}
+  - component: {fileID: 2108238091807722721}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2108238091807722723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108238091807722726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2108238091807722720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108238091807722726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35234a277f78a5c409554d29c5151778, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - isMusic: 0
+    name: Ridiculousness
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: b6b310fc751496347a89931d4dd32803, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Thats20
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 53aa118ce568d0d44bc59eb57c4c29bf, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Spectacular
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 83180bf2e4559da4dbb74644a8278081, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: KillGrind
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 6100cc6ce2d814540938fa75f54d0fcd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: BulletStorm
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: a9354d37f059fe74882bff226808822f, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Overachiever
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: fb2cad84708102c4bb98ea23ad584bae, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: HahshfalahThis
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 49d161da49ed9b14eb709ab7cbf6ab3c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: MoreBulletsLessProblems
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 582081d334107dc4397a3371e47dfc86, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: LethalProtector
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: b406ed181d612d24c807c4c8e6dc6a1e, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: InvincibleKillingMachine
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 4570035d20ad6504a86014e3b6514517, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: MainMenu_Music
+    loopSound: 1
+    playAwake: 1
+    clip: {fileID: 8300000, guid: 337eb16e45f8b2948bebe7a586ff888c, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: SomewhereInGhana
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 101fc71bb314d724ebac0623eafe0915, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+--- !u!81 &2108238091807722721
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108238091807722726}
+  m_Enabled: 1

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Gun : MonoBehaviour
 {
@@ -18,13 +19,17 @@ public class Gun : MonoBehaviour
     public float fullAutoTime = 0;
     public float semiAutoTime = 0;
     public PlayerHealth regen;
+
+    public Text ammoCount;
     void Start()
     {
         currAmmo = maxAmmo;
         currTime = shootTime;
+        ammoReturn = maxAmmo;
         fullAutoMode = false;
         damageValue = 1;
         regen = GetComponentInParent<PlayerHealth>();
+        ammoCount.text = currAmmo.ToString();
     }
     void Update()
     {
@@ -45,7 +50,6 @@ public class Gun : MonoBehaviour
             {               
                 hit.collider.GetComponent<ENemyHealth>().TakeDamage(20);
                 Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                //RegainAmmo();
                 GameManager.gameManager.hits++;
                 ReduceAmmo();
             }
@@ -59,7 +63,9 @@ public class Gun : MonoBehaviour
         if (Input.GetMouseButton(0) && currAmmo <= 0)
         {
             Debug.Log("Out of Ammo");
-        }        
+        }
+
+        ammoCount.text = currAmmo.ToString();
     }
 
     void ReduceAmmo()

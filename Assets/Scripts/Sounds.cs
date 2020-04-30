@@ -4,7 +4,11 @@ using UnityEngine;
 [System.Serializable]
 public class Sounds
 {
+
+    public bool isMusic;
     public string name;
+    public bool loopSound;
+    public bool playAwake;
 
     public AudioClip clip;
 
