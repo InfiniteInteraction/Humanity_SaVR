@@ -18,6 +18,10 @@ public class ENemyHealth : Health
     public bool enemyHit;
     public static PlayerHealth pHealth;
     public Gun pewpew;
+    public GameObject pointPopUp;
+    public Transform popUpTrans;
+    GameObject canvas;
+    public int greenHit;
     #region
 
     #endregion
@@ -38,6 +42,7 @@ public class ENemyHealth : Health
         enemyHit = false;
         pHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         pewpew = FindObjectOfType<Gun>();
+        popUpTrans = 
     }
 
     public override void TakeDamage(float damageAmount)
@@ -105,11 +110,19 @@ public class ENemyHealth : Health
         }
         if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
         {
-
+            pHealth.Healing(-1);
         }
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
         {
-            // Player Loses Health Here
+            pHealth.Healing(-1);
+            greenHit++;
+            if(greenHit == 3)
+            {
+                pHealth.currHealth = 0;
+                
+
+            }
+
         }
     }
 

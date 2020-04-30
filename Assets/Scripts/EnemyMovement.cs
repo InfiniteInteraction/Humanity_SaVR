@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyMovement : MonoBehaviour
 {
-    
     public Rigidbody eRB;
     NavMeshAgent agent;
     public float stoppingDis;
@@ -26,6 +24,12 @@ public class EnemyMovement : MonoBehaviour
     public Color midcolor;
     public Color endColor;
     public float trackDis;
+    float t = 2;
+    public int randomPath;
+    public int randomPoint;
+    public GameObject[] gotoPoints;
+    public bool isChasingPlayer = true;
+
 
     public virtual void Awake()
     {
@@ -33,8 +37,12 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rend = GetComponentInChildren<Renderer>();
         startColor = rend.material.color;
-        speed = 5f;
+        speed = 3f;
         eRB = GetComponent<Rigidbody>();
+        gotoPoints = GameObject.FindGameObjectsWithTag("Points");
+        stoppingDis = 5;
+        randomPath = Random.Range(1, 3);
+        randomPoint = Random.Range(0, 4);
         
     }
    
@@ -52,38 +60,48 @@ public class EnemyMovement : MonoBehaviour
             player = FindObjectOfType<PlayerMovement>().transform;
         }
         here = false;
-       
         stage = 0;
+       
     }
 
     public virtual void Update()
     {
        trackDis = Vector3.Distance(transform.position, player.position);
         greenPos = GameObject.FindGameObjectWithTag("PPoint");
-        ChasePlayer();
-        Hurt();
         transform.LookAt(player.transform);
+        ChasePlayer();
+        //Hurt();
+        
     }
 
 
     public virtual void ChasePlayer()
     {
-        if (tag == "RedEnemy" && Vector3.Distance(transform.position, player.position) > stoppingDis)
+        if (isChasingPlayer)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-        }
-        else if (tag == "RedEnemy" && Vector3.Distance(transform.position, player.position) <= stoppingDis)
-        {
-            speed = 0;
-            here = true;
-        }
+            if (tag == "RedEnemy" && Vector3.Distance(transform.position, player.position) > stoppingDis)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            }
+            else if (tag == "RedEnemy" && Vector3.Distance(transform.position, player.position) <= stoppingDis)
+            {
 
-        else if (tag == "GreenEnemy")
-        {
-            agent.SetDestination(greenPos.transform.position);
-            Invoke("SpawnPass", 10);
+                Hurt();
+                here = true;
+                
+            }
+            else if (tag == "GreenEnemy")
+            {
+                agent.SetDestination(greenPos.transform.position);
+                Invoke("SpawnPass", 10);
+            }
         }
-}
+        else
+        {
+            agent.SetDestination(gotoPoints[randomPoint].transform.position);
+            return;
+        }
+    }
 
 
     public virtual void Hurt()
@@ -101,15 +119,37 @@ public class EnemyMovement : MonoBehaviour
                 if (timer <= 0)
                 {
                     stage = 2;
+                    
                 }
                 else
                 {
                     timer -= Time.deltaTime;
+                    
                 }
                 break;
             case 2:
-                rend.material.color = Color.Lerp(rend.material.color, endColor, 1 * Time.deltaTime);                
+                rend.material.color = Color.Lerp(rend.material.color, endColor, 1 * Time.deltaTime);
+                if (randomPath == 2)
+                {
+                    isChasingPlayer = false;
+                    float newX = Mathf.Cos(t + 5);
+                    float newZ = Mathf.Sin(t);
+
+                    t += .02f;
+                    transform.position = new Vector3(newX * 5, transform.position.y, newZ * Mathf.Cos(t + 5) + 6);
+                }
+                else
+                {
+                    stage = 3;
+                }
                 break;
+            case 3:
+                if (randomPath == 1)
+                {
+                    isChasingPlayer = false;
+                }
+                break;
+           
         }
     }
     void SpawnPass()

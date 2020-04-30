@@ -30,6 +30,8 @@ TagManager:
   - LevelTen
   - NextLevel
   - Replay
+  - Fire
+  - Points
   layers:
   - Default
   - TransparentFX
