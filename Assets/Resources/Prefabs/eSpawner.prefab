@@ -111,15 +111,15 @@ MonoBehaviour:
   - {fileID: 7440456582379713877}
   - {fileID: 7440456583650766497}
   - {fileID: 7440456582232983499}
+  playerHealth: {fileID: 0}
   totalToSpawn: 40
-  enemyPrefab: {fileID: 241570821086460538, guid: f3192d2fe5d07454f883c36ff065d94e,
+  enemyPrefab: {fileID: 9129817837028662559, guid: 8f0b7284164410e488abe3abf95966c0,
     type: 3}
-  enemyGreenPrefab: {fileID: 241570821086460538, guid: 9650f28148e9b3c47952bb83e925a6f4,
+  enemyGreenPrefab: {fileID: 6643001592133680706, guid: fd4a375ba5b235246a52e22dc724fb13,
     type: 3}
+  streakCount: 0
   killCount: 0
   killCountMax: 10
-  spawnTime: 0.5
-  repeatTime: 1.5
   enemySpeed: 3.5
 --- !u!1 &7440456583650766497
 GameObject:

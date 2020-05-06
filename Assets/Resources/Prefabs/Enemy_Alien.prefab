@@ -534,6 +534,10 @@ MonoBehaviour:
   midcolor: {r: 0.9339623, g: 0.8414278, b: 0.048460312, a: 0}
   endColor: {r: 0.9716981, g: 0.09625311, b: 0.09625311, a: 0}
   trackDis: 0
+  randomPath: 0
+  randomPoint: 0
+  gotoPoints: []
+  isChasingPlayer: 1
 --- !u!195 &7860161937169743773
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -599,6 +603,9 @@ MonoBehaviour:
   points: 0
   enemyHit: 0
   pewpew: {fileID: 0}
+  pointPopUp: {fileID: 0}
+  popUpTrans: {fileID: 0}
+  greenHit: 0
 --- !u!136 &4233088738254139444
 CapsuleCollider:
   m_ObjectHideFlags: 0
