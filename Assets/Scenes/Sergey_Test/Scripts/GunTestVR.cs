@@ -38,10 +38,10 @@ public class GunTestVR : MonoBehaviour
     {
         green = GetComponentInChildren<ID_Green>().gameObject;
         red = GetComponentInChildren<ID_Red>().gameObject;
-        //greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
-        greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
-        //redPistolBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
-        redPistolBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
+        greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
+        //greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
+        redPistolBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
+        //redPistolBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
         greenRifleBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
         redRifleBullet = Resources.Load(("Prefabs/RedRifleBullet"), typeof(GameObject)) as GameObject;
         fullAutoTime = 0.1f;
