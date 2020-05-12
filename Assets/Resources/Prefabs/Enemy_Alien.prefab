@@ -483,6 +483,7 @@ GameObject:
   - component: {fileID: -4221146341389316494}
   - component: {fileID: -3807388237467401663}
   - component: {fileID: 4275880392909102879}
+  - component: {fileID: 8624001125606069043}
   m_Layer: 0
   m_Name: Enemy_Alien
   m_TagString: RedEnemy
@@ -632,3 +633,17 @@ MonoBehaviour:
   pewpew: {fileID: 0}
   pointPopUp: {fileID: 0}
   greenHit: 0
+--- !u!136 &8624001125606069043
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9129817837028662559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.04
+  m_Height: 0.3
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
