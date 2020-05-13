@@ -22,6 +22,8 @@ public class EnemyAttacking : FsmState {
     public Vector3 place;
 	private float cntdwn;
 
+    [SerializeField] private Animator anim;
+
 	// Use this for initialization
 	void Awake() 
     {
@@ -29,6 +31,7 @@ public class EnemyAttacking : FsmState {
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
         NormMat = GetComponentInChildren<Renderer>();
+        anim = GetComponent<Animator>();
  
 	}
 	
@@ -54,5 +57,7 @@ public class EnemyAttacking : FsmState {
         //agent.isStopped = true;
         yellowMat = redMat;
         agent.SetDestination(place);
+        GetComponent<Animator>().SetBool("isAttacking", true);
+        GetComponent<Animator>().SetBool("isMoving", false);
     }
 }

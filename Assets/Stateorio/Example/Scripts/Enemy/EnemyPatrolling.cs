@@ -10,7 +10,9 @@ using UnityEngine.AI;
 [RequireComponent (typeof (NavMeshAgent))]
 public class EnemyPatrolling : FsmState {
 
-	public PatrolPoint[] Points;
+    [SerializeField] private Animator anim;
+
+    public PatrolPoint[] Points;
 	public float Epsilon = 0.5f;
 
 	private int destPoint;
@@ -20,6 +22,7 @@ public class EnemyPatrolling : FsmState {
 
 	void Awake () 
     {
+        anim = GetComponent<Animator>();
 		agent = GetComponent<NavMeshAgent> ();
         Points = GameObject.FindObjectsOfType<PatrolPoint>();
         destPoint = Random.Range(0, 6);
@@ -33,9 +36,13 @@ public class EnemyPatrolling : FsmState {
 		if (returnPoint != null) {
 			agent.destination = returnPoint.Value;
 			returnPoint = null;
+            GetComponent<Animator>().SetBool("isIdle", true);
+            GetComponent<Animator>().SetBool("isMoving", false);
 		} else {
 			agent.destination = Points [destPoint].Position;
 			destPoint = (destPoint + Random.Range(1,6)) % Points.Length;
+            GetComponent<Animator>().SetBool("isMoving", true);
+            GetComponent<Animator>().SetBool("isIdle", false);
 		}
 	}
 

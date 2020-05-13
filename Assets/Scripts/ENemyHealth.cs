@@ -2,6 +2,8 @@
 
 public class ENemyHealth : Health
 {
+    [SerializeField] private Animator anim;
+
     GunTestVR gtScript;
     UI_Info uiScript;
     public float pointTimer;
@@ -31,6 +33,7 @@ public class ENemyHealth : Health
 
     private void Awake()
     {
+        anim = GetComponent<Animator>();
         currHealth = 3;
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<ESpawner>();
         scoreS = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreScript>();
@@ -48,6 +51,7 @@ public class ENemyHealth : Health
 
     public override void TakeDamage(float damageAmount)
     {
+        GetComponent<Animator>().SetTrigger("isHit");
         base.TakeDamage(damageAmount);
         if (currHealth <= 0)
         {
