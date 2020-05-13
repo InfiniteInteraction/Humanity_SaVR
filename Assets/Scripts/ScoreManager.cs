@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     const float version = 1.1f;
     public static ScoreManager scoreManager;
     public static PlayerScore data = new PlayerScore(version);
-    public int currLvl; //The index for the current level thwe player is on 
+    public int currLvl; //The index for the current level thwe player is on //Replace Scene Manager with Strings to call specific Wave 
     public int currScore; // The current score that is displayed to the player
     public TextMeshProUGUI hsText;
     public int[] _highScores;

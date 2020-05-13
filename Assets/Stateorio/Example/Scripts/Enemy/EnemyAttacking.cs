@@ -19,6 +19,7 @@ public class EnemyAttacking : FsmState {
     public Renderer NormMat;
     public NavMeshAgent agent;
 	public Transform PlayerHealth;
+    public Vector3 place;
 	private float cntdwn;
 
 	// Use this for initialization
@@ -28,6 +29,7 @@ public class EnemyAttacking : FsmState {
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
         NormMat = GetComponentInChildren<Renderer>();
+ 
 	}
 	
 	// Update is called once per frame
@@ -41,13 +43,16 @@ public class EnemyAttacking : FsmState {
             agent.SetDestination(PlayerHealth.transform.position);
             transform.LookAt(PlayerHealth.transform);
             agent.stoppingDistance = 7;
+            place = transform.position;
+            
             Invoke("Attack", 3);
 		}
 	}
 
     void Attack()
     {
-        agent.isStopped = true;
+        //agent.isStopped = true;
         yellowMat = redMat;
+        agent.SetDestination(place);
     }
 }
