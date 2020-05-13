@@ -113,7 +113,7 @@ MonoBehaviour:
   - {fileID: 7440456582232983499}
   playerHealth: {fileID: 0}
   totalToSpawn: 40
-  enemyPrefab: {fileID: 9129817837028662559, guid: 8f0b7284164410e488abe3abf95966c0,
+  enemyPrefab: {fileID: 3183019167681401425, guid: 2bed01cde2bf1d94287767f01ca9e9d4,
     type: 3}
   enemyGreenPrefab: {fileID: 6643001592133680706, guid: fd4a375ba5b235246a52e22dc724fb13,
     type: 3}
