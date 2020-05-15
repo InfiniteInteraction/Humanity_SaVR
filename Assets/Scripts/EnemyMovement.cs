@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class EnemyMovement : MonoBehaviour
 {
+    public static EnemyMovement enemyMovement;
     public Rigidbody eRB;
     NavMeshAgent agent;
     public float stoppingDis;
@@ -33,11 +34,12 @@ public class EnemyMovement : MonoBehaviour
 
     public virtual void Awake()
     {
+        enemyMovement = this;
         waitTime = 5f;
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rend = GetComponentInChildren<Renderer>();
         startColor = rend.material.color;
-        speed = 3f;
+        speed += ESpawner.eSpawner.waves;
         eRB = GetComponent<Rigidbody>();
         gotoPoints = GameObject.FindGameObjectsWithTag("Points");
         stoppingDis = 5;

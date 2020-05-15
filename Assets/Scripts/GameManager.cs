@@ -7,16 +7,22 @@ using UnityEngine.AI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
+    
+    
 
 
     // public varibles for access by other classes
     #region Public 
-    public bool levelOver = true;    
+    //public bool levelOver = true;    
     public int greenDeaths;
     public float accuracy;
     public float shotsFired;
     public float hits;
-  
+    public ESpawner Waves;
+    public GameObject waveScreen;
+    string waveName;
+    public int waveNumber = 1;
+
     public float eSpeed = 3.5f;
     #endregion
 
@@ -24,7 +30,7 @@ public class GameManager : MonoBehaviour
     #region Private 
     public int score;
     private float misses;
-    string sceneName;
+    
     #endregion
 
     public GameObject[] stars;
@@ -45,13 +51,15 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         gameManager = this;
-        levelOver = false;
+        //levelOver = false;
         
         resultsBackground.SetActive(false);
 
         DontDestroyOnLoad(this.gameObject);
 
         ehealth = FindObjectOfType<ENemyHealth>();
+
+        waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
     }
 
     public void PlayButtonReturn()
@@ -83,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     public void StarCalculation()
     {
+        Waves.Wavescreen.SetActive(false);
         CalculateAccuracy();
         if (accuracy >= 79 && score >= 3999 && greenDeaths >= 4)
         {
@@ -130,12 +139,12 @@ public class GameManager : MonoBehaviour
     }
     public void DifficultySetting()
     {
-        sceneName = SceneManager.GetActiveScene().name;
 
 
-        switch (sceneName)
+
+        switch (waveName)
         {
-            case "Onslaught 1":
+            case "Wave1":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -145,7 +154,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 2":
+            case "Wave2":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -155,7 +164,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 3":
+            case "Wave3":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -165,7 +174,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 4":
+            case "Wave4":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -175,7 +184,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 5":
+            case "Wave5":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -185,7 +194,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 6":
+            case "Wave6":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -195,7 +204,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 7":
+            case "Wave7":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -205,7 +214,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 8":
+            case "Wave8":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -215,7 +224,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 9":
+            case "Wave9":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -225,7 +234,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Onslaught 10":
+            case "Wave10":
                 pD1 = 6;
                 pD2 = 10;
                 pDA2 = 16;

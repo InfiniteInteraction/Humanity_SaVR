@@ -110,8 +110,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   currHealth: 0
+  healthBar: {fileID: 0}
   damageTaken: 0
   healingRecieved: 0
+  eSpawnerRef: {fileID: 0}
+  streakBreaker: 0
   pointTimer: 0
   floatingTextPrefab: {fileID: 4090813092853975136, guid: 56eacd9c0a0f18d43b973795695a5d96,
     type: 3}
@@ -120,6 +123,10 @@ MonoBehaviour:
   eSpawner: {fileID: 0}
   points: 0
   enemyHit: 0
+  pewpew: {fileID: 0}
+  pointPopUp: {fileID: 0}
+  popUpTrans: {fileID: 0}
+  greenHit: 0
 --- !u!54 &106476972890481332
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -146,8 +153,8 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
+  m_Speed: 1
+  m_Acceleration: 1
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -179,7 +186,11 @@ MonoBehaviour:
   greenPos: {fileID: 0}
   teleSpawn: {fileID: 0}
   fTimer: 0
-  speed: 0
+  speed: 1
   midcolor: {r: 0, g: 0, b: 0, a: 0}
   endColor: {r: 0, g: 0, b: 0, a: 0}
   trackDis: 0
+  randomPath: 0
+  randomPoint: 0
+  gotoPoints: []
+  isChasingPlayer: 1

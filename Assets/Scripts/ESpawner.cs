@@ -2,62 +2,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class ESpawner : MonoBehaviour
 {
+    public static ESpawner eSpawner;
 
-    public int currentRound;
+    public Text waveCount;
+    public int waves = 0;
+
     public GameObject[] spawners;
-    private bool isRoundOver;
+    public bool isWaveOver;
     public Health playerHealth;
 
     //Spawners area 
-    public int totalToSpawn = 40;
+    public int totalToSpawn = 15;
     public GameObject enemyPrefab;
     public GameObject enemyGreenPrefab;
 
     public int streakCount;
-
     public int killCount;
     public int killCountMax = 20;
 
+    public GameObject Wavescreen;
+    public int enemyCount;
+    public int enemiesKilled = 0;
+    public int enemiesNeeded;
 
 
     //Spawners Area
 
     public float enemySpeed = 3.5f;
 
+    void Awake()
+    {
+        eSpawner = this;  
+    }
     void Start()
     {
-        GameManager.gameManager.DifficultySetting();
-        InvokeRepeating("DoSpawn", GameManager.gameManager.spawnTime, GameManager.gameManager.repeatTime);
-        enemySpeed = GameManager.gameManager.eSpeed;
+        GameManager.gameManager.DifficultySetting();       
+        enemySpeed = GameManager.gameManager.eSpeed;    
+        Wavescreen.SetActive(false);
+        waveCount.text = waves.ToString();
+        enemiesNeeded = totalToSpawn;
+        DoSpawn();
     }
 
 
     //Spawners Area Begin
-    public void Spawn(int _totalToSpawn)
-    {
-        totalToSpawn = _totalToSpawn;
-    }
+    //public void Spawn(int _totalToSpawn)
+    //{
+    //    totalToSpawn = _totalToSpawn;
+    //}
 
     public void DoSpawn()
     {
         GameObject enemy = Instantiate(enemyPrefab, spawners[Random.Range(0, spawners.Length)].transform.position, Quaternion.identity);
-        enemy.GetComponent<NavMeshAgent>().speed = enemySpeed;
-        SpawnCount();
+        totalToSpawn--;
+        //enemy.GetComponent<NavMeshAgent>().speed = enemySpeed;
+        Invoke("DoSpawn", 1);
     }
 
-    public void SpawnCount()
-    {
-        if (totalToSpawn <= 0)
-        {
-            CancelInvoke();
-            GameManager.gameManager.levelOver = true;
-            Invoke("GetStarCalc", 5);
-
-        }
-    }
+    //public void SpawnCount()
+    //{
+    //    if (enemyCount == enemiesNeeded)
+    //    {
+    //        //waves++;
+    //        //Wavescreen.SetActive(true);
+    //        //GameManager.gameManager.levelOver = true;
+    //        //Invoke("GetStarCalc", 0);
+    //    }
+    //}
 
     public void SpawnGreen()
     {
@@ -116,6 +131,24 @@ public class ESpawner : MonoBehaviour
                 Audiomanager.audiomanager.Play("InvincibleKillingMachine");
                 break;
         }
+    }
+
+    public void RepeatSpawning()
+    {
+        if(totalToSpawn <= 0)
+        {
+            CancelInvoke("DoSpawn");
+            if (enemyCount == enemiesNeeded)
+            {
+                WaveController.WController.WaveComplete();
+                enemyCount += 1;
+            }
+        }
+    }
+
+    private void Update()
+    {
+        RepeatSpawning();
     }
 }
 
