@@ -51,7 +51,7 @@ public class ENemyHealth : Health
 
     public override void TakeDamage(float damageAmount)
     {
-        GetComponent<Animator>().SetTrigger("isHit");
+        //GetComponent<Animator>().SetTrigger("isHit");
         base.TakeDamage(damageAmount);
         if (currHealth <= 0)
         {
@@ -65,13 +65,13 @@ public class ENemyHealth : Health
                 pHealth.Healing(1);
                 pewpew.RegainAmmo();
             }
-
+            eSpawner.enemyCount++;
             eSpawner.streakCount++;
             eSpawner.KillStreak();
             pointTimer++;
             eSpawner.killCount++;
             GameManager.gameManager.hits++;
-            eSpawner.totalToSpawn -= 1;
+            //eSpawner.totalToSpawn -= 1;
             eSpawner.SpawnGreen();
             CallMulti();
             //DeathEffect();
