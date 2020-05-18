@@ -728,7 +728,8 @@ ParticleSystem:
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
-    m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+    m_Mesh: {fileID: -5627080914471815715, guid: 1a9a8472c05740c46ab04feb77b0bafb,
+      type: 3}
     m_MeshRenderer: {fileID: 0}
     m_SkinnedMeshRenderer: {fileID: 0}
     m_Sprite: {fileID: 0}

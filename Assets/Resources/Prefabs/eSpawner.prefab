@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440456582232983499}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.14, y: 0, z: -12.85}
+  m_LocalPosition: {x: 18.29, y: -0.927, z: 4.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7440456582641664179}
@@ -54,7 +54,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440456582379713877}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.98}
+  m_LocalPosition: {x: -32.83, y: -1.17, z: -4.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7440456582641664179}
@@ -106,13 +106,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dca474693ffcee4bacc392a8d28eb1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRound: 0
+  waveCount: {fileID: 0}
+  waves: 0
   spawners:
   - {fileID: 7440456582379713877}
   - {fileID: 7440456583650766497}
   - {fileID: 7440456582232983499}
+  isWaveOver: 0
   playerHealth: {fileID: 0}
-  totalToSpawn: 40
+  totalToSpawn: 10
   enemyPrefab: {fileID: 3183019167681401425, guid: 2bed01cde2bf1d94287767f01ca9e9d4,
     type: 3}
   enemyGreenPrefab: {fileID: 6643001592133680706, guid: fd4a375ba5b235246a52e22dc724fb13,
@@ -120,6 +122,10 @@ MonoBehaviour:
   streakCount: 0
   killCount: 0
   killCountMax: 10
+  Wavescreen: {fileID: 0}
+  enemyCount: 0
+  enemiesKilled: 0
+  enemiesNeeded: 0
   enemySpeed: 3.5
 --- !u!1 &7440456583650766497
 GameObject:
@@ -145,7 +151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7440456583650766497}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.21, y: 0, z: -6.646}
+  m_LocalPosition: {x: -43.64, y: 0, z: -29.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7440456582641664179}
