@@ -3021,6 +3021,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f7aa4d40edff6e48b549003cad031e1, type: 3}
+--- !u!1 &695355773 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8886087255283810407, guid: 3a1fc961c48951b419d84ac527e9ad4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 865353772}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &695355774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695355773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700587be0b0929045a66e241906b19cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sMU: {fileID: 0}
+  panel: {fileID: 499277790}
+--- !u!65 &695355775
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695355773}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.6918561, y: 1, z: 1}
+  m_Center: {x: 0.0002995312, y: 0, z: 0}
 --- !u!1001 &701628819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4782,6 +4815,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8886087255283810407, guid: 3a1fc961c48951b419d84ac527e9ad4c,
+        type: 3}
+      propertyPath: m_TagString
+      value: NextWave
+      objectReference: {fileID: 0}
     - target: {fileID: 8886087255283810406, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4832,6 +4870,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Type
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886087255283810405, guid: 3a1fc961c48951b419d84ac527e9ad4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1049003919}
+    - target: {fileID: 8886087255283810405, guid: 3a1fc961c48951b419d84ac527e9ad4c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextWave
       objectReference: {fileID: 0}
     - target: {fileID: 8886087254941347508, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
@@ -5594,6 +5642,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2441016557639592295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1049003918 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4756099423226821696, guid: 92e6ff5101a4f584183fa702d19701b0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1751835899}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1049003919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049003918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb75392053ff234f9ed884faf8ce948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eSpeedup: 1
 --- !u!1001 &1080822605
 PrefabInstance:
   m_ObjectHideFlags: 0

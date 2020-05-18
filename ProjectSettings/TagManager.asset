@@ -32,6 +32,7 @@ TagManager:
   - Replay
   - Fire
   - Points
+  - NextWave
   layers:
   - Default
   - TransparentFX

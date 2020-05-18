@@ -84,10 +84,11 @@ public class ButtonPush : MonoBehaviour
             SceneManager.LoadScene(0);
             
         }
-        if (other.tag == "RedBullet" || other.tag == "GreenBullet" && gameObject.tag == "NextLevel")
+        if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("NextWave"))
         {
-            ScoreManager.scoreManager.Save();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            WaveController.WController.NextWave();
         }
+
+
     }
 }
