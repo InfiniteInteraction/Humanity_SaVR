@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1727086624425057564}
   - component: {fileID: 2566400634616183304}
+  - component: {fileID: 1049003919}
+  - component: {fileID: 1049003920}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -43,11 +45,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d6ab1b90af7369479b519da3b561451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelOver: 1
   greenDeaths: 0
   accuracy: 0
   shotsFired: 0
   hits: 0
+  Waves: {fileID: 0}
+  waveScreen: {fileID: 0}
+  waveNumber: 1
+  eSpeed: 3.5
   score: 0
   stars:
   - {fileID: 0}
@@ -56,3 +61,43 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   resultsBackground: {fileID: 0}
+  ehealth: {fileID: 0}
+  pD1: 0
+  pD2: 0
+  pDA2: 0
+  pD3: 0
+  pDA3: 0
+  pD4: 0
+  spawnTime: 0
+  repeatTime: 0
+--- !u!114 &1049003919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756099423226821696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb75392053ff234f9ed884faf8ce948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eSpeedup: 1
+--- !u!114 &1049003920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756099423226821696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d17d948350c754993405fc47ba1273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Pistol: {fileID: 0}
+  LoadoutWeapons: []
+  AvailableWeapons: []
+  CurrentWeapon: 
+  WeaponPlace: 0
+  NumKeys: 310000003200000033000000

@@ -50,16 +50,36 @@ public class GameManager : MonoBehaviour
     #endregion
     private void Awake()
     {
-        gameManager = this;
+        //gameManager = this;
         //levelOver = false;
-        
-        resultsBackground.SetActive(false);
+        if (gameManager != null)
+        {
+            GameObject.Destroy(gameManager.gameObject);
+        }
+        else
+        {
+            gameManager = this;
+            DontDestroyOnLoad(this);
+        }
 
-        DontDestroyOnLoad(this.gameObject);
+        if (resultsBackground != null)
+        {
+            resultsBackground.SetActive(false);
+            Debug.Log("resultsBackground works");
+        }
 
+       
+      
         ehealth = FindObjectOfType<ENemyHealth>();
+        if(ehealth == null)
+        {
+            Debug.Log("ehealth is null");
+        }
 
-        waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
+        if (waveScreen != null)
+        {
+            waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
+        }
     }
 
     public void PlayButtonReturn()
@@ -71,7 +91,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //CalculateAccuracy();
-        score = ScoreManager.scoreManager.currScore;
+        if (ScoreManager.scoreManager != null)
+        {
+            score = ScoreManager.scoreManager.currScore;
+        }
     } 
 
     public void BulletMisses()
