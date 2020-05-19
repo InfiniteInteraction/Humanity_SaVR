@@ -122,7 +122,8 @@ MonoBehaviour:
   streakCount: 0
   killCount: 0
   killCountMax: 10
-  Wavescreen: {fileID: 0}
+  Wavescreen: {fileID: 8886087254668463251, guid: 3a1fc961c48951b419d84ac527e9ad4c,
+    type: 3}
   enemyCount: 0
   enemiesKilled: 0
   enemiesNeeded: 0
