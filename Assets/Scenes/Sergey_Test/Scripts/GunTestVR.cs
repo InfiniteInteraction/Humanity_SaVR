@@ -34,6 +34,8 @@ public class GunTestVR : MonoBehaviour
     AudioSource audioSource;
     AudioClip pistolShot;
 
+    public Sprite WeapIcon;
+
     private void Awake()
     {
         green = GetComponentInChildren<ID_Green>().gameObject;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSwitch : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class WeaponSwitch : MonoBehaviour
         KeyCode.Alpha2,
         KeyCode.Alpha3
     };
+    //public Image Icon; //Uncomment when adding Icon to Player UI
 
     public void Start()
     {
@@ -23,7 +25,8 @@ public class WeaponSwitch : MonoBehaviour
         AvailableWeapons.Add(LoadoutWeapons[1]);
 
         CurrentWeapon = AvailableWeapons[0].name;
-        AvailableWeapons[WeaponPlace].gameObject.SetActive(true);        
+        AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+        //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
     }
     public void Update()
     {
@@ -39,6 +42,7 @@ public class WeaponSwitch : MonoBehaviour
 
             CurrentWeapon = AvailableWeapons[WeaponPlace].name;
             AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+            //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
         }
         foreach(KeyCode key in NumKeys)
         {
@@ -52,6 +56,7 @@ public class WeaponSwitch : MonoBehaviour
                 WeaponPlace = NumKeys.IndexOf(key);
                 CurrentWeapon = AvailableWeapons[WeaponPlace].name;
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+               //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
             }
         }
         //if(Input.GetKeyDown(KeyCode.Alpha1))

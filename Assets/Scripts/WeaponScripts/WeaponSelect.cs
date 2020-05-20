@@ -4,45 +4,67 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WeaponSelect : MonoBehaviour
 {
     public WeaponSwitch GM;
     public GameObject Pistol;
     public GameObject Load;
-    public bool PSelect = true;
+    public bool PSelect = false;
+    [Header("Current Weapons")]
     public GameObject CurrPistol;
+    public Image CurrPImage;
     public List<GameObject> CurrLoadOut; //Players current Primary, Secondary Weapons
-    public List<GameObject> PrimSecond; //Buttons for the CurrLoadOut
+    [Header("Pistol")]    
     public List<GameObject> PistolButtons; //Button Player clicks for specific weapon
     public List<GameObject> PistolChoices; //Line up with the Buttons for when clicked makes the current pistol this.
+    public List<Image> PChoiImages; //Pistol Images from the Buttons
+    [Header("Loadout")]
+    public List<GameObject> PrimSecond; //Buttons for the CurrLoadOut
+    public List<Image> PrimSecIcon; //Sprites for the Prim and Secondary weapons
     public List<GameObject> ARButtons; //Same as PistolButtons
     public List<GameObject> ARChoices; // Same as PistolChoices
-    public int SelectedSlot;
+    public List<Image> ARImages; //Holds the Images of the AR Buttons
+    private int SelectedSlot;
     public string SceneName;
     public Transform GunSpawn;
 
     void Awake()
     {
         GM = FindObjectOfType<WeaponSwitch>();
-        Pistol.SetActive(true);
+        LoadoutSelect();
         CurrPistol = GM.Pistol;
+        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
         CurrLoadOut = GM.LoadoutWeapons;
-        Load.SetActive(false);
+        Instantiate(CurrPistol, GunSpawn);
     }
 
     public void LoadoutSelect()
     {
         PSelect = !PSelect;
-        if (!PSelect)
+        if (PSelect == false)
         {
             Pistol.SetActive(false);
             Load.SetActive(true);
+            for (int i = 0; i < PrimSecIcon.Count; i++)
+            {
+                PrimSecIcon[i].sprite = CurrLoadOut[i].GetComponent<GunTestVR>().WeapIcon;
+            }
+
+            for (int i = 0; i < ARImages.Count; i++)
+            {
+                ARImages[i].sprite = ARChoices[i].GetComponent<GunTestVR>().WeapIcon;
+            }
         }
         else 
         {
             Pistol.SetActive(true);
             Load.SetActive(false);
+            for (int i = 0; i < PistolChoices.Count; i++)
+            {
+                PChoiImages[i].sprite = PistolChoices[i].GetComponent<GunTestVR>().WeapIcon;
+            }
         }
     }
 
@@ -60,6 +82,7 @@ public class WeaponSelect : MonoBehaviour
             //Debug.Log("Pistol selected " + PistolChoices[Click].name);
             Instantiate(PistolChoices[Click], GunSpawn);
             GM.Pistol = PistolChoices[Click];
+            
         }
         else
         {
@@ -67,6 +90,7 @@ public class WeaponSelect : MonoBehaviour
             //Debug.Log("AR selected " + ARChoices[Click].name);
             Instantiate(ARChoices[Click], GunSpawn);
             GM.LoadoutWeapons[SelectedSlot] = ARChoices[Click];
+            PrimSecIcon[SelectedSlot].sprite = ARChoices[Click].GetComponent<GunTestVR>().WeapIcon;
         }
         CurrUpdate();
     }
@@ -75,13 +99,14 @@ public class WeaponSelect : MonoBehaviour
     {
         //Debug.Log(EventSystem.current.currentSelectedGameObject);
         int Load = PrimSecond.IndexOf(EventSystem.current.currentSelectedGameObject);
-        SelectedSlot = Load;
+        SelectedSlot = Load;        
         //Debug.Log(Load);
     }
 
     public void CurrUpdate()
     {
         CurrPistol = GM.Pistol;
+        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
         CurrLoadOut = GM.LoadoutWeapons;
     }
 
