@@ -28,8 +28,7 @@ public class WaveController : MonoBehaviour
         {
            ESpawner.eSpawner.waves++;
            ESpawner.eSpawner.isWaveOver = false;
-           EnemyMovement.enemyMovement.speed++;
-
+           EnemyMovement.enemyMovement.speed++;           
         }
    }
 
@@ -38,7 +37,6 @@ public class WaveController : MonoBehaviour
         ESpawner.eSpawner.isWaveOver = false;
         ESpawner.eSpawner.Wavescreen.SetActive(false);
         ESpawner.eSpawner.totalToSpawn = 20 * ESpawner.eSpawner.waves ;
-        //EnemyMovement.enemyMovement.speed++;
         ESpawner.eSpawner.streakCount = 0;
         ESpawner.eSpawner.killCount = 0;
         ESpawner.eSpawner.enemyCount = 0;
