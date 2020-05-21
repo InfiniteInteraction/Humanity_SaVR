@@ -18,7 +18,7 @@ public class EnemyAttacking : FsmState {
     public Material redMat;
     public Renderer NormMat;
     public NavMeshAgent agent;
-	public Transform PlayerHealth;
+	[SerializeField] private Transform Player;
     public Vector3 place;
 	private float cntdwn;
 
@@ -27,6 +27,7 @@ public class EnemyAttacking : FsmState {
 	// Use this for initialization
 	void Awake() 
     {
+        Player = GameObject.FindGameObjectWithTag("Player").transform;
         Cooldown = 10;
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
@@ -43,8 +44,8 @@ public class EnemyAttacking : FsmState {
         if (cntdwn <= 0) 
         {
             NormMat.material = yellowMat;
-            agent.SetDestination(PlayerHealth.transform.position);
-            transform.LookAt(PlayerHealth.transform);
+            agent.SetDestination(Player.transform.position);
+            transform.LookAt(Player.transform);
             agent.stoppingDistance = 7;
             place = transform.position;
             

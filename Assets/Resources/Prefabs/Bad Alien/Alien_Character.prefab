@@ -127,7 +127,7 @@ MonoBehaviour:
   redMat: {fileID: 2100000, guid: e35d2051800b8bb44a7d0cff8676f6dc, type: 2}
   NormMat: {fileID: 0}
   agent: {fileID: 0}
-  PlayerHealth: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+  PlayerHealth: {fileID: 0}
   place: {x: 0, y: 0, z: 0}
   anim: {fileID: 0}
 --- !u!114 &389063416485791562

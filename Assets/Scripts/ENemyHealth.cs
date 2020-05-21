@@ -51,8 +51,9 @@ public class ENemyHealth : Health
 
     public override void TakeDamage(float damageAmount)
     {
-        //GetComponent<Animator>().SetTrigger("isHit");
+        GetComponent<Animator>().SetTrigger("isHit");
         base.TakeDamage(damageAmount);
+        GetComponent<Animator>().ResetTrigger("isHit");
         if (currHealth <= 0)
         {
             if (gameObject.layer == 8 || gameObject.tag == "GreenEnemy")
