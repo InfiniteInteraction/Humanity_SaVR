@@ -26,6 +26,7 @@ public class ESpawner : MonoBehaviour
     public int killCountMax = 20;
 
     public GameObject Wavescreen;
+    public GameObject Results;
     public int enemyCount;
     public int enemiesKilled = 0;
     public int enemiesNeeded;
@@ -44,17 +45,11 @@ public class ESpawner : MonoBehaviour
         GameManager.gameManager.DifficultySetting();       
         enemySpeed = GameManager.gameManager.eSpeed;    
         Wavescreen.SetActive(false);
+        Results.SetActive(false);
         waveCount.text = waves.ToString();
         enemiesNeeded = totalToSpawn;
         DoSpawn();
     }
-
-
-    //Spawners Area Begin
-    //public void Spawn(int _totalToSpawn)
-    //{
-    //    totalToSpawn = _totalToSpawn;
-    //}
 
     public void DoSpawn()
     {
@@ -64,17 +59,6 @@ public class ESpawner : MonoBehaviour
         Invoke("DoSpawn", 1);
     }
 
-    //public void SpawnCount()
-    //{
-    //    if (enemyCount == enemiesNeeded)
-    //    {
-    //        //waves++;
-    //        //Wavescreen.SetActive(true);
-    //        //GameManager.gameManager.levelOver = true;
-    //        //Invoke("GetStarCalc", 0);
-    //    }
-    //}
-
     public void SpawnGreen()
     {
         if (killCount == killCountMax)
@@ -83,8 +67,10 @@ public class ESpawner : MonoBehaviour
             killCount = 0;
         }
     }
-    void GetStarCalc()
+    void wave10Complete()
     {
+        Wavescreen.SetActive(false);
+        Results.SetActive(true);
         GameManager.gameManager.Starsystem();
     }
 
@@ -143,6 +129,11 @@ public class ESpawner : MonoBehaviour
             {
                 WaveController.WController.WaveComplete();
                 enemyCount += 1;
+                
+                if (waves == 10)
+                {
+                    wave10Complete();
+                }
             }
         }
     }

@@ -87,6 +87,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("OVRMenu");
+    }
+
 
     void Update()
     {
@@ -114,7 +119,6 @@ public class GameManager : MonoBehaviour
 
     public void StarCalculation()
     {
-        Waves.Wavescreen.SetActive(false);
         CalculateAccuracy();
         if (accuracy >= 79 && score >= 3999 && greenDeaths >= 4)
         {
