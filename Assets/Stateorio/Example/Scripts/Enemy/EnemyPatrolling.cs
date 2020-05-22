@@ -27,6 +27,7 @@ public class EnemyPatrolling : FsmState {
         Points = GameObject.FindObjectsOfType<PatrolPoint>();
         destPoint = Random.Range(0, 6);
 		if (Points.Length > 1) agent.autoBraking = false;
+        agent.speed = GameManager.gameManager.eSpeed;
 	}
 
 	private void gotoNextPoint () {

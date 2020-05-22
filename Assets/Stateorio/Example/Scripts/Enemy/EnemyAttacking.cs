@@ -13,7 +13,7 @@ using UnityEngine.AI;
 public class EnemyAttacking : FsmState {
 
 	public float Cooldown;
-	public int Strength;
+	public float Strength;
     public Material yellowMat;
     public Material redMat;
     public Renderer NormMat;
@@ -21,16 +21,21 @@ public class EnemyAttacking : FsmState {
 	[SerializeField] private Transform Player;
     public Vector3 place;
 	private float cntdwn;
+    public float atkTime;
+    public float atkCooldown;
 
     [SerializeField] private Animator anim;
 
 	// Use this for initialization
 	void Awake() 
     {
+        Strength = 1f;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Cooldown = 10;
+        atkCooldown = 4;
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
+        atkTime = atkCooldown;
         NormMat = GetComponentInChildren<Renderer>();
         anim = GetComponent<Animator>();
  
@@ -55,10 +60,17 @@ public class EnemyAttacking : FsmState {
 
     void Attack()
     {
+        atkTime -= Time.deltaTime;
         //agent.isStopped = true;
         yellowMat = redMat;
         agent.SetDestination(place);
         GetComponent<Animator>().SetBool("isAttacking", true);
         GetComponent<Animator>().SetBool("isMoving", false);
+        if((atkTime -=Time.deltaTime) <= 0)
+        {
+            atkTime = atkCooldown;
+            Damage.damage.playerHealth -= Strength;
+            Damage.damage.PlayerDeath();
+        }
     }
 }

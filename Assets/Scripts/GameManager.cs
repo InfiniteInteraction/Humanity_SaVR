@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public float hits;
     public ESpawner Waves;
     public GameObject waveScreen;
-    string waveName;
+    public string waveName;
     public int waveNumber = 1;
 
     public float eSpeed = 3.5f;
@@ -167,11 +167,12 @@ public class GameManager : MonoBehaviour
     public void DifficultySetting()
     {
 
+        waveName = ESpawner.eSpawner.waves.ToString();
 
 
         switch (waveName)
         {
-            case "Wave1":
+            case "0":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -181,7 +182,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave2":
+            case "1":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -191,7 +192,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave3":
+            case "2":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -201,7 +202,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave4":
+            case "3":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -211,7 +212,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave5":
+            case "4":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -221,7 +222,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave6":
+            case "5":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -231,7 +232,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave7":
+            case "6":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -241,7 +242,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave8":
+            case "7":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -251,7 +252,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave9":
+            case "8":
                 pD1 = 11;
                 pD2 = 10;
                 pDA2 = 16;
@@ -261,7 +262,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
-            case "Wave10":
+            case "9":
                 pD1 = 6;
                 pD2 = 10;
                 pDA2 = 16;

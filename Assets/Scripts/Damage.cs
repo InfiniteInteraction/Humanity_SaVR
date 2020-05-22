@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Damage : MonoBehaviour
 {
-    public int playerHealth;
+    public static Damage damage; 
+    public float playerHealth;
     public ScoreScript points;
 
     private void Awake()
     {
+        damage = this;
         playerHealth = 100;
     }
     public void Update()
@@ -25,20 +27,11 @@ public class Damage : MonoBehaviour
         }        
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "RedEnemy")
-        {
-            playerHealth -= 1;
-            PlayerDeath();
-        }
-    }
-
-    void PlayerDeath()
+   public void PlayerDeath()
     {
         if (playerHealth <= 0)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(0);
         }
     }
 }

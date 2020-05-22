@@ -28,7 +28,7 @@ public class WaveController : MonoBehaviour
         {
            ESpawner.eSpawner.waves++;
            ESpawner.eSpawner.isWaveOver = false;
-           EnemyMovement.enemyMovement.speed++;           
+                      
         }
    }
 
@@ -41,6 +41,7 @@ public class WaveController : MonoBehaviour
         ESpawner.eSpawner.killCount = 0;
         ESpawner.eSpawner.enemyCount = 0;
         ESpawner.eSpawner.enemiesNeeded = ESpawner.eSpawner.totalToSpawn;
+        GameManager.gameManager.eSpeed += .5f;
         ESpawner.eSpawner.DoSpawn();
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
