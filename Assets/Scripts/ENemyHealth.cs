@@ -63,7 +63,9 @@ public class ENemyHealth : Health
 
             if (gameObject.tag == "GreenEnemy")
             {
-                pHealth.Healing(1);
+                Damage.damage.playerHealth += 100;
+                Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
+                Destroy(gameObject);
                 pewpew.RegainAmmo();
             }
             eSpawner.enemyCount++;
@@ -116,16 +118,16 @@ public class ENemyHealth : Health
         }
         if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
         {
-            pHealth.Healing(-1);
+            Damage.damage.playerHealth -= 1;
         }
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
         {
-            pHealth.Healing(-1);
+            Damage.damage.playerHealth -= 1;
             greenHit++;
             if(greenHit == 3)
             {
-                pHealth.currHealth = 0;
-                
+
+                Damage.damage.playerHealth = 0;
 
             }
 

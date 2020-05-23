@@ -29,10 +29,10 @@ public class EnemyAttacking : FsmState {
 	// Use this for initialization
 	void Awake() 
     {
-        Strength = 1f;
+        Strength = GameManager.gameManager.enemyATK;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         Cooldown = 10;
-        atkCooldown = 4;
+        atkCooldown = GameManager.gameManager.enemyATKCooldown;
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
         atkTime = atkCooldown;

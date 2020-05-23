@@ -21,6 +21,10 @@ public class GameManager : MonoBehaviour
     public ESpawner Waves;
     public GameObject waveScreen;
     public string waveName;
+    public float enemyATK;
+    public float enemyATKTime;
+    public float enemyATKCooldown;
+    public ENemyHealth[] eHealth;
     public int waveNumber = 1;
 
     public float eSpeed = 3.5f;
@@ -80,6 +84,10 @@ public class GameManager : MonoBehaviour
         {
             waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
         }
+
+        enemyATK = 1;
+        enemyATKCooldown = 4;
+
     }
 
     public void PlayButtonReturn()
@@ -95,6 +103,8 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        eHealth = GameObject.FindObjectsOfType<ENemyHealth>();
+        waveName = ESpawner.eSpawner.waves.ToString();
         //CalculateAccuracy();
         if (ScoreManager.scoreManager != null)
         {
@@ -201,6 +211,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                enemyATK = 2;
+                enemyATKCooldown = 3;
                 break;
             case "3":
                 pD1 = 11;
