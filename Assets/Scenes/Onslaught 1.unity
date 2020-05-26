@@ -6855,6 +6855,7 @@ MonoBehaviour:
   rifleCharging: 0
   emissiveObjects: []
   wheelSpin: {fileID: 0}
+  WeapIcon: {fileID: 0}
 --- !u!4 &1261550722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6699144166421863091, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -13616,6 +13617,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
+      propertyPath: LoadoutWeapons.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
+      propertyPath: Pistol
+      value: 
+      objectReference: {fileID: 755538669}
+    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
+      propertyPath: LoadoutWeapons.Array.data[0]
+      value: 
+      objectReference: {fileID: 1261550720}
+    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
+      propertyPath: LoadoutWeapons.Array.data[1]
+      value: 
+      objectReference: {fileID: 1261550723}
     - target: {fileID: 2566400634616183304, guid: 92e6ff5101a4f584183fa702d19701b0,
         type: 3}
       propertyPath: Waves
@@ -13656,22 +13673,6 @@ PrefabInstance:
       propertyPath: resultsBackground
       value: 
       objectReference: {fileID: 323618514}
-    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
-      propertyPath: LoadoutWeapons.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
-      propertyPath: Pistol
-      value: 
-      objectReference: {fileID: 755538669}
-    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
-      propertyPath: LoadoutWeapons.Array.data[0]
-      value: 
-      objectReference: {fileID: 1261550720}
-    - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
-      propertyPath: LoadoutWeapons.Array.data[1]
-      value: 
-      objectReference: {fileID: 1261550723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
 --- !u!1 &1760052995
@@ -24997,22 +24998,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 0.08
-      objectReference: {fileID: 0}
     - target: {fileID: 2441016557996356163, guid: 5bee8098eca43a645b98466fe4952033,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -25033,6 +25018,22 @@ PrefabInstance:
       propertyPath: sMU
       value: 
       objectReference: {fileID: 1010009622}
+    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
+    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441016557996356162, guid: 5bee8098eca43a645b98466fe4952033,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 786789397, guid: 5bee8098eca43a645b98466fe4952033, type: 3}
       propertyPath: m_IsTrigger
       value: 1
