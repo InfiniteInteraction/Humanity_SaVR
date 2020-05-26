@@ -30,7 +30,7 @@ public class WeaponSwitch : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) || OVRInput.GetDown(OVRInput.RawButton.X))
+        if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.RawButton.X))
         {
             AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
             WeaponPlace++;
