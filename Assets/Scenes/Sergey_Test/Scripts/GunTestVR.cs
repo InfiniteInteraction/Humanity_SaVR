@@ -133,10 +133,10 @@ public class GunTestVR : MonoBehaviour
         {
             SwitchBullets();
         }
-        if (OVRInput.GetDown(OVRInput.RawButton.X))
-        {
-            SwitchFireMode();
-        }
+        //if (OVRInput.GetDown(OVRInput.RawButton.X))
+        //{
+        //    SwitchFireMode();
+        //}
     }
 
 
