@@ -31,7 +31,7 @@ public class EnemyAttacking : FsmState {
     {
         Strength = GameManager.gameManager.enemyATK;
         Player = GameObject.FindGameObjectWithTag("Player").transform;
-        Cooldown = 10;
+        Cooldown = GameManager.gameManager.CTime;
         atkCooldown = GameManager.gameManager.enemyATKCooldown;
         agent = GetComponent<NavMeshAgent>();
 		cntdwn = Cooldown;
