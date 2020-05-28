@@ -60,18 +60,18 @@ public class ENemyHealth : Health
         GetComponent<Animator>().ResetTrigger("isHit");
         if (currHealth <= 0)
         {
-            if (gameObject.layer == 8 || gameObject.tag == "GreenEnemy")
-            {
-                GameManager.gameManager.greenDeaths++;
-            }
+            //if (gameObject.layer == 8 || gameObject.tag == "GreenEnemy")
+            //{
+            //    GameManager.gameManager.greenDeaths++;
+            //}
 
-            if (gameObject.tag == "GreenEnemy")
-            {
-                Damage.damage.playerHealth += 100;
-                Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
-                Destroy(gameObject);
-                // pewpew.RegainAmmo();
-            }
+            //if (gameObject.tag == "GreenEnemy")
+            //{
+            //    Damage.damage.playerHealth += 100;
+            //    Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
+            //    Destroy(gameObject);
+            //    // pewpew.RegainAmmo();
+            //}
             eSpawner.enemyCount++;
             eSpawner.streakCount++;
             eSpawner.KillStreak();
@@ -111,14 +111,19 @@ public class ENemyHealth : Health
         bulletType = collision.collider.gameObject;
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
         {
-            //DeathEffect();
             TakeDamage(5);
             enemyHit = true;
         }
         else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")
         {
-            TakeDamage(5);
             enemyHit = true;
+            GameManager.gameManager.greenDeaths++;                             
+            Damage.damage.playerHealth += 100;
+            Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
+            DeathEffect();
+            CallMulti();
+            eSpawner.KillStreak();
+            Destroy(gameObject);  
         }
         if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
         {

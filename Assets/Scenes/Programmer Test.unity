@@ -2606,7 +2606,7 @@ MonoBehaviour:
   - {fileID: 841008507}
   isWaveOver: 0
   playerHealth: {fileID: 0}
-  totalToSpawn: 1
+  totalToSpawn: 15
   enemyPrefab: {fileID: 8288587923413601841, guid: 206d13ea2ce7a544399dfb02575a0676,
     type: 3}
   enemyGreenPrefab: {fileID: 7338002616494147980, guid: 5fcba750deaf6f9429bf4e5f06c684bc,
