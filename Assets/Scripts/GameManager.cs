@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public float enemyATKCooldown;
     public ENemyHealth[] eHealth;
     public int waveNumber = 1;
-
+    public int CTime;
     public float eSpeed = 3.5f;
     #endregion
 
@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
 
         enemyATK = 1;
         enemyATKCooldown = 4;
+        CTime = 20;
 
     }
 
@@ -211,8 +212,6 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                enemyATK = 2;
-                enemyATKCooldown = 3;
                 break;
             case "3":
                 pD1 = 11;
@@ -223,6 +222,9 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 16;
+                enemyATK = 1;
+                enemyATKCooldown = 5;
                 break;
             case "4":
                 pD1 = 11;
@@ -253,6 +255,9 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 12;
+                enemyATK = 2;
+                enemyATKCooldown = 3;
                 break;
             case "7":
                 pD1 = 11;
@@ -283,7 +288,11 @@ public class GameManager : MonoBehaviour
                 pD4 = 31;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 6;
+                enemyATK = 3;
+                enemyATKCooldown = 1;
                 break;
+            
         }
     }
 }

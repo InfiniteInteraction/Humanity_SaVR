@@ -122,7 +122,8 @@ public class PlasmaBullet : MonoBehaviour
         else
         {
             GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
-            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
+            Debug.Log(splash);
+            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity); 
         }
         collisionPos = null;
         Debug.Log("TIMED OUT");

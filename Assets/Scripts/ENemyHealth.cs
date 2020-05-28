@@ -35,6 +35,10 @@ public class ENemyHealth : Health
     {
         anim = GetComponent<Animator>();
         currHealth = 10;
+        if (gameObject.tag == ("GreenEnemy"))
+        {
+            currHealth = 1; 
+        }
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<ESpawner>();
         scoreS = GameObject.FindGameObjectWithTag("Score").GetComponent<ScoreScript>();
         eSpawner = FindObjectOfType<ESpawner>();
@@ -64,9 +68,9 @@ public class ENemyHealth : Health
             if (gameObject.tag == "GreenEnemy")
             {
                 Damage.damage.playerHealth += 100;
-                Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
+                Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
                 Destroy(gameObject);
-                pewpew.RegainAmmo();
+                // pewpew.RegainAmmo();
             }
             eSpawner.enemyCount++;
             eSpawner.streakCount++;
@@ -81,7 +85,7 @@ public class ENemyHealth : Health
         }
         if (floatingTextPrefab)
         {
-            ShowFloatingText();
+            // ShowFloatingText();
         }
     }
 
