@@ -70,6 +70,7 @@ public class EnemyAttacking : FsmState {
         {
             atkTime = atkCooldown;
             Damage.damage.playerHealth -= Strength;
+            Audiomanager.audiomanager.Play("PlayerHurt");
             Damage.damage.PlayerDeath();
         }
     }

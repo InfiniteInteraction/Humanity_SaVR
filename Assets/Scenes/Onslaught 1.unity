@@ -1032,6 +1032,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicBox
       objectReference: {fileID: 0}
+    - target: {fileID: 6335388151973281768, guid: b9f27738febbc2348847a03271f6a798,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6335388151973281770, guid: b9f27738febbc2348847a03271f6a798,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1597,41 +1602,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: rolloffMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: MaxDistance
-      value: 110
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: BypassListenerEffects
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: MinDistance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
-        type: 3}
-      propertyPath: m_Volume
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55366906218081a4d8bc2436cce2d2f0, type: 3}
@@ -13992,7 +13962,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816460398}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63610ec476def4d4d88345ff68a6094a, type: 3}
   m_Name: 
@@ -25171,6 +25141,11 @@ PrefabInstance:
       propertyPath: Wavescreen
       value: 
       objectReference: {fileID: 345253916}
+    - target: {fileID: 7440456582641664188, guid: b362d0422897b20479a2b155f64e78c6,
+        type: 3}
+      propertyPath: Results
+      value: 
+      objectReference: {fileID: 323618514}
     - target: {fileID: 7440456582641664179, guid: b362d0422897b20479a2b155f64e78c6,
         type: 3}
       propertyPath: m_LocalPosition.x
