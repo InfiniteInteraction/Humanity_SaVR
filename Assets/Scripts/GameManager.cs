@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameManager gameManager;
+    public static GameManager gameManager;
     
     
 
