@@ -6,7 +6,7 @@ using UnityEngine.AI;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager gameManager;
+    public GameManager gameManager;
     
     
 
@@ -58,11 +58,13 @@ public class GameManager : MonoBehaviour
         //levelOver = false;
         if (gameManager != null)
         {
-            GameObject.Destroy(gameManager.gameObject);
+            Debug.LogError(gameManager + " Deleted");
+            Destroy(gameManager.gameObject);
         }
         else
         {
             gameManager = this;
+            Debug.LogError(gameManager);
             DontDestroyOnLoad(this);
         }
 
@@ -105,7 +107,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         eHealth = GameObject.FindObjectsOfType<ENemyHealth>();
-        waveName = ESpawner.eSpawner.waves.ToString();
+        if (Waves != null)
+        {
+            waveName = ESpawner.eSpawner.waves.ToString();
+        }
         //CalculateAccuracy();
         if (ScoreManager.scoreManager != null)
         {
