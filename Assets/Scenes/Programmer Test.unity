@@ -2606,14 +2606,14 @@ MonoBehaviour:
   - {fileID: 841008507}
   isWaveOver: 0
   playerHealth: {fileID: 0}
-  totalToSpawn: 15
+  totalToSpawn: 23
   enemyPrefab: {fileID: 8288587923413601841, guid: 206d13ea2ce7a544399dfb02575a0676,
     type: 3}
   enemyGreenPrefab: {fileID: 7338002616494147980, guid: 5fcba750deaf6f9429bf4e5f06c684bc,
     type: 3}
   streakCount: 0
   killCount: 0
-  killCountMax: 0
+  killCountMax: 10
   Wavescreen: {fileID: 200630388}
   Results: {fileID: 183938967}
   enemyCount: 0

@@ -13,6 +13,7 @@ public class PlayerHealth : Health
         if (other.tag == "RedEnemy")
         {
             TakeDamage(1);
+            ESpawner.eSpawner.streakCount = 0;
         }
     }
 
