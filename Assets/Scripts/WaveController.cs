@@ -9,8 +9,7 @@ public class WaveController : MonoBehaviour
 
 
     void Start()
-    {
-        
+    {       
         ESpawner.eSpawner.isWaveOver = false;
         WController = this;
     }

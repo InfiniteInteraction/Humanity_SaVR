@@ -58,13 +58,13 @@ public class GameManager : MonoBehaviour
         //levelOver = false;
         if (gameManager != null)
         {
-            Debug.LogError(gameManager + " Deleted");
+            //Debug.LogError(gameManager + " Deleted");
             Destroy(gameManager.gameObject);
         }
         else
         {
             gameManager = this;
-            Debug.LogError(gameManager);
+            //Debug.LogError(gameManager);
             DontDestroyOnLoad(this);
         }
 

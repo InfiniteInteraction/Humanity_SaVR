@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GunTestVR : MonoBehaviour
 {
@@ -39,7 +41,15 @@ public class GunTestVR : MonoBehaviour
     private void Awake()
     {
         green = GetComponentInChildren<ID_Green>().gameObject;
+        if (green == null)
+        {
+            Debug.Log("green in GunTestVR not found.");
+        }
         red = GetComponentInChildren<ID_Red>().gameObject;
+        if (red == null)
+        {
+            Debug.Log("red in GunTestVR not found.");
+        }
         greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         //greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         redPistolBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
@@ -50,6 +60,7 @@ public class GunTestVR : MonoBehaviour
         wheelSpin = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
+
     }
 
     void Start()
@@ -81,57 +92,60 @@ public class GunTestVR : MonoBehaviour
 
     void Update()
     {
-
-        if (gameObject.name.Equals("PlasmaRifleVR"))
+        string Actscene = FindObjectOfType<WeaponSwitch>().Actscene;
+        if (Actscene != "WeapSelect")
         {
-            if (rifleTrigger)
-                Timer();
-            float triggerPress;
-            triggerPress = OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
-            if (triggerPress >= 0.95f && !rifleTrigger)
+            if (gameObject.name.Equals("PlasmaRifleVR"))
             {
-                rifleTrigger = true;
-                StartCoroutine("RifleWheelGo");
-            }
-            if (triggerPress <= 0.05f && rifleTrigger)
-            {
-                rifleTrigger = false;
-                StartCoroutine("RifleWheelStop");
-            }
-        }
-        else
-        {
-            if (fullAutoMode)
-            {
-                if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && canShoot && currAmmo > 0)
+                if (rifleTrigger)
+                    Timer();
+                float triggerPress;
+                triggerPress = OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
+                if (triggerPress >= 0.95f && !rifleTrigger)
                 {
-                    StartCoroutine("AutoShot");
+                    rifleTrigger = true;
+                    StartCoroutine("RifleWheelGo");
+                }
+                if (triggerPress <= 0.05f && rifleTrigger)
+                {
+                    rifleTrigger = false;
+                    StartCoroutine("RifleWheelStop");
                 }
             }
             else
             {
-                if ((OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) && canShoot && currAmmo > 0)
+                if (fullAutoMode)
                 {
-                    StartCoroutine("OneShot");
-                    return;
+                    if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && canShoot && currAmmo > 0)
+                    {
+                        StartCoroutine("AutoShot");
+                    }
                 }
-                if ((OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) && !canShoot)
+                else
                 {
-                    canShoot = true;
-                    return;
-                }
+                    if ((OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) && canShoot && currAmmo > 0)
+                    {
+                        StartCoroutine("OneShot");
+                        return;
+                    }
+                    if ((OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) && !canShoot)
+                    {
+                        canShoot = true;
+                        return;
+                    }
 
+                }
             }
-        }
 
-        if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && currAmmo <= 0)
-        {
-            Debug.Log("Out of Ammo");
-        }
+            if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && currAmmo <= 0)
+            {
+                Debug.Log("Out of Ammo");
+            }
 
-        if (OVRInput.GetDown(OVRInput.RawButton.Y))
-        {
-            SwitchBullets();
+            if (OVRInput.GetDown(OVRInput.RawButton.Y))
+            {
+                SwitchBullets();
+            }
         }
         //if (OVRInput.GetDown(OVRInput.RawButton.X))
         //{
