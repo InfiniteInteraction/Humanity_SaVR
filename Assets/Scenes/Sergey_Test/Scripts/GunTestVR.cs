@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class GunTestVR : MonoBehaviour
 {
+    public static GunTestVR gunTestVR;
+
     public Transform spawnPoint; //Point the raycast will originate from
     public LayerMask layerMask; //The layer mask that detects enemy
     public float damageValue = 0;
