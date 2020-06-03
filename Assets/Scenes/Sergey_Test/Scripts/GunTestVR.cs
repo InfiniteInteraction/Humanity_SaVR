@@ -42,6 +42,7 @@ public class GunTestVR : MonoBehaviour
 
     private void Awake()
     {
+        gunTestVR = this;
         green = GetComponentInChildren<ID_Green>().gameObject;
         if (green == null)
         {
@@ -62,7 +63,7 @@ public class GunTestVR : MonoBehaviour
         wheelSpin = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
-
+        
     }
 
     void Start()
@@ -165,7 +166,7 @@ public class GunTestVR : MonoBehaviour
 
     public void RegainAmmo()
     {
-        currAmmo += ammoReturn;
+        currAmmo = maxAmmo;
         currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
         ammoChanged = true;
     }
