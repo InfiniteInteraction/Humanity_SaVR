@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -28,6 +29,13 @@ public class GameManager : MonoBehaviour
     public int waveNumber = 1;
     public int CTime;
     public float eSpeed = 3.5f;
+    public TextMeshProUGUI waveScore;
+    public TextMeshProUGUI waveScore2;
+    public TextMeshProUGUI waveScore3;
+    public TextMeshProUGUI waveScore4;
+    public TextMeshProUGUI waveScore5;
+    public TextMeshProUGUI waveScore6;
+    public int saveWave = 1;
     #endregion
 
     // private varibles not access by other classes
@@ -90,6 +98,12 @@ public class GameManager : MonoBehaviour
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 20;
+        waveScore.text = "Wave 1 Highscore " + PlayerPrefs.GetInt("Wave1", 0).ToString();
+        waveScore2.text = "Wave 2 Highscore " + PlayerPrefs.GetInt("Wave2", 0).ToString();
+        waveScore3.text = "Wave 3 Highscore " + PlayerPrefs.GetInt("Wave3", 0).ToString();
+        waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
+        waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
+        waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
 
     }
 
@@ -106,6 +120,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey(KeyCode.O))
+        {
+            PlayerPrefs.DeleteAll();
+        }
         eHealth = GameObject.FindObjectsOfType<ENemyHealth>();
         if (Waves != null)
         {
@@ -116,6 +134,12 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
+        waveScore.text = "Wave 1 Highscore " + PlayerPrefs.GetInt("Wave1", 0).ToString();
+        waveScore2.text = "Wave 2 Highscore " + PlayerPrefs.GetInt("Wave2", 0).ToString();
+        waveScore3.text = "Wave 3 Highscore " + PlayerPrefs.GetInt("Wave3", 0).ToString();
+        waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
+        waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
+        waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
     } 
 
     public void BulletMisses()

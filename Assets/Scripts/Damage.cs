@@ -16,6 +16,7 @@ public class Damage : MonoBehaviour
     }
     public void Update()
     {
+        Mathf.Clamp(playerHealth, 0, 100);
         if (Input.GetKeyDown(KeyCode.L))
         {           
             Debug.Log("points");            

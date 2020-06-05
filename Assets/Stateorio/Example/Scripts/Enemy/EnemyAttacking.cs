@@ -63,7 +63,7 @@ public class EnemyAttacking : FsmState {
         atkTime -= Time.deltaTime;
         //agent.isStopped = true;
         yellowMat = redMat;
-        agent.SetDestination(place);
+        
         GetComponent<Animator>().SetBool("isAttacking", true);
         GetComponent<Animator>().SetBool("isMoving", false);
         if((atkTime -=Time.deltaTime) <= 0)

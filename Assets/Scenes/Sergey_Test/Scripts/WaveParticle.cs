@@ -16,7 +16,7 @@ public class WaveParticle : MonoBehaviour
     {
         speed += Time.deltaTime;
         var main = ps.main;
-        main.startSpeed = speed * 50f;
-        main.simulationSpeed = speed * 3f;
+        //main.startSpeed = speed * 50f;
+        //main.simulationSpeed = speed * 3f;
     }
 }

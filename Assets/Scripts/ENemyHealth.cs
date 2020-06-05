@@ -111,7 +111,7 @@ public class ENemyHealth : Health
         bulletType = collision.collider.gameObject;
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
         {
-            TakeDamage(5);
+            TakeDamage(51);
             enemyHit = true;
         }
         else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")
@@ -134,10 +134,10 @@ public class ENemyHealth : Health
         {
             Damage.damage.playerHealth -= 1;
             greenHit++;
-            if(greenHit == 3)
+            if(greenHit >= 3)
             {
 
-                Damage.damage.playerHealth = 0;
+                Damage.damage.PlayerDeath();
 
             }
 

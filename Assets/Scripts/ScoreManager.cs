@@ -14,17 +14,17 @@ public class ScoreManager : MonoBehaviour
     const float version = 1.1f;
     public static ScoreManager scoreManager;
     public static PlayerScore data = new PlayerScore(version);
-    public int currLvl; //The index for the current level thwe player is on //Replace Scene Manager with Strings to call specific Wave 
+    public int currWave; //The index for the current level thwe player is on //Replace Scene Manager with Strings to call specific Wave 
     public int currScore; // The current score that is displayed to the player
     public TextMeshProUGUI hsText;
     public int[] _highScores;
-    private int sceneCount = 0;
+    private int waveCount = 0;
     void Awake()
     {
 
         scoreManager = this;
-        sceneCount = SceneManager.sceneCountInBuildSettings;
-        currLvl = SceneManager.GetActiveScene().buildIndex;
+        waveCount = GameManager.gameManager.waveNumber;
+        currWave = ESpawner.eSpawner.waves;
         InitializeHighScores();
         Load();
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            hsText.text = "HighScore: " + _highScores[currLvl].ToString();
+            hsText.text = "HighScore: " + _highScores[currWave].ToString();
         }
     }
 
@@ -45,8 +45,8 @@ public class ScoreManager : MonoBehaviour
     }
     public void InitializeHighScores()
     {
-        _highScores = new int[scoreManager.sceneCount];
-        for (int i = 0; i < scoreManager.sceneCount; ++i)
+        _highScores = new int[scoreManager.waveCount];
+        for (int i = 0; i < scoreManager.waveCount; ++i)
         {
             _highScores[i] = 0;
 
@@ -94,7 +94,7 @@ public class ScoreManager : MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/scores.game");
 
-        data.scores = new int[scoreManager.sceneCount];
+        data.scores = new int[scoreManager.waveCount];
         data.scores = _highScores;
 
         formatter.Serialize(file, data);
@@ -132,17 +132,17 @@ public class ScoreManager : MonoBehaviour
     }
     public void LoadLevel(int sceneIndex)
     {
-        currLvl = sceneIndex;
-        if (currLvl >= scoreManager.sceneCount)
+        currWave = sceneIndex;
+        if (currWave >= scoreManager.waveCount)
         {
-            currLvl = 0;
+            currWave = 0;
         }
-        SceneManager.LoadScene(currLvl);
+       
     }
     public void LoadNextLevel()
     {
-        int sceneIndex = ++currLvl;
-        if (currLvl > scoreManager.sceneCount)
+        int sceneIndex = ++currWave;
+        if (currWave > scoreManager.waveCount)
         {
             LoadLevel(0);
         }
@@ -159,18 +159,18 @@ public class ScoreManager : MonoBehaviour
     {
         CheckHighScore(_currLvl.buildIndex);
         Save();
-        currLvl = _currLvl.buildIndex;
+        currWave = _currLvl.buildIndex;
         ResetCurrentScore();
     }
     public void CheckHighScore(int nextLevel)
     {
-        if (currLvl <= scoreManager.sceneCount)
+        if (currWave <= scoreManager.waveCount)
         {
-            if (currLvl != nextLevel)
+            if (currWave != nextLevel)
             {
-                if (_highScores[currLvl] < currScore)
+                if (_highScores[currWave] < currScore)
                 {
-                    _highScores[currLvl] = currScore;
+                    _highScores[currWave] = currScore;
                 }
             }
         }

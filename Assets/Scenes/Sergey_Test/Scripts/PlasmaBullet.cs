@@ -82,7 +82,11 @@ public class PlasmaBullet : MonoBehaviour
         if (rb)
         {
             rb.AddForce(transform.right * -150);
-            StartCoroutine("Countdown");
+            if(gameObject.tag == "PR")
+            {
+
+            }
+            //StartCoroutine("Countdown");
         }
     }
 
@@ -121,13 +125,14 @@ public class PlasmaBullet : MonoBehaviour
         }
         else
         {
-            GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
-            Debug.Log(splash);
-            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity); 
+
+            //GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
+            //Debug.Log(splash);
+            ////Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity); 
         }
         collisionPos = null;
         Debug.Log("TIMED OUT");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     IEnumerator RecalculateAccuracy()

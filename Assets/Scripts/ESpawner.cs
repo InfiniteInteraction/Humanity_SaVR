@@ -125,7 +125,7 @@ public class ESpawner : MonoBehaviour
         if(totalToSpawn <= 0)
         {
             CancelInvoke("DoSpawn");
-            if (enemyCount == enemiesNeeded)
+            if (enemyCount == enemiesNeeded && GameManager.gameManager.eHealth.Length == 0)
             {
                 WaveController.WController.WaveComplete();
                 enemyCount += 1;
