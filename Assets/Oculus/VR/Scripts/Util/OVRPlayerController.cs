@@ -276,7 +276,7 @@ public class OVRPlayerController : MonoBehaviour
 			CameraUpdated();
 		}
 
-		UpdateMovement();
+		//UpdateMovement();
 
 		Vector3 moveDirection = Vector3.zero;
 
