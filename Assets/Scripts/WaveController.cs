@@ -82,6 +82,47 @@ public class WaveController : MonoBehaviour
                 Debug.LogError("Overwrite");
             }
         }
+        if (GameManager.gameManager.saveWave == 7)
+        {
+
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave7", 0))
+            {
+                PlayerPrefs.SetInt("Wave7", GameManager.gameManager.score);
+                PlayerPrefs.Save();
+                Debug.LogError("Overwrite");
+            }
+        }
+        if (GameManager.gameManager.saveWave == 8)
+        {
+
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave8", 0))
+            {
+                PlayerPrefs.SetInt("Wave8", GameManager.gameManager.score);
+                PlayerPrefs.Save();
+                Debug.LogError("Overwrite");
+            }
+        }
+        if (GameManager.gameManager.saveWave == 9)
+        {
+
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave9", 0))
+            {
+                PlayerPrefs.SetInt("Wave9", GameManager.gameManager.score);
+                PlayerPrefs.Save();
+                Debug.LogError("Overwrite");
+            }
+        }
+        if (GameManager.gameManager.saveWave == 10)
+        {
+
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave10", 0))
+            {
+                PlayerPrefs.SetInt("Wave10", GameManager.gameManager.score);
+                PlayerPrefs.Save();
+                Debug.LogError("Overwrite");
+            }
+        }
+
         GameManager.gameManager.saveWave += 1;
         if (ESpawner.eSpawner.isWaveOver == true)
         {

@@ -35,6 +35,10 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI waveScore4;
     public TextMeshProUGUI waveScore5;
     public TextMeshProUGUI waveScore6;
+    public TextMeshProUGUI waveScore7;
+    public TextMeshProUGUI waveScore8;
+    public TextMeshProUGUI waveScore9;
+    public TextMeshProUGUI waveScore10;
     public int saveWave = 1;
     #endregion
 
@@ -104,6 +108,10 @@ public class GameManager : MonoBehaviour
         waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
         waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
         waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
+        waveScore7.text = "Wave 7 Highscore " + PlayerPrefs.GetInt("Wave7", 0).ToString();
+        waveScore8.text = "Wave 8 Highscore " + PlayerPrefs.GetInt("Wave8", 0).ToString();
+        waveScore9.text = "Wave 9 Highscore " + PlayerPrefs.GetInt("Wave9", 0).ToString();
+        waveScore10.text = "Wave 10 Highscore " + PlayerPrefs.GetInt("Wave10", 0).ToString();
 
     }
 
@@ -140,6 +148,10 @@ public class GameManager : MonoBehaviour
         waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
         waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
         waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
+        waveScore7.text = "Wave 7 Highscore " + PlayerPrefs.GetInt("Wave7", 0).ToString();
+        waveScore8.text = "Wave 8 Highscore " + PlayerPrefs.GetInt("Wave8", 0).ToString();
+        waveScore9.text = "Wave 9 Highscore " + PlayerPrefs.GetInt("Wave9", 0).ToString();
+        waveScore10.text = "Wave 10 Highscore " + PlayerPrefs.GetInt("Wave10", 0).ToString();
     } 
 
     public void BulletMisses()
