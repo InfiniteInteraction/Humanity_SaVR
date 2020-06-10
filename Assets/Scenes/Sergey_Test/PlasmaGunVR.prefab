@@ -39504,7 +39504,7 @@ MonoBehaviour:
   rifleCharging: 0
   emissiveObjects: []
   wheelSpin: {fileID: 0}
-  WeapIcon: {fileID: 0}
+  WeapIcon: {fileID: 21300000, guid: 9961fe39967da7c48b05d680af510b28, type: 3}
 --- !u!1 &7331447806194845631
 GameObject:
   m_ObjectHideFlags: 0

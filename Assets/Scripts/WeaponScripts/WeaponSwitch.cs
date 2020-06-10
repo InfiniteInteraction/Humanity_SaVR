@@ -11,7 +11,7 @@ public class WeaponSwitch : MonoBehaviour
     public List<GameObject> AvailableWeapons = new List<GameObject>();
     public string CurrentWeapon;
     public int WeaponPlace = 0;
-    public List<KeyCode> NumKeys = new List<KeyCode>()
+    [HideInInspector] public List<KeyCode> NumKeys = new List<KeyCode>()
     {
         KeyCode.Alpha1,
         KeyCode.Alpha2,

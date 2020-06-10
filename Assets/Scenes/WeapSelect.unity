@@ -601,7 +601,7 @@ PrefabInstance:
     - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
       propertyPath: Pistol
       value: 
-      objectReference: {fileID: 1700595242543221690, guid: f83bdc636b54fa24db83b9afd674db15,
+      objectReference: {fileID: 6835955310380247970, guid: 81ca413c343e00c4ba591cda0473b0d1,
         type: 3}
     - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
       propertyPath: LoadoutWeapons.Array.data[0]
@@ -16441,7 +16441,7 @@ MonoBehaviour:
   - {fileID: 448675683}
   - {fileID: 344961757}
   PistolChoices:
-  - {fileID: 1700595242543221690, guid: f83bdc636b54fa24db83b9afd674db15, type: 3}
+  - {fileID: 6835955310380247970, guid: 81ca413c343e00c4ba591cda0473b0d1, type: 3}
   - {fileID: 6023585015678628646, guid: 1be38a55cf9f20246b011abe0e22fb9a, type: 3}
   - {fileID: 1690350191487913430, guid: cf9907ef598151746aa01edb9e5fbae7, type: 3}
   PChoiImages:
