@@ -102,16 +102,16 @@ public class GameManager : MonoBehaviour
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 20;
-        waveScore.text = "Wave 1 Highscore " + PlayerPrefs.GetInt("Wave1", 0).ToString();
-        waveScore2.text = "Wave 2 Highscore " + PlayerPrefs.GetInt("Wave2", 0).ToString();
-        waveScore3.text = "Wave 3 Highscore " + PlayerPrefs.GetInt("Wave3", 0).ToString();
-        waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
-        waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
-        waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
-        waveScore7.text = "Wave 7 Highscore " + PlayerPrefs.GetInt("Wave7", 0).ToString();
-        waveScore8.text = "Wave 8 Highscore " + PlayerPrefs.GetInt("Wave8", 0).ToString();
-        waveScore9.text = "Wave 9 Highscore " + PlayerPrefs.GetInt("Wave9", 0).ToString();
-        waveScore10.text = "Wave 10 Highscore " + PlayerPrefs.GetInt("Wave10", 0).ToString();
+        waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
+        waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
+        waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
+        waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
+        waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
+        waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
+        waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
+        waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
+        waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
+        waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
 
     }
 
@@ -142,16 +142,16 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
-        waveScore.text = "Wave 1 Highscore " + PlayerPrefs.GetInt("Wave1", 0).ToString();
-        waveScore2.text = "Wave 2 Highscore " + PlayerPrefs.GetInt("Wave2", 0).ToString();
-        waveScore3.text = "Wave 3 Highscore " + PlayerPrefs.GetInt("Wave3", 0).ToString();
-        waveScore4.text = "Wave 4 Highscore " + PlayerPrefs.GetInt("Wave4", 0).ToString();
-        waveScore5.text = "Wave 5 Highscore " + PlayerPrefs.GetInt("Wave5", 0).ToString();
-        waveScore6.text = "Wave 6 Highscore " + PlayerPrefs.GetInt("Wave6", 0).ToString();
-        waveScore7.text = "Wave 7 Highscore " + PlayerPrefs.GetInt("Wave7", 0).ToString();
-        waveScore8.text = "Wave 8 Highscore " + PlayerPrefs.GetInt("Wave8", 0).ToString();
-        waveScore9.text = "Wave 9 Highscore " + PlayerPrefs.GetInt("Wave9", 0).ToString();
-        waveScore10.text = "Wave 10 Highscore " + PlayerPrefs.GetInt("Wave10", 0).ToString();
+        waveScore.text =   PlayerPrefs.GetInt("Wave1", 0).ToString();
+        waveScore2.text =  PlayerPrefs.GetInt("Wave2", 0).ToString();
+        waveScore3.text =  PlayerPrefs.GetInt("Wave3", 0).ToString();
+        waveScore4.text =  PlayerPrefs.GetInt("Wave4", 0).ToString();
+        waveScore5.text =  PlayerPrefs.GetInt("Wave5", 0).ToString();
+        waveScore6.text =  PlayerPrefs.GetInt("Wave6", 0).ToString();
+        waveScore7.text =  PlayerPrefs.GetInt("Wave7", 0).ToString();
+        waveScore8.text =  PlayerPrefs.GetInt("Wave8", 0).ToString();
+        waveScore9.text =  PlayerPrefs.GetInt("Wave9", 0).ToString();
+        waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
     } 
 
     public void BulletMisses()
@@ -180,7 +180,7 @@ public class GameManager : MonoBehaviour
             stars[2].SetActive(true);
             stars[3].SetActive(true);
             stars[4].SetActive(true);
-            Debug.Log("5 star rating");
+            Debug.LogError("5 star rating");
 
         }
         else if (accuracy >= 59 && score >= 101200 && greenDeaths >= 98)
@@ -190,7 +190,7 @@ public class GameManager : MonoBehaviour
             stars[1].SetActive(true);
             stars[2].SetActive(true);
             stars[3].SetActive(true);
-            Debug.Log("4 star rating");
+            Debug.LogError("4 star rating");
 
         }
         else if (accuracy >= 39 && score >= 75900 && greenDeaths >= 73)
@@ -199,7 +199,7 @@ public class GameManager : MonoBehaviour
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             stars[2].SetActive(true);
-            Debug.Log("3 star rating");
+            Debug.LogError("3 star rating");
 
         }
         else if (accuracy >= 19 && score >= 50600 && greenDeaths >= 49)
@@ -207,13 +207,19 @@ public class GameManager : MonoBehaviour
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
             stars[1].SetActive(true);
-            Debug.Log("2 star rating");
+            Debug.LogError("2 star rating");
         }
         else
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
-            Debug.Log("1 star rating");
+            stars[1].SetActive(false);
+            stars[2].SetActive(false);
+            stars[3].SetActive(false);
+            stars[4].SetActive(false);
+
+
+            Debug.LogError("1 star rating");
         }
     }
 

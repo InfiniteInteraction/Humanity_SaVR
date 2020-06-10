@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
     const float version = 1.1f;
     public static ScoreManager scoreManager;
     public static PlayerScore data = new PlayerScore(version);
-    public int currWave; //The index for the current level thwe player is on //Replace Scene Manager with Strings to call specific Wave 
+    public int currLvl; //The index for the current level thwe player is on //Replace Scene Manager with Strings to call specific Wave 
     public int currScore; // The current score that is displayed to the player
     public TextMeshProUGUI hsText;
     public int[] _highScores;
@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
 
         scoreManager = this;
         waveCount = GameManager.gameManager.waveNumber;
-        currWave = ESpawner.eSpawner.waves;
+        currLvl = SceneManager.sceneCount;
         InitializeHighScores();
         Load();
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            hsText.text = "HighScore: " + _highScores[currWave].ToString();
+            hsText.text = "HighScore: " + _highScores[currLvl].ToString();
         }
     }
 
@@ -132,17 +132,17 @@ public class ScoreManager : MonoBehaviour
     }
     public void LoadLevel(int sceneIndex)
     {
-        currWave = sceneIndex;
-        if (currWave >= scoreManager.waveCount)
+        currLvl = sceneIndex;
+        if (currLvl >= scoreManager.waveCount)
         {
-            currWave = 0;
+            currLvl = 0;
         }
        
     }
     public void LoadNextLevel()
     {
-        int sceneIndex = ++currWave;
-        if (currWave > scoreManager.waveCount)
+        int sceneIndex = ++currLvl;
+        if (currLvl > scoreManager.waveCount)
         {
             LoadLevel(0);
         }
@@ -159,18 +159,18 @@ public class ScoreManager : MonoBehaviour
     {
         CheckHighScore(_currLvl.buildIndex);
         Save();
-        currWave = _currLvl.buildIndex;
+        currLvl = _currLvl.buildIndex;
         ResetCurrentScore();
     }
     public void CheckHighScore(int nextLevel)
     {
-        if (currWave <= scoreManager.waveCount)
+        if (currLvl <= scoreManager.waveCount)
         {
-            if (currWave != nextLevel)
+            if (currLvl != nextLevel)
             {
-                if (_highScores[currWave] < currScore)
+                if (_highScores[currLvl] < currScore)
                 {
-                    _highScores[currWave] = currScore;
+                    _highScores[currLvl] = currScore;
                 }
             }
         }

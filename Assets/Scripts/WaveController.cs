@@ -29,7 +29,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave1", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 2)
@@ -39,7 +39,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave2", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+                
             }
         }
         if (GameManager.gameManager.saveWave == 3)
@@ -49,7 +49,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave3", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 4)
@@ -59,7 +59,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave4", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 5)
@@ -69,7 +69,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave5", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 6)
@@ -79,7 +79,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave6", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 7)
@@ -89,7 +89,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave7", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 8)
@@ -99,7 +99,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave8", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+              
             }
         }
         if (GameManager.gameManager.saveWave == 9)
@@ -109,7 +109,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave9", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+               
             }
         }
         if (GameManager.gameManager.saveWave == 10)
@@ -119,7 +119,7 @@ public class WaveController : MonoBehaviour
             {
                 PlayerPrefs.SetInt("Wave10", GameManager.gameManager.score);
                 PlayerPrefs.Save();
-                Debug.LogError("Overwrite");
+                
             }
         }
 
