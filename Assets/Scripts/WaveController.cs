@@ -4,6 +4,7 @@ public class WaveController : MonoBehaviour
 {
     public static WaveController WController;
     public int eSpeedup = 1;
+    
 
 
 
@@ -130,7 +131,6 @@ public class WaveController : MonoBehaviour
            ESpawner.eSpawner.isWaveOver = false;
                       
         }
-        
    }
 
     public void NextWave()
