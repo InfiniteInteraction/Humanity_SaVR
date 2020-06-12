@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 2544132938618068348}
   - component: {fileID: 4026557815268146482}
   m_Layer: 0
-  m_Name: musket_DuskSky
+  m_Name: Musket_DuskSky
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -312,7 +312,7 @@ MonoBehaviour:
   spawnPoint: {fileID: 0}
   layerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   damageValue: 0
   currAmmo: 10
   maxAmmo: 20
