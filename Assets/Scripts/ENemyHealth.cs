@@ -80,7 +80,7 @@ public class ENemyHealth : Health
             GameManager.gameManager.hits++;
             eSpawner.SpawnGreen();
             CallMulti();
-            DeathEffect();
+            //DeathEffect();
             Destroy(gameObject);
         }
         if (floatingTextPrefab)
