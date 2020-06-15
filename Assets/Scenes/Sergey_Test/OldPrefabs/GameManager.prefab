@@ -49,11 +49,28 @@ MonoBehaviour:
   accuracy: 0
   shotsFired: 0
   hits: 0
-  Waves: {fileID: 7440456582641664188, guid: b362d0422897b20479a2b155f64e78c6, type: 3}
-  waveScreen: {fileID: 8886087254668463251, guid: 3a1fc961c48951b419d84ac527e9ad4c,
-    type: 3}
+  Waves: {fileID: 0}
+  waveScreen: {fileID: 0}
+  waveName: 
+  enemyATK: 0
+  enemyATKTime: 0
+  enemyATKCooldown: 0
+  eHealth: []
   waveNumber: 1
+  CTime: 0
   eSpeed: 3.5
+  waveScore: {fileID: 0}
+  waveScore2: {fileID: 0}
+  waveScore3: {fileID: 0}
+  waveScore4: {fileID: 0}
+  waveScore5: {fileID: 0}
+  waveScore6: {fileID: 0}
+  waveScore7: {fileID: 0}
+  waveScore8: {fileID: 0}
+  waveScore9: {fileID: 0}
+  waveScore10: {fileID: 0}
+  saveWave: 1
+  gHitCount: 0
   score: 0
   stars:
   - {fileID: 0}
@@ -61,8 +78,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  resultsBackground: {fileID: 2441016557954822069, guid: 5bee8098eca43a645b98466fe4952033,
-    type: 3}
+  resultsBackground: {fileID: 0}
   ehealth: {fileID: 0}
   pD1: 0
   pD2: 0
@@ -99,9 +115,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Pistol: {fileID: 6835955310380247970, guid: 81ca413c343e00c4ba591cda0473b0d1, type: 3}
   LoadoutWeapons:
-  - {fileID: 6023585015678628646, guid: 1be38a55cf9f20246b011abe0e22fb9a, type: 3}
   - {fileID: 800109368108189773, guid: 65e7c5f37a8cd1143bdde29caf961aca, type: 3}
+  - {fileID: 6023585015678628646, guid: 1be38a55cf9f20246b011abe0e22fb9a, type: 3}
   AvailableWeapons: []
   CurrentWeapon: 
   WeaponPlace: 0
   NumKeys: 310000003200000033000000
+  WeapSelector: {fileID: 0}
+  Actscene: 
