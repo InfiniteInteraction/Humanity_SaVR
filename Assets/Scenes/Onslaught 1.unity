@@ -3292,6 +3292,12 @@ Transform:
   m_Father: {fileID: 1622895987}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &434983469 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8535429530934010303, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1261550717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &468554158 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 168962, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -9989,6 +9995,43 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 434983469}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: currAmmo
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: redBullet
+      value: 
+      objectReference: {fileID: 1418517321614710428, guid: b3100299a8112bd4c9210b21555e5890,
+        type: 3}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: WeapIcon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206656171603767640, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: greenBullet
+      value: 
+      objectReference: {fileID: 1418517321614710428, guid: 3a41b7a6fb174014eab1e8377843ae8c,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 430123011550259630, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -10038,6 +10081,9 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 0}
+  greenBullet: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 0}
@@ -29711,6 +29757,18 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSizeBase
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 201660400, guid: 5bee8098eca43a645b98466fe4952033, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1632119978, guid: 5bee8098eca43a645b98466fe4952033, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025255622, guid: 5bee8098eca43a645b98466fe4952033, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bee8098eca43a645b98466fe4952033, type: 3}

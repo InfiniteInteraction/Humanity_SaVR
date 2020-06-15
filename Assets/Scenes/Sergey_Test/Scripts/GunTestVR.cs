@@ -26,8 +26,14 @@ public class GunTestVR : MonoBehaviour
     public float semiAutoTime = 0;
     public float rifleCharging;
 
+    public bool isGreenFireMode;
+    public GameObject redBullet;
+    public GameObject greenBullet;
+
     GameObject green;
     GameObject red;
+    GameObject redRailgunBullet;
+    GameObject greenRailgunBullet;
     GameObject greenPistolBullet;
     GameObject redPistolBullet;
     GameObject greenRifleBullet;
@@ -59,6 +65,10 @@ public class GunTestVR : MonoBehaviour
         //redPistolBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
         greenRifleBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
         redRifleBullet = Resources.Load(("Prefabs/RedRifleBullet"), typeof(GameObject)) as GameObject;
+        //redRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
+        redRailgunBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
+        //greenRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
+        greenRailgunBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         fullAutoTime = 0.1f;
         wheelSpin = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -95,6 +105,12 @@ public class GunTestVR : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            WeaponShoot();
+        }
+
+
         string Actscene = FindObjectOfType<WeaponSwitch>().Actscene;
         if (Actscene != "WeapSelect")
         {
@@ -234,6 +250,23 @@ public class GunTestVR : MonoBehaviour
         }
     }
 
+    void WeaponShoot()
+    {
+        //Replace everything calling Shoot function with WeaponShoot
+        if (isGreenFireMode)
+        {
+            Instantiate(greenBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+
+        }
+        else
+        {
+            Instantiate(redBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+        }
+        //TODO Add audio sound effect
+        ReduceAmmo();
+        //Set currTime to 0
+    }
+
     void Shoot()
     {
         RaycastHit hit;
@@ -298,6 +331,8 @@ public class GunTestVR : MonoBehaviour
             Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
             ReduceAmmo();
             Debug.Log("Did not Hit");
+
+            //RailgunBulletsStartHere
         }
         currTime = 0;
     }
