@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI waveScore9;
     public TextMeshProUGUI waveScore10;
     public int saveWave = 1;
+    public int gHitCount;
     #endregion
 
     // private varibles not access by other classes
@@ -102,17 +103,25 @@ public class GameManager : MonoBehaviour
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 20;
-        waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
-        waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
-        waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
-        waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
-        waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
-        waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
-        waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
-        waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
-        waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
-        waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
+        if (SceneManager.sceneCount == 3)
+        {
+            waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
+            waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
+            waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
+            waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
+            waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
+            waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
+            waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
+            waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
+            waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
+            waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
+        }
+        else
+        {
+            return;
+        }
 
+        gHitCount = 0;
     }
 
     public void PlayButtonReturn()
@@ -142,16 +151,21 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
-        waveScore.text =   PlayerPrefs.GetInt("Wave1", 0).ToString();
-        waveScore2.text =  PlayerPrefs.GetInt("Wave2", 0).ToString();
-        waveScore3.text =  PlayerPrefs.GetInt("Wave3", 0).ToString();
-        waveScore4.text =  PlayerPrefs.GetInt("Wave4", 0).ToString();
-        waveScore5.text =  PlayerPrefs.GetInt("Wave5", 0).ToString();
-        waveScore6.text =  PlayerPrefs.GetInt("Wave6", 0).ToString();
-        waveScore7.text =  PlayerPrefs.GetInt("Wave7", 0).ToString();
-        waveScore8.text =  PlayerPrefs.GetInt("Wave8", 0).ToString();
-        waveScore9.text =  PlayerPrefs.GetInt("Wave9", 0).ToString();
+        waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
+        waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
+        waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
+        waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
+        waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
+        waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
+        waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
+        waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
+        waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
         waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
+        if (gHitCount == 3)
+        {
+
+            Damage.damage.playerHealth = 0;
+        }
     } 
 
     public void BulletMisses()
@@ -172,7 +186,7 @@ public class GameManager : MonoBehaviour
     public void StarCalculation()
     {
         CalculateAccuracy();
-        if (accuracy >= 79 && score >= 126500 && greenDeaths >= 122)
+        if (accuracy >= 79 && score >= 38161 && greenDeaths >= 35)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -183,30 +197,37 @@ public class GameManager : MonoBehaviour
             Debug.LogError("5 star rating");
 
         }
-        else if (accuracy >= 59 && score >= 101200 && greenDeaths >= 98)
+        else if (accuracy >= 59 && score >= 28621 && greenDeaths >= 28)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             stars[2].SetActive(true);
             stars[3].SetActive(true);
+            stars[4].SetActive(false);
+
             Debug.LogError("4 star rating");
 
         }
-        else if (accuracy >= 39 && score >= 75900 && greenDeaths >= 73)
+        else if (accuracy >= 35 && score >= 19081 && greenDeaths >= 21)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
             stars[1].SetActive(true);
             stars[2].SetActive(true);
+            stars[3].SetActive(false);
+            stars[4].SetActive(false);
             Debug.LogError("3 star rating");
 
         }
-        else if (accuracy >= 19 && score >= 50600 && greenDeaths >= 49)
+        else if (accuracy >= 15 && score >= 9541 && greenDeaths >= 14)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
             stars[1].SetActive(true);
+            stars[2].SetActive(false);
+            stars[3].SetActive(false);
+            stars[4].SetActive(false);
             Debug.LogError("2 star rating");
         }
         else
@@ -260,6 +281,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                enemyATK = 1;
+                enemyATKCooldown = 2;
                 break;
             case "3":
                 pD1 = 11;
@@ -270,9 +293,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 16;
-                enemyATK = 1;
-                enemyATKCooldown = 5;
+                CTime = 14;
+               
                 break;
             case "4":
                 pD1 = 11;
@@ -283,6 +305,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 13;
                 break;
             case "5":
                 pD1 = 11;
@@ -293,6 +316,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 12;
                 break;
             case "6":
                 pD1 = 11;
@@ -303,9 +327,9 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 12;
+                CTime = 10;
                 enemyATK = 2;
-                enemyATKCooldown = 3;
+                enemyATKCooldown = 2;
                 break;
             case "7":
                 pD1 = 11;
@@ -316,6 +340,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 9;
                 break;
             case "8":
                 pD1 = 11;
@@ -326,6 +351,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                CTime = 8;
                 break;
             case "9":
                 pD1 = 6;
@@ -337,7 +363,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 CTime = 6;
-                enemyATK = 3;
+                enemyATK = 2.5f;
                 enemyATKCooldown = 1;
                 break;
             
