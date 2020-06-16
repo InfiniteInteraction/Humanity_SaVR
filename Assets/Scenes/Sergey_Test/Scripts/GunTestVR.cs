@@ -343,14 +343,14 @@ public class GunTestVR : MonoBehaviour
 
     IEnumerator OneShot()
     {
-        Shoot();
+        WeaponShoot();
         canShoot = false;
         yield return new WaitForSeconds(0.01f);
     }
 
     IEnumerator AutoShot()
     {
-        Shoot();
+        WeaponShoot();
         canShoot = false;
         yield return new WaitForSeconds(0.1f);
         canShoot = true;
@@ -386,7 +386,7 @@ public class GunTestVR : MonoBehaviour
     IEnumerator RifleWheelStop()
     {
         if (rifleCharging >= 0.5f)
-            Shoot();
+            WeaponShoot();
         rifleCharging = 0;
         if (green.activeSelf)
         {
