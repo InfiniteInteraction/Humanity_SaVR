@@ -44,7 +44,7 @@ public class WeaponSwitch : MonoBehaviour
         {
 
 
-            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.RawButton.X))
+            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger))
             {
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
                 WeaponPlace++;

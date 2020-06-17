@@ -742,7 +742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &244088960
 Transform:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &289878034
 Transform:
   m_ObjectHideFlags: 0
@@ -6076,7 +6076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &354189931
 Transform:
   m_ObjectHideFlags: 0
@@ -10828,7 +10828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &382745418
 Transform:
   m_ObjectHideFlags: 0
@@ -11645,7 +11645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &554187840
 Transform:
   m_ObjectHideFlags: 0
@@ -19057,7 +19057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1504932149
 Transform:
   m_ObjectHideFlags: 0
@@ -23907,7 +23907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573241675
 Transform:
   m_ObjectHideFlags: 0
@@ -29283,6 +29283,9 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 0}
+  greenBullet: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 0}
@@ -29986,7 +29989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1919432247
 Transform:
   m_ObjectHideFlags: 0
@@ -34739,7 +34742,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1920099381
 Transform:
   m_ObjectHideFlags: 0
@@ -39673,7 +39676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2076754349
 Transform:
   m_ObjectHideFlags: 0
@@ -44578,6 +44581,9 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 0}
+  greenBullet: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 0}
