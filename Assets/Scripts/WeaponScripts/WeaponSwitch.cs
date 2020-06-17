@@ -7,7 +7,9 @@ using UnityEditor.SceneManagement;
 public class WeaponSwitch : MonoBehaviour
 {
     public GameObject Pistol;
+    [HideInInspector] public GameObject CurrPistol;
     public List<GameObject> LoadoutWeapons;
+    [HideInInspector] public List<GameObject> CurrLoad;
     public List<GameObject> AvailableWeapons = new List<GameObject>();
     public string CurrentWeapon;
     public int WeaponPlace = 0;
@@ -21,16 +23,20 @@ public class WeaponSwitch : MonoBehaviour
     public GameObject WeapSelector;
     public string Actscene;
 
-    public void Start()
+    public void Awake()
     {
-        AvailableWeapons.Add(Pistol);
-        AvailableWeapons.Add(LoadoutWeapons[0]);
-        AvailableWeapons.Add(LoadoutWeapons[1]);
-
-        CurrentWeapon = AvailableWeapons[0].name;
-        AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
-            
-        //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
+        SetWeap();
+    }   
+    public void SetWeap()
+    {
+        CurrPistol = Pistol;
+        for (int i = 0; i < LoadoutWeapons.Count; i++)
+        {
+            if (!CurrLoad.Contains(LoadoutWeapons[i]))
+            {
+                CurrLoad.Add(LoadoutWeapons[i]);
+            }
+        }
     }
     public void Update()
     {
@@ -98,6 +104,7 @@ public class WeaponSwitch : MonoBehaviour
 
     public void Swap()
     {
+        //SetWeap();
         AvailableWeapons.Clear();
         AvailableWeapons.Add(Pistol);
         AvailableWeapons.Add(LoadoutWeapons[0]);

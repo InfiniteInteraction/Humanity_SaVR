@@ -17,13 +17,12 @@ public class WeaponHolder : MonoBehaviour
     }
 
     public void WeapLoad()
-    {
-        
+    {        
         WGM = GameManager.gameManager.GetComponent<WeaponSwitch>();
 
         foreach (GameObject Gun in Weapons)
         {
-            string PName = WGM.Pistol.name;
+            string PName = WGM.CurrPistol.name;
             if (Gun.name == PName)
             {
                 WGM.Pistol = Gun;
@@ -31,9 +30,9 @@ public class WeaponHolder : MonoBehaviour
 
             foreach (GameObject LoadoutGun in Weapons)
             {
-                for (int i = 0; i < WGM.LoadoutWeapons.Count; i++)
+                for (int i = 0; i < WGM.CurrLoad.Count; i++)
                 {
-                    string WName = WGM.LoadoutWeapons[i].name;
+                    string WName = WGM.CurrLoad[i].name;
                     if (LoadoutGun.name == WName)
                     {
                         WGM.LoadoutWeapons[i] = LoadoutGun;

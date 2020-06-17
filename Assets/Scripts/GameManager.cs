@@ -71,31 +71,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);     
         }
-
-        if (resultsBackground != null)
-        {
-            resultsBackground.SetActive(false);
-            Debug.Log("resultsBackground works");
-        }      
-      
-        ehealth = FindObjectOfType<ENemyHealth>();
-        if(ehealth == null)
-        {
-            Debug.Log("ehealth is null");
-        }
-
-        if (waveScreen != null)
-        {
-            waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
-        }
-
-        enemyATK = 1;
-        enemyATKCooldown = 4;
-        CTime = 20;
-
-        gHitCount = 0;
     }
-
     public void PlayButtonReturn()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -105,10 +81,9 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("OVRMenu");
     }
-
-
     void Update()
     {
+        Checks();
         if (SceneManager.sceneCount == 1)
         {
             WaveHolder WScore = FindObjectOfType<WaveHolder>();
@@ -348,6 +323,31 @@ public class GameManager : MonoBehaviour
                 break;
             
         }
+    }
+    public void Checks()
+    {
+        if (resultsBackground != null)
+        {
+            resultsBackground.SetActive(false);
+            Debug.Log("resultsBackground works");
+        }
+
+        ehealth = FindObjectOfType<ENemyHealth>();
+        if (ehealth == null)
+        {
+            Debug.Log("ehealth is null");
+        }
+        Waves = FindObjectOfType<ESpawner>();
+        if (Waves != null)
+        {
+            waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
+        }
+
+        enemyATK = 1;
+        enemyATKCooldown = 4;
+        CTime = 20;
+
+        gHitCount = 0;
     }
 }
     

@@ -82,7 +82,7 @@ public class WeaponSelect : MonoBehaviour
             //Debug.Log("Pistol selected " + PistolChoices[Click].name);
             Instantiate(PistolChoices[Click], GunSpawn);
             GM.Pistol = PistolChoices[Click];
-            
+            GM.CurrPistol = PistolChoices[Click];           
         }
         else
         {
@@ -90,6 +90,7 @@ public class WeaponSelect : MonoBehaviour
             //Debug.Log("AR selected " + ARChoices[Click].name);
             Instantiate(ARChoices[Click], GunSpawn);
             GM.LoadoutWeapons[SelectedSlot] = ARChoices[Click];
+            GM.CurrLoad[SelectedSlot] = ARChoices[Click];
             PrimSecIcon[SelectedSlot].sprite = ARChoices[Click].GetComponent<GunTestVR>().WeapIcon;
         }
         CurrUpdate();
