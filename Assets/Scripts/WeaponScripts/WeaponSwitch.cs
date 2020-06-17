@@ -29,11 +29,12 @@ public class WeaponSwitch : MonoBehaviour
 
         CurrentWeapon = AvailableWeapons[0].name;
         AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
-        Actscene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            
         //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
     }
     public void Update()
     {
+        Actscene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         if (Actscene == "WeapSelect")
         {
             AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
@@ -42,8 +43,6 @@ public class WeaponSwitch : MonoBehaviour
         }
         else
         {
-
-
             if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.Button.PrimaryHandTrigger))
             {
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(false);

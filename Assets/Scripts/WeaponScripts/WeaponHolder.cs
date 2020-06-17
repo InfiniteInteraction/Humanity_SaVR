@@ -13,30 +13,34 @@ public class WeaponHolder : MonoBehaviour
         {
             Weapons[i].SetActive(false);
         }
-        
-        WGM = FindObjectOfType<WeaponSwitch>();
+        WeapLoad();
+    }
 
-       foreach(GameObject Gun in Weapons)
-       {
+    public void WeapLoad()
+    {
+        
+        WGM = GameManager.gameManager.GetComponent<WeaponSwitch>();
+
+        foreach (GameObject Gun in Weapons)
+        {
             string PName = WGM.Pistol.name;
-            if(Gun.name == PName)
+            if (Gun.name == PName)
             {
                 WGM.Pistol = Gun;
             }
 
-            foreach(GameObject LoadoutGun in Weapons)
+            foreach (GameObject LoadoutGun in Weapons)
             {
                 for (int i = 0; i < WGM.LoadoutWeapons.Count; i++)
                 {
                     string WName = WGM.LoadoutWeapons[i].name;
-                    if(LoadoutGun.name == WName)
+                    if (LoadoutGun.name == WName)
                     {
                         WGM.LoadoutWeapons[i] = LoadoutGun;
                     }
                 }
-            }            
-       }
-
+            }
+        }
         WGM.Swap();
     }
 }

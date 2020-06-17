@@ -69,25 +69,23 @@ public class GameManager : MonoBehaviour
     {
         //gameManager = this;
         //levelOver = false;
-        if (gameManager != null)
+        if (gameManager == null)
         {
             //Debug.LogError(gameManager + " Deleted");
-            Destroy(gameManager.gameObject);
+            gameManager = this;
+            //Debug.LogError(gameManager);
+            DontDestroyOnLoad(gameManager.gameObject);
         }
         else
         {
-            gameManager = this;
-            //Debug.LogError(gameManager);
-            DontDestroyOnLoad(this);
+            Destroy(gameObject);     
         }
 
         if (resultsBackground != null)
         {
             resultsBackground.SetActive(false);
             Debug.Log("resultsBackground works");
-        }
-
-       
+        }      
       
         ehealth = FindObjectOfType<ENemyHealth>();
         if(ehealth == null)
@@ -103,23 +101,6 @@ public class GameManager : MonoBehaviour
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 20;
-        if (SceneManager.sceneCount == 3)
-        {
-            waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
-            waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
-            waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
-            waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
-            waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
-            waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
-            waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
-            waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
-            waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
-            waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
-        }
-        else
-        {
-            return;
-        }
 
         gHitCount = 0;
     }
@@ -137,6 +118,24 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        if (SceneManager.sceneCount == 1)
+        {
+            waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
+            waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
+            waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
+            waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
+            waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
+            waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
+            waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
+            waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
+            waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
+            waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
+        }
+        else
+        {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.O))
         {
             PlayerPrefs.DeleteAll();
