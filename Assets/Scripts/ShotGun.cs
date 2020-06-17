@@ -8,7 +8,7 @@ public class ShotGun : MonoBehaviour
     public float spreadAngle;
     public GameObject pellet;//bulletPrefab
     public float pelletFireVel = 1;
-    public Transform BarrelExit;
+    public Transform BulletSpawn;
     List<Quaternion> pellets;
 
      void Awake()
@@ -31,17 +31,17 @@ public class ShotGun : MonoBehaviour
     }
     void Fire()
     {
-        int i = 0;
-       foreach (Quaternion quat in pellets)
-       //for (int i = 0; i< pelletCount; i++)
+        /*int i = 0;
+       foreach (Quaternion quat in pellets)*/
+       for (int i = 0; i< pelletCount; i++)
 
-            pellets[i] = Random.rotation;
-        GameObject p = Instantiate(pellet, BarrelExit.position, BarrelExit.rotation);
+        pellets[i] = Random.rotation;
+        GameObject p = Instantiate(pellet, BulletSpawn.position, BulletSpawn.rotation);
 
         p.transform.rotation = Quaternion.RotateTowards(p.transform.rotation, pellets[i], spreadAngle);
         p.GetComponent<Rigidbody>().AddForce(p.transform.right * pelletFireVel);
 
-           i++;
+          // i++;
 
     }
 
