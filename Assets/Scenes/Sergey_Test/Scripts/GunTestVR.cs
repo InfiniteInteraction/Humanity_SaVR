@@ -86,12 +86,17 @@ public class GunTestVR : MonoBehaviour
             foreach (GameObject detail in emissiveObjects)
             {
                 detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;
+                
             }
         }
         if (gameObject.name.Equals("RailGun_Chris"))
         {
             damageValue = 3;
             GetComponent<Renderer>().material = Resources.Load(("Materials/RailGunChris_MatR"), typeof(Material)) as Material;
+            redBullet = redRailgunBullet;
+            greenBullet = greenRailgunBullet;
+         
+
         }
         if (gameObject.name.Equals("TommyGun"))
         {
@@ -135,14 +140,14 @@ public class GunTestVR : MonoBehaviour
             {
                 if (fullAutoMode)
                 {
-                    if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && canShoot && currAmmo > 0)
+                    if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && canShoot && currAmmo > 0 && tag!= "RGun")
                     {
                         StartCoroutine("AutoShot");
                     }
                 }
                 else
                 {
-                    if ((OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) && canShoot && currAmmo > 0)
+                    if ((OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) && canShoot && currAmmo > 0&& tag!= "RGun")
                     {
                         StartCoroutine("OneShot");
                         return;
@@ -152,7 +157,17 @@ public class GunTestVR : MonoBehaviour
                         canShoot = true;
                         return;
                     }
+                    if ((OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) && canShoot && currAmmo > 0 && tag == "RGun")
+                    {
+                        StartCoroutine("OneShot");
+                        return;
+                    }
+                    if ((OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) && !canShoot && tag == "RGun")
+                    {
+                        canShoot = true;
+                        return;
 
+                    }
                 }
             }
 
@@ -164,6 +179,15 @@ public class GunTestVR : MonoBehaviour
             if (OVRInput.GetDown(OVRInput.RawButton.Y))
             {
                 SwitchBullets();
+                if(isGreenFireMode==false)
+                {
+                    isGreenFireMode = true;
+                }
+                else
+                {
+                    isGreenFireMode = false;
+                }
+               
             }
         }
         //if (OVRInput.GetDown(OVRInput.RawButton.X))
