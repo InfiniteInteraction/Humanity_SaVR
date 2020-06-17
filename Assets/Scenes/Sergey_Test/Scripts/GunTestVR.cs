@@ -256,13 +256,12 @@ public class GunTestVR : MonoBehaviour
         if (isGreenFireMode)
         {
             Instantiate(greenBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-
         }
         else
         {
             Instantiate(redBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
         }
-        //TODO Add audio sound effect
+        audioSource.PlayOneShot(pistolShot);
         ReduceAmmo();
         //Set currTime to 0
     }

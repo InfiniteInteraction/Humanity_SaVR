@@ -160,6 +160,11 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 1418517321614710428, guid: 2604ffbb54d56124e936d512dfcda030,
+    type: 3}
+  greenBullet: {fileID: 5869237511908163126, guid: 1f07ffb0193605f4a9a5854a02c4c3e4,
+    type: 3}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 21300000, guid: 9961fe39967da7c48b05d680af510b28, type: 3}
@@ -1694,21 +1699,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0075
-      objectReference: {fileID: 0}
-    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.004
-      objectReference: {fileID: 0}
     - target: {fileID: 8062959608787511083, guid: 2a528c3e70eb34043a267449cf53e48c,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1754,11 +1744,21 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.004
       objectReference: {fileID: 0}
-    - target: {fileID: 8062959607413931119, guid: 2a528c3e70eb34043a267449cf53e48c,
+    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
         type: 3}
-      propertyPath: ShapeModule.m_MeshRenderer
-      value: 
-      objectReference: {fileID: 4524738767389200094}
+      propertyPath: m_LocalScale.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8062959607413931117, guid: 2a528c3e70eb34043a267449cf53e48c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 8062959608787511077, guid: 2a528c3e70eb34043a267449cf53e48c,
         type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
@@ -1770,6 +1770,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4524738767389200094}
     - target: {fileID: 8062959608766814954, guid: 2a528c3e70eb34043a267449cf53e48c,
+        type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 4524738767389200094}
+    - target: {fileID: 8062959607413931119, guid: 2a528c3e70eb34043a267449cf53e48c,
         type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
       value: 
@@ -1864,21 +1869,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.004
       objectReference: {fileID: 0}
-    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0075
-      objectReference: {fileID: 0}
-    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.004
-      objectReference: {fileID: 0}
     - target: {fileID: 8339037317742785980, guid: 16ccccd1836a8574eaad08fe6d556620,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1894,22 +1884,37 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.004
       objectReference: {fileID: 0}
-    - target: {fileID: 8339037318520132185, guid: 16ccccd1836a8574eaad08fe6d556620,
+    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
         type: 3}
-      propertyPath: ShapeModule.m_MeshRenderer
-      value: 
-      objectReference: {fileID: 4524738767389200094}
+      propertyPath: m_LocalScale.x
+      value: 0.004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339037317283816812, guid: 16ccccd1836a8574eaad08fe6d556620,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.004
+      objectReference: {fileID: 0}
     - target: {fileID: 8339037319024660431, guid: 16ccccd1836a8574eaad08fe6d556620,
         type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
       value: 
       objectReference: {fileID: 4524738767389200094}
-    - target: {fileID: 8339037317283816786, guid: 16ccccd1836a8574eaad08fe6d556620,
+    - target: {fileID: 8339037318520132185, guid: 16ccccd1836a8574eaad08fe6d556620,
         type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
       value: 
       objectReference: {fileID: 4524738767389200094}
     - target: {fileID: 8339037317742785954, guid: 16ccccd1836a8574eaad08fe6d556620,
+        type: 3}
+      propertyPath: ShapeModule.m_MeshRenderer
+      value: 
+      objectReference: {fileID: 4524738767389200094}
+    - target: {fileID: 8339037317283816786, guid: 16ccccd1836a8574eaad08fe6d556620,
         type: 3}
       propertyPath: ShapeModule.m_MeshRenderer
       value: 
