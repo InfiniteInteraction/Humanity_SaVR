@@ -319,7 +319,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.990566, b: 0.23709252, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4948,6 +4948,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5869237511908163121}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Name
+      value: PlasmaRing
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5002,21 +5017,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Name
-      value: PlasmaRing
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
