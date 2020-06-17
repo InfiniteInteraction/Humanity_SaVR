@@ -26,9 +26,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 1)
         {
             
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave1",0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 1 Score",0))
             {
-                PlayerPrefs.SetInt("Wave1", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 1 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -36,9 +36,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 2)
         {
            
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave2", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 2 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave2", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 2 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                 
             }
@@ -46,9 +46,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 3)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave3", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 3 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave3", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 3 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -56,9 +56,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 4)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave4", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 4 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave4", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 4 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -66,9 +66,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 5)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave5", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 5 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave5", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 5 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -76,9 +76,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 6)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave6", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 6 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave6", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 6 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -86,9 +86,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 7)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave7", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 7 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave7", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 7 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -96,9 +96,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 8)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave8", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 8 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave8", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 8 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
               
             }
@@ -106,9 +106,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 9)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave9", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 9 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave9", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 9 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                
             }
@@ -116,9 +116,9 @@ public class WaveController : MonoBehaviour
         if (GameManager.gameManager.saveWave == 10)
         {
 
-            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave10", 0))
+            if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 10 Score", 0))
             {
-                PlayerPrefs.SetInt("Wave10", GameManager.gameManager.score);
+                PlayerPrefs.SetInt("Wave 10 Score", GameManager.gameManager.score);
                 PlayerPrefs.Save();
                 
             }

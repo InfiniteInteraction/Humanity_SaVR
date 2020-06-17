@@ -33,14 +33,14 @@ public class ShotGun : MonoBehaviour
     {
         /*int i = 0;
        foreach (Quaternion quat in pellets)*/
-       for (int i = 0; i< pelletCount; i++)
+        for (int i = 0; i < pelletCount; i++)
+        {
+            pellets[i] = Random.rotation;
+            GameObject p = Instantiate(pellet, BulletSpawn.position, BulletSpawn.rotation);
 
-        pellets[i] = Random.rotation;
-        GameObject p = Instantiate(pellet, BulletSpawn.position, BulletSpawn.rotation);
-
-        p.transform.rotation = Quaternion.RotateTowards(p.transform.rotation, pellets[i], spreadAngle);
-        p.GetComponent<Rigidbody>().AddForce(p.transform.right * pelletFireVel);
-
+            p.transform.rotation = Quaternion.RotateTowards(p.transform.rotation, pellets[i], spreadAngle);
+            p.GetComponent<Rigidbody>().AddForce(p.transform.right * pelletFireVel);
+        }
           // i++;
 
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -29,16 +30,6 @@ public class GameManager : MonoBehaviour
     public int waveNumber = 1;
     public int CTime;
     public float eSpeed = 3.5f;
-    public TextMeshProUGUI waveScore;
-    public TextMeshProUGUI waveScore2;
-    public TextMeshProUGUI waveScore3;
-    public TextMeshProUGUI waveScore4;
-    public TextMeshProUGUI waveScore5;
-    public TextMeshProUGUI waveScore6;
-    public TextMeshProUGUI waveScore7;
-    public TextMeshProUGUI waveScore8;
-    public TextMeshProUGUI waveScore9;
-    public TextMeshProUGUI waveScore10;
     public int saveWave = 1;
     public int gHitCount;
     #endregion
@@ -120,16 +111,16 @@ public class GameManager : MonoBehaviour
     {
         if (SceneManager.sceneCount == 1)
         {
-            waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
-            waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
-            waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
-            waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
-            waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
-            waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
-            waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
-            waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
-            waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
-            waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
+            WaveHolder WScore = FindObjectOfType<WaveHolder>();
+            if(WScore != null)
+            {
+                foreach(GameObject ScoreText in WScore.WaveScoreText)
+                {
+                    string WaveName = ScoreText.name.ToString();
+                    //Debug.LogError(WaveName);
+                    ScoreText.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(WaveName, 0).ToString();
+                }
+            }
         }
         else
         {
@@ -150,16 +141,6 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
-        waveScore.text = PlayerPrefs.GetInt("Wave1", 0).ToString();
-        waveScore2.text = PlayerPrefs.GetInt("Wave2", 0).ToString();
-        waveScore3.text = PlayerPrefs.GetInt("Wave3", 0).ToString();
-        waveScore4.text = PlayerPrefs.GetInt("Wave4", 0).ToString();
-        waveScore5.text = PlayerPrefs.GetInt("Wave5", 0).ToString();
-        waveScore6.text = PlayerPrefs.GetInt("Wave6", 0).ToString();
-        waveScore7.text = PlayerPrefs.GetInt("Wave7", 0).ToString();
-        waveScore8.text = PlayerPrefs.GetInt("Wave8", 0).ToString();
-        waveScore9.text = PlayerPrefs.GetInt("Wave9", 0).ToString();
-        waveScore10.text = PlayerPrefs.GetInt("Wave10", 0).ToString();
         if (gHitCount == 3)
         {
 
