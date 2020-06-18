@@ -106,6 +106,32 @@ public class GunTestVR : MonoBehaviour
             }
             damageValue = 3;
         }
+        if (gameObject.name.Equals("Musket_DuskSky"))
+        {
+            //redbullet =
+            //greenbullet = 
+        }
+        if (gameObject.name.Equals("Pistola22_green"))
+        {
+            //redbullet =
+            //greenbullet =
+        }
+        if (gameObject.name.Equals("PlasmaGunVR"))
+        {
+            //redbullet =
+            //greenbullet =
+        }
+        if (gameObject.name.Equals("Rifleobj_green"))
+        {
+            //redbullet =
+            //greenbullet =
+        }
+        if (gameObject.name.Equals("syfy_shotgun"))
+        {
+            //redbullet =
+            //greenbullet =
+        }
+
     }
 
     void Update()
@@ -280,10 +306,15 @@ public class GunTestVR : MonoBehaviour
         if (isGreenFireMode)
         {
             Instantiate(greenBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+            //insert redbullet 
+            //greenbullet
+
         }
         else
         {
             Instantiate(redBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+            //insert redbullet 
+            //greenbullet
         }
         audioSource.PlayOneShot(pistolShot);
         ReduceAmmo();
