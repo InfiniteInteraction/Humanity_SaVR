@@ -325,6 +325,11 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 1418517321614710428, guid: 9be1e6d2486220b4294d3e813cd21d48,
+    type: 3}
+  greenBullet: {fileID: 1418517321614710428, guid: 047c706ec0340ab46b0e90f5a341ee61,
+    type: 3}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 0}
