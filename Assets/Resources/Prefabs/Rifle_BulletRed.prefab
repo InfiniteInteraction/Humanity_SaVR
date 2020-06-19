@@ -206,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1418517321962571729
 Transform:
   m_ObjectHideFlags: 0
@@ -9650,7 +9650,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 64548b62f11b1ad41b00a860623fa3ce, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -9702,21 +9702,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1418517321614710429}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Name
-      value: PlasmaRing
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9771,6 +9756,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Name
+      value: PlasmaRing
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}

@@ -32,13 +32,13 @@ public class GunTestVR : MonoBehaviour
 
     GameObject green;
     GameObject red;
-    GameObject redRailgunBullet;
-    GameObject greenRailgunBullet;
-    GameObject greenPistolBullet;
-    GameObject redPistolBullet;
-    GameObject greenRifleBullet;
-    GameObject redRifleBullet;
-    GameObject waveBullet;
+    //GameObject redRailgunBullet;
+    //GameObject greenRailgunBullet;
+    //GameObject greenPistolBullet;
+    //GameObject redPistolBullet;
+    //GameObject greenRifleBullet;
+    //GameObject redRifleBullet;
+    //GameObject waveBullet;
     public List<GameObject> emissiveObjects = new List<GameObject>();
     public Animator wheelSpin;
     AudioSource audioSource;
@@ -59,16 +59,16 @@ public class GunTestVR : MonoBehaviour
         {
             Debug.Log("red in GunTestVR not found.");
         }
-        greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
-        //greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
-        redPistolBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
-        //redPistolBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
-        greenRifleBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
-        redRifleBullet = Resources.Load(("Prefabs/RedRifleBullet"), typeof(GameObject)) as GameObject;
-        //redRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
-        redRailgunBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
-        //greenRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
-        greenRailgunBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
+        //greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
+        ////greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
+        //redPistolBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
+        ////redPistolBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
+        //greenRifleBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
+        //redRifleBullet = Resources.Load(("Prefabs/RedRifleBullet"), typeof(GameObject)) as GameObject;
+        ////redRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
+        //redRailgunBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
+        ////greenRailgunBullet = Resources.Load(("Prefabs/LaserBulletRed), typeof(GameObject)) as GameObject;
+        //greenRailgunBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         fullAutoTime = 0.1f;
         wheelSpin = gameObject.GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -85,51 +85,56 @@ public class GunTestVR : MonoBehaviour
             damageValue = 5;
             foreach (GameObject detail in emissiveObjects)
             {
-                detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;
-                
+                detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;               
             }
+
+            redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("RailGun_Chris"))
         {
             damageValue = 3;
             GetComponent<Renderer>().material = Resources.Load(("Materials/RailGunChris_MatR"), typeof(Material)) as Material;
-            redBullet = redRailgunBullet;
-            greenBullet = greenRailgunBullet;
-         
 
+            redBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("TommyGun"))
         {
+            
             foreach (Transform child in transform)
             {
                 child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
             }
-            damageValue = 3;
+
+            redBullet = Resources.Load(("Prefabs/TommyGunBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/TommyGunBulletGreen"), typeof(GameObject)) as GameObject;
+            damageValue = 1;
         }
         if (gameObject.name.Equals("Musket_DuskSky"))
         {
-            //redbullet =
-            //greenbullet = 
+            redBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet =  Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Pistola22_green"))
         {
-            //redbullet =
-            //greenbullet =
+            redBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("PlasmaGunVR"))
         {
-            //redbullet =
-            //greenbullet =
+            redBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Rifleobj_green"))
         {
-            //redbullet =
-            //greenbullet =
+            redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/Rifle_GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("syfy_shotgun"))
         {
-            //redbullet =
-            //greenbullet =
+            redBullet = Resources.Load(("Prefabs/syfy_shotgunBulletRed"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/syfy_shotgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
 
     }
@@ -216,10 +221,6 @@ public class GunTestVR : MonoBehaviour
                
             }
         }
-        //if (OVRInput.GetDown(OVRInput.RawButton.X))
-        //{
-        //    SwitchFireMode();
-        //}
     }
 
 
@@ -306,19 +307,14 @@ public class GunTestVR : MonoBehaviour
         if (isGreenFireMode)
         {
             Instantiate(greenBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-            //insert redbullet 
-            //greenbullet
-
         }
         else
         {
             Instantiate(redBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-            //insert redbullet 
-            //greenbullet
         }
         audioSource.PlayOneShot(pistolShot);
         ReduceAmmo();
-        //Set currTime to 0
+        currTime = 0;
     }
 
     void Shoot()
