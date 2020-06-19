@@ -259,7 +259,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519343329322839919}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.05, y: -0.67, z: 3.7386665}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1409966520244836899}
@@ -332,7 +332,7 @@ MonoBehaviour:
     type: 3}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
-  WeapIcon: {fileID: 0}
+  WeapIcon: {fileID: 21300000, guid: 7f399d0c6f2524c43a9c208c95847efc, type: 3}
 --- !u!1 &1652157504021941936
 GameObject:
   m_ObjectHideFlags: 0
