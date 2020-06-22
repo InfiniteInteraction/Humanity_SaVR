@@ -138,7 +138,7 @@ MonoBehaviour:
     loopSound: 1
     playAwake: 0
     clip: {fileID: 8300000, guid: 101fc71bb314d724ebac0623eafe0915, type: 3}
-    volume: 0.35
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
@@ -146,6 +146,22 @@ MonoBehaviour:
     loopSound: 0
     playAwake: 0
     clip: {fileID: 8300000, guid: f8be7b1845d92bd4982847c433ecb9e6, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: RedDamage
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 76aaf1f0ace1ac04b9f39daeb90d2df8, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: GreenDamage
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 05de23ac02b75884697c66c4306825d1, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
