@@ -2616,6 +2616,8 @@ MonoBehaviour:
   pewpew: {fileID: 0}
   pointPopUp: {fileID: 0}
   greenHit: 0
+  redDamage: {fileID: 8300000, guid: 76aaf1f0ace1ac04b9f39daeb90d2df8, type: 3}
+  greenDamage: {fileID: 8300000, guid: 05de23ac02b75884697c66c4306825d1, type: 3}
 --- !u!136 &-3140282670407711868
 CapsuleCollider:
   m_ObjectHideFlags: 0

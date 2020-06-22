@@ -109,6 +109,8 @@ MonoBehaviour:
   pewpew: {fileID: 0}
   pointPopUp: {fileID: 0}
   greenHit: 0
+  redDamage: {fileID: 8300000, guid: 76aaf1f0ace1ac04b9f39daeb90d2df8, type: 3}
+  greenDamage: {fileID: 8300000, guid: 05de23ac02b75884697c66c4306825d1, type: 3}
 --- !u!114 &8884351211609652562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,8 +129,10 @@ MonoBehaviour:
   redMat: {fileID: 2100000, guid: e35d2051800b8bb44a7d0cff8676f6dc, type: 2}
   NormMat: {fileID: 0}
   agent: {fileID: 0}
-  PlayerHealth: {fileID: 0}
+  Player: {fileID: 0}
   place: {x: 0, y: 0, z: 0}
+  atkTime: 0
+  atkCooldown: 0
   anim: {fileID: 0}
 --- !u!114 &389063416485791562
 MonoBehaviour:

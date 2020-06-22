@@ -71,7 +71,7 @@ public class EnemyAttacking : FsmState {
             atkTime = atkCooldown;
             ESpawner.eSpawner.streakCount = 0;
             Damage.damage.playerHealth -= Strength;
-            Audiomanager.audiomanager.Play("PlayerHurt");
+            //Audiomanager.audiomanager.Play("PlayerHurt");
             Damage.damage.PlayerDeath();
         }
     }

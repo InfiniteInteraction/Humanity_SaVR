@@ -23,6 +23,9 @@ public class ENemyHealth : Health
     public GameObject pointPopUp;
     GameObject canvas;
     public int greenHit;
+
+    public AudioClip redDamage;
+    public AudioClip greenDamage;
     
     
     #region
@@ -112,10 +115,12 @@ public class ENemyHealth : Health
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
         {
             TakeDamage(51);
+            AudioSource.PlayClipAtPoint(redDamage, transform.position, 1f);
             enemyHit = true;
         }
         else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")
         {
+            AudioSource.PlayClipAtPoint(greenDamage, transform.position, 1f);
             enemyHit = true;
             GameManager.gameManager.greenDeaths++;                             
             Damage.damage.playerHealth += 100;
