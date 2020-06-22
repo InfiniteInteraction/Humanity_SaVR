@@ -317,75 +317,75 @@ public class GunTestVR : MonoBehaviour
         currTime = 0;
     }
 
-    void Shoot()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(spawnPoint.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
-        {
-            if (green.activeSelf)
-            {
-                if (gameObject.name.Equals("PlasmaRifleVR"))
-                {
-                    Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                }
-                else
-                {
-                    Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                    audioSource.PlayOneShot(pistolShot);
-                }
-            }
-            if (red.activeSelf)
-            {
-                if (gameObject.name.Equals("PlasmaRifleVR"))
-                {
-                    Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                }
-                else
-                {
-                    Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                    audioSource.clip = pistolShot;
-                    audioSource.PlayOneShot(pistolShot);
-                }
-            }
-            Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            ReduceAmmo();
-            Debug.Log("Did Hit");
-        }
-        else
-        {
-            if (green.activeSelf)
-            {
-                if (gameObject.name.Equals("PlasmaRifleVR"))
-                {
-                    Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                }
-                else
-                {
-                    Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                    audioSource.PlayOneShot(pistolShot);
-                }
-            }
-            if (red.activeSelf)
-            {
-                if (gameObject.name.Equals("PlasmaRifleVR"))
-                {
-                    Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                }
-                else
-                {
-                    Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-                    audioSource.clip = pistolShot;
-                    audioSource.PlayOneShot(pistolShot);
-                }
-            }
-            Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-            ReduceAmmo();
-            Debug.Log("Did not Hit");
-
-            //RailgunBulletsStartHere
-        }
-        currTime = 0;
-    }
+  //  void Shoot()
+  //  {
+  //      RaycastHit hit;
+  //      if (Physics.Raycast(spawnPoint.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+  //      {
+  //          if (green.activeSelf)
+  //          {
+  //              if (gameObject.name.Equals("PlasmaRifleVR"))
+  //              {
+  //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //              }
+  //              else
+  //              {
+  //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //                  audioSource.PlayOneShot(pistolShot);
+  //              }
+  //          }
+  //          if (red.activeSelf)
+  //          {
+  //              if (gameObject.name.Equals("PlasmaRifleVR"))
+  //              {
+  //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //              }
+  //              else
+  //              {
+  //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //                  audioSource.clip = pistolShot;
+  //                  audioSource.PlayOneShot(pistolShot);
+  //              }
+  //          }
+  //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+  //          ReduceAmmo();
+  //          Debug.Log("Did Hit");
+  //      }
+  //      else
+  //      {
+  //          if (green.activeSelf)
+  //          {
+  //              if (gameObject.name.Equals("PlasmaRifleVR"))
+  //              {
+  //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //              }
+  //              else
+  //              {
+  //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //                  audioSource.PlayOneShot(pistolShot);
+  //              }
+  //          }
+  //          if (red.activeSelf)
+  //          {
+  //              if (gameObject.name.Equals("PlasmaRifleVR"))
+  //              {
+  //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //              }
+  //              else
+  //              {
+  //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+  //                  audioSource.clip = pistolShot;
+  //                  audioSource.PlayOneShot(pistolShot);
+  //              }
+  //          }
+  //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
+  //          ReduceAmmo();
+  //          Debug.Log("Did not Hit");
+  //
+  //          //RailgunBulletsStartHere
+   //     }
+  //      currTime = 0;
+   // }
     void Timer()
     {
         rifleCharging += Time.fixedDeltaTime;
