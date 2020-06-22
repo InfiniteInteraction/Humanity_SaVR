@@ -39433,7 +39433,7 @@ GameObject:
   - component: {fileID: 7731322208264268466}
   m_Layer: 0
   m_Name: PlasmaGunVR
-  m_TagString: Untagged
+  m_TagString: RGun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39502,6 +39502,9 @@ MonoBehaviour:
   fullAutoTime: 0
   semiAutoTime: 0
   rifleCharging: 0
+  isGreenFireMode: 0
+  redBullet: {fileID: 0}
+  greenBullet: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
   WeapIcon: {fileID: 21300000, guid: 9961fe39967da7c48b05d680af510b28, type: 3}
