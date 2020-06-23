@@ -236,7 +236,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                enemyATK = 1;
+                enemyATK = 20;
                 enemyATKCooldown = 2;
                 break;
             case "3":
@@ -248,7 +248,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 14;
+                CTime = 3;
                
                 break;
             case "4":
@@ -260,7 +260,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 13;
+                CTime = 3;
                 break;
             case "5":
                 pD1 = 11;
@@ -271,7 +271,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 12;
+                CTime = 3;
                 break;
             case "6":
                 pD1 = 11;
@@ -282,8 +282,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 10;
-                enemyATK = 2;
+                CTime = 3;
+                enemyATK = 3;
                 enemyATKCooldown = 2;
                 break;
             case "7":
@@ -295,7 +295,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 9;
+                CTime = 3;
                 break;
             case "8":
                 pD1 = 11;
@@ -306,7 +306,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 8;
+                CTime = 3;
                 break;
             case "9":
                 pD1 = 6;
@@ -317,9 +317,9 @@ public class GameManager : MonoBehaviour
                 pD4 = 31;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 6;
-                enemyATK = 2.5f;
-                enemyATKCooldown = 1;
+                CTime = 3;
+                enemyATK = 3f;
+                enemyATKCooldown = 1.5f;
                 break;
             
         }

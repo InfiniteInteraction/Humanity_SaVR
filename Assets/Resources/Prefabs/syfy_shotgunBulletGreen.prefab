@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4586734285708622276}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_Children: []
   m_Father: {fileID: 5869237511908163121}
   m_RootOrder: 2
@@ -4948,21 +4948,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5869237511908163121}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Name
-      value: PlasmaRing
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5032,6 +5017,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Name
+      value: PlasmaRing
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
