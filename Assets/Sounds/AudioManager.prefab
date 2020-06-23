@@ -161,8 +161,24 @@ MonoBehaviour:
     name: GreenDamage
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 05de23ac02b75884697c66c4306825d1, type: 3}
-    volume: 1
+    clip: {fileID: 8300000, guid: 26a5d595d149fe144aa2a004660bbfc5, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: WaveComplete
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 9f4029cdcbc57bb4189ae49ac0176ce0, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: WaveFailed
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 2a1fa11b8e39225439d53c9a927a1d76, type: 3}
+    volume: 0.8
     pitch: 1
     source: {fileID: 0}
 --- !u!81 &2108238091807722721
