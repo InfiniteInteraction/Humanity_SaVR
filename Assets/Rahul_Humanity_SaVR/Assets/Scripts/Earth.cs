@@ -30,7 +30,7 @@ public class Earth : MonoBehaviour
 
     public void RightArrow()
     {
-        textBox.text = "Antartica";
+        textBox.text = "Antarctica";
         EarthModel.transform.DOMove(new Vector3(-197.2886f, -66.64333f, 3530.233f), 0.5f);
         EarthModel.transform.DORotate(new Vector3(86.257f, -259.702f, 140.284f),0.5f);
     }
