@@ -48,8 +48,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 1.5, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.3, y: 0.64487374, z: 0.65455407}
+  m_Center: {x: -2.4586045e-17, y: 0.026878752, z: -0.004133058}
 --- !u!54 &1608234749159519501
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -319,7 +319,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.99215686, g: 0, b: 0.037687875, a: 1}
+      maxColor: {r: 0.99215686, g: 0.027191257, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4891,7 +4891,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 0
-  m_Color: {r: 1, g: 0, b: 0.11302805, a: 1}
+  m_Color: {r: 1, g: 0.019385792, b: 0, a: 1}
   m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 60
