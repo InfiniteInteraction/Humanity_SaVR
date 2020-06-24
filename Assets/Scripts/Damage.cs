@@ -33,7 +33,8 @@ public class Damage : MonoBehaviour
         if (playerHealth <= 0)
         {
             Audiomanager.audiomanager.Play("WaveFailed");
-            SceneManager.LoadScene(0);
+            Debug.Log("Player Dead");
+            //SceneManager.LoadScene(0);
         }
     }
 }
