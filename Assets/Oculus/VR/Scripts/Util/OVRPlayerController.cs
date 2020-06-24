@@ -21,8 +21,6 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class OVRPlayerController : MonoBehaviour
 {
-    public GameObject panel;
-
     /// <summary>
 	/// The rate acceleration during movement.
 	/// </summary>
@@ -164,8 +162,7 @@ public class OVRPlayerController : MonoBehaviour
 	}
 
 	void Awake()
-	{
-        panel.SetActive(false);
+	{        
        Controller = gameObject.GetComponent<CharacterController>();
 
 		if (Controller == null)
@@ -226,13 +223,6 @@ public class OVRPlayerController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.E))
 			buttonRotation += RotationRatchet;
-        if (OVRInput.GetDown(OVRInput.Button.Start))
-        {
-            panel.SetActive(true);
-            Time.timeScale = 0;
-           
-        }
-        
 	}
 
 	protected virtual void UpdateController()

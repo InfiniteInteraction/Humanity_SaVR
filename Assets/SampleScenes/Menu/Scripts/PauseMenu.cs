@@ -4,60 +4,46 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    private Toggle m_MenuToggle;
-	private float m_TimeScaleRef = 1f;
-    private float m_VolumeRef = 1f;
-    private bool m_Paused;
-
-
-    void Awake()
+    public GameObject Panel;
+    public bool isPaused;
+    public void Start()
     {
-        m_MenuToggle = GetComponent <Toggle> ();
-	}
-
-
-    private void MenuOn ()
-    {
-        m_TimeScaleRef = Time.timeScale;
-        Time.timeScale = 0f;
-
-        m_VolumeRef = AudioListener.volume;
-        AudioListener.volume = 0f;
-
-        m_Paused = true;
+        Panel.SetActive(false);
+        Time.timeScale = 1.0f;
+        isPaused = false;
     }
-
-
-    public void MenuOff ()
+    public void Update()
     {
-        Time.timeScale = m_TimeScaleRef;
-        AudioListener.volume = m_VolumeRef;
-        m_Paused = false;
-    }
-
-
-    public void OnMenuStatusChange ()
-    {
-        if (m_MenuToggle.isOn && !m_Paused)
+        if (OVRInput.GetDown(OVRInput.Button.Start))
         {
-            MenuOn();
-        }
-        else if (!m_MenuToggle.isOn && m_Paused)
-        {
-            MenuOff();
+            Paused();
         }
     }
-
-
-#if !MOBILE_INPUT
-	void Update()
-	{
-		if(Input.GetKeyUp(KeyCode.Escape))
-		{
-		    m_MenuToggle.isOn = !m_MenuToggle.isOn;
-            Cursor.visible = m_MenuToggle.isOn;//force the cursor visible if anythign had hidden it
+    public void Paused()
+    {
+        isPaused = !isPaused;
+        if (!isPaused)
+        {
+            Panel.SetActive(false);
+            Time.timeScale = 1.0f;
         }
-	}
-#endif
-
+        else
+        {
+            Panel.SetActive(true);
+            Time.timeScale = 0.0f;
+        }
+    }
+    public void Resume()
+    {
+        Panel.SetActive(false);
+        Time.timeScale = 1.0f;
+    }
+    //public void OnApplicationQuit()
+    //{
+    //#if UNITY_EDITOR
+    //    UnityEditor.EditorApplication.isPlaying = false;
+    //#else
+    //    Application.Quit();
+    //#endif
+    //}
 }
