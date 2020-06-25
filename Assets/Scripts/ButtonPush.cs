@@ -31,7 +31,10 @@ public class ButtonPush : MonoBehaviour
         {
             WaveController.WController.NextWave();
         }
-
+        if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("PressAnyButton"))
+        {
+            SceneManager.LoadScene(0);
+        }
 
     }
 }
