@@ -11,8 +11,12 @@ public class WaveController : MonoBehaviour
 
     void Start()
     {       
-        ESpawner.eSpawner.isWaveOver = false;
         WController = this;
+        if (ESpawner.eSpawner == null)
+        {
+            return;
+        }
+        ESpawner.eSpawner.isWaveOver = false;
     }
 
 
@@ -151,7 +155,14 @@ public class WaveController : MonoBehaviour
     }
 
     public void Update()
-    {        
-        ESpawner.eSpawner.waveCount.text = ESpawner.eSpawner.waves.ToString();
+    {
+        if (ESpawner.eSpawner == null)
+        {
+            return;
+        }
+        else 
+        {
+            ESpawner.eSpawner.waveCount.text = ESpawner.eSpawner.waves.ToString(); 
+        }
     }
 }
