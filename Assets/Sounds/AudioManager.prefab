@@ -181,6 +181,14 @@ MonoBehaviour:
     volume: 0.8
     pitch: 1
     source: {fileID: 0}
+  - isMusic: 0
+    name: LevelComplete
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 1da0ad2500aef6d4fb12c2e6924d9bda, type: 3}
+    volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
 --- !u!81 &2108238091807722721
 AudioListener:
   m_ObjectHideFlags: 0

@@ -71,6 +71,7 @@ public class ESpawner : MonoBehaviour
     {
         Wavescreen.SetActive(false);
         Results.SetActive(true);
+        Audiomanager.audiomanager.Play("LevelComplete");
         GameManager.gameManager.Starsystem();
     }
 
