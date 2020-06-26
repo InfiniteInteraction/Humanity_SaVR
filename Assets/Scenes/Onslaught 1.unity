@@ -3737,30 +3737,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1261550717}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &468554158 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 168962, guid: ce816f2e6abb0504092c23ed9b970dfd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1261550717}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &468554160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468554158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 158b7efba9a990241bd17de2dbd4ff3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Weapons:
-  - {fileID: 755538669}
-  - {fileID: 1261550723}
-  - {fileID: 1261550720}
-  - {fileID: 1203161260}
-  WGM: {fileID: 0}
 --- !u!1001 &491350756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8529,7 +8505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sMU: {fileID: 1010009622}
-  panel: {fileID: 499277790}
 --- !u!65 &1025255624
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9077,7 +9052,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sMU: {fileID: 1010009622}
-  panel: {fileID: 499277790}
 --- !u!114 &1105800434 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1105800434, guid: 3a1fc961c48951b419d84ac527e9ad4c,
@@ -17978,7 +17952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sMU: {fileID: 1010009622}
-  panel: {fileID: 499277790}
 --- !u!1 &1652254678
 GameObject:
   m_ObjectHideFlags: 0
@@ -18624,7 +18597,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1010009620}
+      - m_Target: {fileID: 1010009623}
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:

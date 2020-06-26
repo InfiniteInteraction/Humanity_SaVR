@@ -29,7 +29,7 @@ public class NextLevel : MonoBehaviour
         {
             if (gamePaused)
             {
-                Resume();
+                //Resume();
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
             }
@@ -46,17 +46,17 @@ public class NextLevel : MonoBehaviour
     {
         soundSettings.SetActive(false);
     }
-    public void Resume()
-    {
+    //public void Resume()
+    //{
         
-        CameraMovement.cMove.enabled = true;
-        pausemenuUI.SetActive(false);
-        soundSettings.SetActive(false);
-        Time.timeScale = 1f;
-        gamePaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
+    //    CameraMovement.cMove.enabled = true;
+    //    pausemenuUI.SetActive(false);
+    //    soundSettings.SetActive(false);
+    //    Time.timeScale = 1f;
+    //    gamePaused = false;
+    //    Cursor.lockState = CursorLockMode.Locked;
+    //    Cursor.visible = false;
+    //}
     public void Pause()
     {
         

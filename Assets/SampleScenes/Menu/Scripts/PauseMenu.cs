@@ -36,6 +36,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         Panel.SetActive(false);
+        isPaused = false;
         Time.timeScale = 1.0f;
     }
     //public void OnApplicationQuit()
