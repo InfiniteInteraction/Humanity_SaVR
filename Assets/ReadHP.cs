@@ -15,6 +15,6 @@ public class ReadHP : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       hP.text = "Health: " + GameObject.FindObjectOfType<Damage>().playerHealth.ToString();
+       hP.text = /* "Health: " + */ GameObject.FindObjectOfType<Damage>().playerHealth.ToString();
     }
 }
