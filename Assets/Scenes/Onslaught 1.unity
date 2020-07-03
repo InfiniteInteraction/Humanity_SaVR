@@ -1599,6 +1599,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3343535431400832780, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3343535431527438495, guid: 60865cccd2469ab4ca6b643b4751148b,
         type: 3}
       propertyPath: m_Layer
@@ -1703,6 +1708,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -170
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -128.33606
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_text
+      value: Score
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 513
+      objectReference: {fileID: 0}
+    - target: {fileID: 3673319461484221450, guid: 60865cccd2469ab4ca6b643b4751148b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 79.944115
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60865cccd2469ab4ca6b643b4751148b, type: 3}
@@ -10911,7 +10956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1273810851
 MonoBehaviour:
   m_ObjectHideFlags: 0
