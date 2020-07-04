@@ -138,7 +138,7 @@ MonoBehaviour:
     loopSound: 1
     playAwake: 0
     clip: {fileID: 8300000, guid: 101fc71bb314d724ebac0623eafe0915, type: 3}
-    volume: 0.3
+    volume: 0.25
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
@@ -187,6 +187,38 @@ MonoBehaviour:
     playAwake: 0
     clip: {fileID: 8300000, guid: 1da0ad2500aef6d4fb12c2e6924d9bda, type: 3}
     volume: 0.8
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Health80
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: ac5fb4b693e5ded48bcf62ab568fd89f, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Health60
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: ab88ff64ed1996b428b66bea5de5736a, type: 3}
+    volume: 0.4
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Health40
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: b62dc3227eb610648876558de88b419e, type: 3}
+    volume: 0.2
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Health20
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 985fd0f641b21ca428a7d59a771f1e5e, type: 3}
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
 --- !u!81 &2108238091807722721

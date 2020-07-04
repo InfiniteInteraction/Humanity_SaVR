@@ -72,7 +72,42 @@ public class EnemyAttacking : FsmState {
             ESpawner.eSpawner.streakCount = 0;
             Damage.damage.playerHealth -= Strength;
             //Audiomanager.audiomanager.Play("PlayerHurt");
-            Damage.damage.PlayerDeath();
+            StartCoroutine("PlayerHealthSound");
+            if (Damage.damage.playerHealth == 0)
+            {
+                Damage.damage.PlayerDeath();
+            }
         }
+    }
+
+    IEnumerator PlayerHealthSound()
+    {
+        if (Damage.damage.playerHealth >= 1)
+        {
+            switch (Damage.damage.playerHealth)
+            {
+                case 80:
+                    Audiomanager.audiomanager.Play("Health80");
+                    yield return new WaitForSeconds(1f);
+                    break;
+                case 60:
+                    Audiomanager.audiomanager.Play("Health60");
+                    yield return new WaitForSeconds(1f);
+                    break;
+                case 40:
+                    Audiomanager.audiomanager.Play("Health40");
+                    yield return new WaitForSeconds(1f);
+                    break;
+                case 20:
+                    Audiomanager.audiomanager.Play("Health20");
+                    yield return new WaitForSeconds(1f);
+                    break;
+                default:
+                    yield return new WaitForSeconds(2f);
+                    break;
+            }
+        }
+        else
+            yield return true;
     }
 }

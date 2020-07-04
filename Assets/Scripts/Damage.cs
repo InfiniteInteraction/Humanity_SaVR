@@ -30,7 +30,7 @@ public class Damage : MonoBehaviour
 
    public void PlayerDeath()
     {
-        if (playerHealth <= 0)
+        if (playerHealth == 0)
         {
             Audiomanager.audiomanager.Play("WaveFailed");
             Debug.Log("Player Dead");

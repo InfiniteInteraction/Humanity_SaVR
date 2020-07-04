@@ -919,7 +919,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134248315}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &134248318
 Camera:
   m_ObjectHideFlags: 0
@@ -3554,6 +3554,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3208101014867573535, guid: 55366906218081a4d8bc2436cce2d2f0,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55366906218081a4d8bc2436cce2d2f0, type: 3}
@@ -7312,6 +7317,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2108238091807722721, guid: f11f3af4d9f27e1449193a14493f2779,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f11f3af4d9f27e1449193a14493f2779, type: 3}
 --- !u!114 &822476210 stripped
@@ -10310,6 +10320,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 3101436068924977224, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101436068924977224, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.12232896
@@ -10583,16 +10603,6 @@ PrefabInstance:
       propertyPath: Weapons.Array.data[3]
       value: 
       objectReference: {fileID: 1203161260}
-    - target: {fileID: 3101436068924977224, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3101436068924977224, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 7890879835530610827, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: m_IsActive
@@ -18506,6 +18516,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1049003919, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
+      propertyPath: world
+      value: 
+      objectReference: {fileID: 113187624}
     - target: {fileID: 1727086624425057564, guid: 92e6ff5101a4f584183fa702d19701b0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18651,10 +18665,6 @@ PrefabInstance:
       propertyPath: waveScore10
       value: 
       objectReference: {fileID: 1240804626}
-    - target: {fileID: 1049003919, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
-      propertyPath: world
-      value: 
-      objectReference: {fileID: 113187624}
     - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
       propertyPath: LoadoutWeapons.Array.size
       value: 2
@@ -18842,7 +18852,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764435305}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1764435308
 Camera:
   m_ObjectHideFlags: 0
