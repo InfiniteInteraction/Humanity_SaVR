@@ -142,7 +142,7 @@ public class WaveController : MonoBehaviour
     {
         ESpawner.eSpawner.isWaveOver = false;
         ESpawner.eSpawner.Wavescreen.SetActive(false);
-        ESpawner.eSpawner.totalToSpawn = 10 * ESpawner.eSpawner.waves ;
+        ESpawner.eSpawner.totalToSpawn = 7 * ESpawner.eSpawner.waves ;
         GameManager.gameManager.DifficultySetting();
         ESpawner.eSpawner.streakCount = 0;
         ESpawner.eSpawner.killCount = 0;

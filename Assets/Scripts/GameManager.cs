@@ -71,6 +71,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);     
         }
+        enemyATK = 1;
+        enemyATKCooldown = 4;
+        CTime = 12;
+        gHitCount = 0;
     }
     public void PlayButtonReturn()
     {
@@ -121,6 +125,7 @@ public class GameManager : MonoBehaviour
 
             Damage.damage.playerHealth = 0;
         }
+        DifficultySetting();
     } 
 
     public void BulletMisses()
@@ -226,6 +231,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                enemyATK = 5;
+                CTime = 10;
                 break;
             case "2":
                 pD1 = 11;
@@ -236,8 +243,9 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                enemyATK = 20;
+                enemyATK = 5;
                 enemyATKCooldown = 2;
+                CTime = 8;
                 break;
             case "3":
                 pD1 = 11;
@@ -248,8 +256,8 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
-               
+                enemyATK = 5;
+                CTime = 6;
                 break;
             case "4":
                 pD1 = 11;
@@ -260,7 +268,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
+                CTime = 5;
                 break;
             case "5":
                 pD1 = 11;
@@ -271,7 +279,6 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
                 break;
             case "6":
                 pD1 = 11;
@@ -282,8 +289,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
-                enemyATK = 3;
+                enemyATK = 5;
                 enemyATKCooldown = 2;
                 break;
             case "7":
@@ -295,7 +301,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
+                enemyATK = 5;
                 break;
             case "8":
                 pD1 = 11;
@@ -306,7 +312,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                CTime = 3;
+                CTime = 4;
                 break;
             case "9":
                 pD1 = 6;
@@ -318,7 +324,7 @@ public class GameManager : MonoBehaviour
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 CTime = 3;
-                enemyATK = 3f;
+                enemyATK = 10;
                 enemyATKCooldown = 1.5f;
                 break;
             
@@ -343,11 +349,7 @@ public class GameManager : MonoBehaviour
             waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
         }
 
-        enemyATK = 1;
-        enemyATKCooldown = 4;
-        CTime = 20;
 
-        gHitCount = 0;
     }
 }
     

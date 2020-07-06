@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Onslaught 1.unity
     guid: d59548dc6d487444bbda6665980ea07d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Onslaught 2.unity
     guid: 2b4d6c5556b8c9c489bbe7a50527ea13
   - enabled: 0
@@ -38,10 +38,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
