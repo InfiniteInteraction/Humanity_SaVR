@@ -10,8 +10,8 @@ public class HighScore_Table : MonoBehaviour
     private List<Transform> highscoreEntryTransformList;
 
     private void Awake() {
-        entryContainer = transform.Find("highscoreEntryContainer");
-        entryTemplate = entryContainer.Find("highscoreEntryTemplate");
+        entryContainer = transform.Find("HSEntryTempContainer");
+        entryTemplate = entryContainer.Find("HSEntryTemp");
 
         entryTemplate.gameObject.SetActive(false);
 
@@ -20,13 +20,13 @@ public class HighScore_Table : MonoBehaviour
 
         if (highscores == null) {
             // There's no stored table, initialize
-            Debug.Log("Initializing table with default values...");
-            AddHighscoreEntry(3500, "BIL");
-            AddHighscoreEntry(2500, "SER");
-            AddHighscoreEntry(1500, "DON");
-            AddHighscoreEntry(1000, "RHT");
-            AddHighscoreEntry(500, "SAV");
-            AddHighscoreEntry(100, "TJR");
+           
+            AddHighscoreEntry(35000, "BIL");
+            AddHighscoreEntry(25000, "SER");
+            AddHighscoreEntry(15000, "DON");
+            AddHighscoreEntry(10000, "RHT");
+            AddHighscoreEntry(5000, "SAV");
+            AddHighscoreEntry(1000, "TJR");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -68,23 +68,23 @@ public class HighScore_Table : MonoBehaviour
         case 3: rankString = "3RD"; break;
         }
 
-        entryTransform.Find("posText").GetComponent<TextMeshProUGUI>().text = rankString;
+        entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().text = rankString;
 
         int score = highscoreEntry.score;
 
-        entryTransform.Find("scoreText").GetComponent<TextMeshProUGUI>().text = score.ToString();
+        entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = score.ToString();
 
         string name = highscoreEntry.name;
-        entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>().text = name;
+        entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().text = name;
 
         //// Set background visible odds and evens, easier to read
         //entryTransform.Find("background").gameObject.SetActive(rank % 2 == 1);
         
         // Highlight First
         if (rank == 1) {
-            entryTransform.Find("posText").GetComponent<TextMeshProUGUI>().color = Color.green;
-            entryTransform.Find("scoreText").GetComponent<TextMeshProUGUI>().color = Color.green;
-            entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>().color = Color.green;
+            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.green;
+            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.green;
+            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.green;
         }
 
        
