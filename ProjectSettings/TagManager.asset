@@ -37,6 +37,7 @@ TagManager:
   - PR
   - RGun
   - PressAnyButton
+  - How
   layers:
   - Default
   - TransparentFX
