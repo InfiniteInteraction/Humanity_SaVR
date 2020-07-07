@@ -9,9 +9,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    
-    
-
 
     // public varibles for access by other classes
     #region Public 
@@ -120,12 +117,16 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
-        if (gHitCount == 3)
+        if (gHitCount >= 3)
         {
-
             Damage.damage.playerHealth = 0;
+            Damage.damage.PlayerDeath();
         }
-        DifficultySetting();
+        if (Waves != null)
+        {
+            DifficultySetting();
+        }
+
     } 
 
     public void BulletMisses()

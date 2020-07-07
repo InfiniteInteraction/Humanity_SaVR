@@ -140,14 +140,7 @@ public class ENemyHealth : Health
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
         {
             Damage.damage.playerHealth -= 1;
-            greenHit++;
-            if(greenHit >= 3)
-            {
-
-                Damage.damage.PlayerDeath();
-
-            }
-
+            GameManager.gameManager.gHitCount++;
         }
     }
 
