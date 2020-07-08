@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class HighScore_Table : MonoBehaviour
 {
-     private Transform entryContainer;
+    public static HighScore_Table highScore_Table;
+    
+    private Transform entryContainer;
     private Transform entryTemplate;
+    public int pScore;
     private List<Transform> highscoreEntryTransformList;
 
-    private void Awake() {
+    private void Awake() 
+    {
+        highScore_Table = this;
         entryContainer = transform.Find("HSEntryTempContainer");
         entryTemplate = entryContainer.Find("HSEntryTemp");
-
         entryTemplate.gameObject.SetActive(false);
 
         string jsonString = PlayerPrefs.GetString("highscoreTable");
@@ -21,12 +26,12 @@ public class HighScore_Table : MonoBehaviour
         if (highscores == null) {
             // There's no stored table, initialize
            
-            AddHighscoreEntry(35000, "BIL");
-            AddHighscoreEntry(25000, "SER");
-            AddHighscoreEntry(15000, "DON");
-            AddHighscoreEntry(10000, "RHT");
-            AddHighscoreEntry(5000, "SAV");
-            AddHighscoreEntry(1000, "TJR");
+            AddHighscoreEntry(45000, "BIL");
+            AddHighscoreEntry(40000, "SER");
+            AddHighscoreEntry(35000, "DON");
+            AddHighscoreEntry(30000, "RHT");
+            AddHighscoreEntry(25000, "RDS");
+            AddHighscoreEntry(20000, "TJR");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -69,8 +74,8 @@ public class HighScore_Table : MonoBehaviour
         }
 
         entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().text = rankString;
-
         int score = highscoreEntry.score;
+        
 
         entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().text = score.ToString();
 
@@ -92,7 +97,7 @@ public class HighScore_Table : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
-    private void AddHighscoreEntry(int score, string name) {
+    public void AddHighscoreEntry(int score, string name) {
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
         
@@ -124,7 +129,7 @@ public class HighScore_Table : MonoBehaviour
      * Represents a single High score entry
      * */
     [System.Serializable] 
-    private class HighscoreEntry {
+    public class HighscoreEntry {
         public int score;
         public string name;
     }

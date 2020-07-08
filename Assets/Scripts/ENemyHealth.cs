@@ -63,22 +63,10 @@ public class ENemyHealth : Health
         GetComponent<Animator>().ResetTrigger("isHit");
         if (currHealth <= 0)
         {
-            //if (gameObject.layer == 8 || gameObject.tag == "GreenEnemy")
-            //{
-            //    GameManager.gameManager.greenDeaths++;
-            //}
-
-            //if (gameObject.tag == "GreenEnemy")
-            //{
-            //    Damage.damage.playerHealth += 100;
-            //    Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
-            //    Destroy(gameObject);
-            //    // pewpew.RegainAmmo();
-            //}
             eSpawner.enemyCount++;
             eSpawner.streakCount++;
             eSpawner.KillStreak();
-            pointTimer++;
+            //pointTimer++;
             eSpawner.killCount++;
             GameManager.gameManager.hits++;
             eSpawner.SpawnGreen();
@@ -176,25 +164,29 @@ public class ENemyHealth : Health
         {
             if (pointTimer < GameManager.gameManager.pD1)
             {
-                points = 100;
-                scoreS.Multi(points);
+               
+               points = 100;
+               scoreS.Multi(points);
             }
 
-            if (pointTimer > GameManager.gameManager.pD2 & pointTimer < GameManager.gameManager.pDA2)
+            if (pointTimer > GameManager.gameManager.pD2 && pointTimer < GameManager.gameManager.pDA2)
             {
+               
                 points = 75;
                 scoreS.Multi(points);
             }
 
             if (pointTimer > GameManager.gameManager.pD3 && pointTimer < GameManager.gameManager.pDA3)
             {
-                points = 50;
-                scoreS.Multi(points);
+               points = 50;
+               scoreS.Multi(points);
+              
             }
-            if (pointTimer < GameManager.gameManager.pD4)
+            if (pointTimer > GameManager.gameManager.pD4)
             {
-                points = 25;
-                scoreS.Multi(points);
+              points = 25;
+              scoreS.Multi(points);
+             
             }
         }
 }

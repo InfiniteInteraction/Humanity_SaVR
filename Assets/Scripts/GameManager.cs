@@ -142,12 +142,13 @@ public class GameManager : MonoBehaviour
     public void Starsystem()
     {
             StarCalculation();
+        HighScore_Table.highScore_Table.AddHighscoreEntry(score, "SaVR");
     }
 
     public void StarCalculation()
     {
         CalculateAccuracy();
-        if (accuracy >= 79 && score >= 38161 && greenDeaths >= 35)
+        if (accuracy >= 60 && score >= 38161 && greenDeaths >= 35)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -158,7 +159,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("5 star rating");
 
         }
-        else if (accuracy >= 59 && score >= 28621 && greenDeaths >= 28)
+        else if (accuracy >= 40 && score >= 28621 && greenDeaths >= 28)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -170,7 +171,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("4 star rating");
 
         }
-        else if (accuracy >= 35 && score >= 19081 && greenDeaths >= 21)
+        else if (accuracy >= 25 && score >= 19081 && greenDeaths >= 21)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -181,7 +182,7 @@ public class GameManager : MonoBehaviour
             Debug.LogError("3 star rating");
 
         }
-        else if (accuracy >= 15 && score >= 9541 && greenDeaths >= 14)
+        else if (accuracy >= 10 && score >= 9541 && greenDeaths >= 14)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -207,10 +208,7 @@ public class GameManager : MonoBehaviour
 
     public void DifficultySetting()
     {
-
         waveName = ESpawner.eSpawner.waves.ToString();
-
-
         switch (waveName)
         {
             case "0":
@@ -224,10 +222,10 @@ public class GameManager : MonoBehaviour
                 repeatTime = 1.5f;
                 break;
             case "1":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
+                pD1 = 10;
+                pD2 = 9;
+                pDA2 = 13;
+                pD3 = 12;
                 pDA3 = 20;
                 pD4 = 19;
                 spawnTime = 0.5f;
@@ -236,12 +234,12 @@ public class GameManager : MonoBehaviour
                 CTime = 10;
                 break;
             case "2":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 enemyATK = 5;
@@ -249,79 +247,79 @@ public class GameManager : MonoBehaviour
                 CTime = 8;
                 break;
             case "3":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 enemyATK = 5;
                 CTime = 6;
                 break;
             case "4":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 CTime = 5;
                 break;
             case "5":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 break;
             case "6":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 enemyATK = 5;
                 enemyATKCooldown = 2;
                 break;
             case "7":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 8;
+                pD2 = 7;
+                pDA2 = 10;
+                pD3 = 9;
+                pDA3 = 15;
+                pD4 = 14;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 enemyATK = 5;
                 break;
             case "8":
-                pD1 = 11;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 15;
-                pDA3 = 20;
-                pD4 = 19;
+                pD1 = 6;
+                pD2 = 5;
+                pDA2 = 8;
+                pD3 = 7;
+                pDA3 = 11;
+                pD4 = 10;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 CTime = 4;
                 break;
             case "9":
                 pD1 = 6;
-                pD2 = 10;
-                pDA2 = 16;
-                pD3 = 21;
-                pDA3 = 26;
-                pD4 = 31;
+                pD2 = 5;
+                pDA2 = 8;
+                pD3 = 7;
+                pDA3 = 11;
+                pD4 = 10;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
                 CTime = 3;
@@ -349,12 +347,5 @@ public class GameManager : MonoBehaviour
         {
             waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
         }
-
-
     }
 }
-    
-
-       
-
-

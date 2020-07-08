@@ -14,7 +14,7 @@ public class ESpawner : MonoBehaviour
 
     public GameObject[] spawners;
     public bool isWaveOver;
-    public Health playerHealth;
+
 
     //Spawners area 
     public int totalToSpawn = 15;
