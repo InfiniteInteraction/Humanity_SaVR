@@ -24,10 +24,13 @@ public class WaveController : MonoBehaviour
    public void WaveComplete()
    {
         ESpawner.eSpawner.isWaveOver = true;
-        Audiomanager.audiomanager.Play("WaveComplete");
         ESpawner.eSpawner.Wavescreen.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        if(ESpawner.eSpawner.waves <=9)
+        {
+            Audiomanager.audiomanager.Play("WaveComplete");
+        }
         if (GameManager.gameManager.saveWave == 1)
         {
             
