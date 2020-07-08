@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d3df52bff052e340baf621ec96a4e49, type: 2}
+  - {fileID: 2100000, guid: 75e03577fab620541b9518dafc7d8831, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 1172782456802973215}
   - component: {fileID: 5750648316112234425}
   - component: {fileID: 4554033941138821917}
+  - component: {fileID: 8060026883525532163}
   m_Layer: 0
   m_Name: pCube1
   m_TagString: Untagged
@@ -166,7 +167,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: b93bc252b443b164fb47cace2c8b18df, type: 2}
-  - {fileID: 2100000, guid: 5c5b5150eb3058445a89cf82efa417e0, type: 2}
+  - {fileID: 2100000, guid: 5ddf4279b6c724a4996ce56c025f22d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,6 +188,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8060026883525532163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2661422739126756421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3195677279445535268
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,6 +211,7 @@ GameObject:
   - component: {fileID: 5012587796967043087}
   - component: {fileID: 3852290935058292707}
   - component: {fileID: 7158360138799193115}
+  - component: {fileID: 8551865217796684667}
   m_Layer: 0
   m_Name: polySurface2
   m_TagString: Untagged
@@ -245,7 +259,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: c4f18641e06cab548a0815309d34da3c, type: 2}
-  - {fileID: 2100000, guid: 5c5b5150eb3058445a89cf82efa417e0, type: 2}
+  - {fileID: 2100000, guid: 5ddf4279b6c724a4996ce56c025f22d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -266,6 +280,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8551865217796684667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3195677279445535268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4365915273473594472
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +790,7 @@ GameObject:
   - component: {fileID: 8237516922288191061}
   - component: {fileID: 8773031669755676854}
   - component: {fileID: 601159523018152160}
+  - component: {fileID: 704499934558695993}
   m_Layer: 0
   m_Name: pCube2
   m_TagString: Untagged
@@ -811,7 +838,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5430f3a1f54ed8442b739ab8563256a5, type: 2}
-  - {fileID: 2100000, guid: 5c5b5150eb3058445a89cf82efa417e0, type: 2}
+  - {fileID: 2100000, guid: 5ddf4279b6c724a4996ce56c025f22d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -832,3 +859,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &704499934558695993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8446625092785337761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -275,6 +275,27 @@ public class GunTestVR : MonoBehaviour
                     child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunG"), typeof(Material)) as Material;
                 }
             }
+            if (gameObject.name.Equals("syfy_shotgun"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials_shotgun_green/Mat_plazmaColor_green"), typeof(Material)) as Material;
+                }
+            }
+            if (gameObject.name.Equals("Musket_DuskSky"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Musket_materials_green/Mat_beamWire_green"), typeof(Material)) as Material;
+                }
+            }
+            if (gameObject.name.Equals("Rifleobj_green"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_10 - _SciFi Rifle_/Mat_Rifle_Green"), typeof(Material)) as Material;
+                }
+            }
         }
         else
         {
@@ -296,6 +317,27 @@ public class GunTestVR : MonoBehaviour
                 foreach (Transform child in transform)
                 {
                     child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
+                }
+            }
+            if (gameObject.name.Equals("syfy_shotgun"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
+                }
+            }
+            if (gameObject.name.Equals("Musket_DuskSky"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Musket_materials_red/Mat_beamWire_red"), typeof(Material)) as Material;
+                }
+            }
+            if (gameObject.name.Equals("Rifleobj_green"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_10 - _SciFi Rifle_/Mat_Rifle_Red"), typeof(Material)) as Material;
                 }
             }
         }

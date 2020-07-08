@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 1711067000193637693}
   - component: {fileID: 1436297219689108940}
   - component: {fileID: 5686861125123901884}
+  - component: {fileID: 5441552396867532985}
   m_Layer: 0
   m_Name: syfyGun02:polySurface3
   m_TagString: Untagged
@@ -135,7 +136,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1a6d6e8ba35406439c6e6e68c961214, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -156,6 +157,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5441552396867532985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567237703962154380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &713337531709435658
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,6 +180,7 @@ GameObject:
   - component: {fileID: 5780993956688995193}
   - component: {fileID: 334986547857640335}
   - component: {fileID: 437860331206457934}
+  - component: {fileID: 586614268207007196}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface56_polySurface56_polySurface56_polySurface56
   m_TagString: Untagged
@@ -213,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f04d159f5c4624f938de2abf468577, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -234,6 +248,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &586614268207007196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 713337531709435658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1519343329322839919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,6 +1228,7 @@ GameObject:
   - component: {fileID: 9011860615783040136}
   - component: {fileID: 6308326347323302566}
   - component: {fileID: 4598351615064449958}
+  - component: {fileID: 555028950425775696}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface31_polySurface31_polySurface31_polySurface31
   m_TagString: Untagged
@@ -1248,7 +1275,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1a6d6e8ba35406439c6e6e68c961214, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1269,6 +1296,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &555028950425775696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3753086430457376781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3978875466661266385
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1319,7 @@ GameObject:
   - component: {fileID: 6510187481863773750}
   - component: {fileID: 7554782144045819675}
   - component: {fileID: 5714239337993907592}
+  - component: {fileID: 2473060593545645485}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface57_polySurface57_polySurface57_polySurface57
   m_TagString: Untagged
@@ -1326,7 +1366,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f04d159f5c4624f938de2abf468577, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1347,6 +1387,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2473060593545645485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3978875466661266385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4117575404846322687
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1566,7 @@ GameObject:
   - component: {fileID: 4994293844177824375}
   - component: {fileID: 2106695583645551160}
   - component: {fileID: 3228837872202933879}
+  - component: {fileID: 3624435659936967795}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface29_polySurface29_polySurface29_polySurface29
   m_TagString: Untagged
@@ -1560,7 +1613,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e1a6d6e8ba35406439c6e6e68c961214, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1581,6 +1634,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3624435659936967795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4586498393885886112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4588313537327410363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1657,7 @@ GameObject:
   - component: {fileID: 3335176228728517075}
   - component: {fileID: 8885435796443057822}
   - component: {fileID: 5805395942640541607}
+  - component: {fileID: 8743692716803158393}
   m_Layer: 0
   m_Name: syfyGun02:gpCylinder19_pCylinder19_pCylinder19_pCylinder19
   m_TagString: Untagged
@@ -1607,7 +1673,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588313537327410363}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2544132938618068348}
@@ -1638,7 +1704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5f79439420b894744b78b0f5da8614e9, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1659,6 +1725,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8743692716803158393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588313537327410363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4967106325434006766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1904,6 +1982,7 @@ GameObject:
   - component: {fileID: 415865049161452178}
   - component: {fileID: 4694026369178387533}
   - component: {fileID: 1357813317816683309}
+  - component: {fileID: 6502045144229190027}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface59_polySurface59_polySurface59_polySurface59
   m_TagString: Untagged
@@ -1950,7 +2029,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f04d159f5c4624f938de2abf468577, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1971,6 +2050,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6502045144229190027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037686995866263262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7057759300025032957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2402,6 +2493,7 @@ GameObject:
   - component: {fileID: 7259133578152146756}
   - component: {fileID: 7521408493022098524}
   - component: {fileID: 7656946592635427719}
+  - component: {fileID: 6722400544819627640}
   m_Layer: 0
   m_Name: syfyGun02:gpolySurface58_polySurface58_polySurface58_polySurface58
   m_TagString: Untagged
@@ -2448,7 +2540,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14f04d159f5c4624f938de2abf468577, type: 2}
+  - {fileID: 2100000, guid: 2ca0d4124fdcdbd4a8ab6bb745df8f6d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2469,6 +2561,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6722400544819627640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8592266053447818833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8825707885699987542
 GameObject:
   m_ObjectHideFlags: 0
