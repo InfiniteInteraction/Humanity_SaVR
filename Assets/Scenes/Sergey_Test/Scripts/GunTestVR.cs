@@ -30,8 +30,8 @@ public class GunTestVR : MonoBehaviour
     public GameObject redBullet;
     public GameObject greenBullet;
 
-    GameObject green;
-    GameObject red;
+    public GameObject green;
+    public GameObject red;
     //GameObject redRailgunBullet;
     //GameObject greenRailgunBullet;
     //GameObject greenPistolBullet;
@@ -50,14 +50,17 @@ public class GunTestVR : MonoBehaviour
     {
         gunTestVR = this;
         green = GetComponentInChildren<ID_Green>().gameObject;
-        if (green == null)
+        if (green != null)
         {
-            Debug.Log("green in GunTestVR not found.");
+            Debug.Log("green is found.");
+            green.SetActive(false);
         }
+       
         red = GetComponentInChildren<ID_Red>().gameObject;
-        if (red == null)
+        if (red != null)
         {
-            Debug.Log("red in GunTestVR not found.");
+            Debug.Log("red in GunTestVR found.");
+            red.SetActive(true);
         }
         //greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         ////greenPistolBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
@@ -79,7 +82,7 @@ public class GunTestVR : MonoBehaviour
     void Start()
     {
         damageValue = 5;
-        green.SetActive(false);
+        //green.SetActive(false);
         if (gameObject.name.Equals("PlasmaRifleVR"))
         {
             damageValue = 5;
@@ -286,7 +289,9 @@ public class GunTestVR : MonoBehaviour
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Musket_materials_green/Mat_beamWire_green"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_green/Mat_beamWire_green"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = temp;
+                    
                 }
             }
             if (gameObject.name.Equals("Rifleobj_green"))
@@ -330,7 +335,9 @@ public class GunTestVR : MonoBehaviour
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Musket_materials_red/Mat_beamWire_red"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_red/Mat_beamWire_red"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = temp;
+                    
                 }
             }
             if (gameObject.name.Equals("Rifleobj_green"))
