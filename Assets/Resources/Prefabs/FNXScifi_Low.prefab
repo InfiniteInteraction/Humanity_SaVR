@@ -450,6 +450,7 @@ GameObject:
   - component: {fileID: 702366887745203960}
   - component: {fileID: 1231671115733500132}
   - component: {fileID: 5653925865600127912}
+  - component: {fileID: 5762308935094301383}
   m_Layer: 0
   m_Name: pCylinder17
   m_TagString: Untagged
@@ -517,6 +518,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5762308935094301383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5195184102320954827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6243893484897314651
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +775,7 @@ GameObject:
   - component: {fileID: 1207923700995948223}
   - component: {fileID: 8957240443481170559}
   - component: {fileID: 3300150614596558549}
+  - component: {fileID: 1947238508376263135}
   m_Layer: 0
   m_Name: pCylinder18
   m_TagString: Untagged
@@ -829,6 +843,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1947238508376263135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231794174231200428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7372229935250108015
 GameObject:
   m_ObjectHideFlags: 0
