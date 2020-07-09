@@ -14,7 +14,7 @@ public class ScoreScript : MonoBehaviour
     }
     public void Update()
     {
-        score.text = "Score: " + scoreManager.currScore ;      
+        score.text = /*"Score: " +*/ scoreManager.currScore.ToString() ;      
     }
     public void Multi(int points)
     {
