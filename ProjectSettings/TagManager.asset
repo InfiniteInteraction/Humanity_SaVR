@@ -38,6 +38,7 @@ TagManager:
   - RGun
   - PressAnyButton
   - How
+  - HUD
   layers:
   - Default
   - TransparentFX

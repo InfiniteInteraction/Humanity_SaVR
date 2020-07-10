@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class DeathFade : MonoBehaviour
 {
-    public Image faceOut;
+    public Image fadeOut;
     public float fadeTime = 0.5f;
 
     // Start is called before the first frame update
@@ -26,8 +26,8 @@ public class DeathFade : MonoBehaviour
 
     IEnumerator fadeImage()
     {
-        
-        faceOut.color = Color.Lerp(faceOut.color, Color.black, fadeTime * Time.fixedDeltaTime);
+        fadeOut.color = Color.Lerp(fadeOut.color, Color.black, fadeTime * Time.deltaTime);
+        GameObject.FindGameObjectWithTag("HUD").SetActive(false);
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("DeathScene");
         

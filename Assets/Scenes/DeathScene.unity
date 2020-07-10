@@ -3132,6 +3132,7 @@ GameObject:
   - component: {fileID: 1790634578}
   - component: {fileID: 1790634577}
   - component: {fileID: 1790634576}
+  - component: {fileID: 1790634579}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: PauseQuitButton
@@ -3217,6 +3218,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790634574}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1790634579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790634574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700587be0b0929045a66e241906b19cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sMU: {fileID: 79598890}
 --- !u!1 &1838512461 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100012, guid: ce816f2e6abb0504092c23ed9b970dfd,
