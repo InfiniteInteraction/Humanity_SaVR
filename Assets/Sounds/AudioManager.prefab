@@ -153,8 +153,8 @@ MonoBehaviour:
     name: RedDamage
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 79f9082399438fb4cab3d1a9a47ad6a6, type: 3}
-    volume: 0.7
+    clip: {fileID: 8300000, guid: f9fc817070d36644c9661a773c3e1672, type: 3}
+    volume: 0.6
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
