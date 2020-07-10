@@ -158,7 +158,7 @@ public class GunTestVR : MonoBehaviour
                 if (rifleTrigger)
                     Timer();
                 float triggerPress;
-                triggerPress = OVRInput.Get(OVRInput.RawAxis1D.LIndexTrigger);
+                triggerPress = OVRInput.Get(OVRInput.RawAxis1D.RIndexTrigger);
                 if (triggerPress >= 0.95f && !rifleTrigger)
                 {
                     rifleTrigger = true;
@@ -170,33 +170,37 @@ public class GunTestVR : MonoBehaviour
                     StartCoroutine("RifleWheelStop");
                 }
             }
+            if(gameObject.name.Equals("Rifle obj_green") && !fullAutoMode)
+            {
+                fullAutoMode = true;
+            }
             else
             {
                 if (fullAutoMode)
                 {
-                    if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && canShoot && currAmmo > 0 && tag!= "RGun")
+                    if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) && canShoot && currAmmo > 0)
                     {
                         StartCoroutine("AutoShot");
                     }
                 }
                 else
                 {
-                    if ((OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger)) && canShoot && currAmmo > 0&& tag!= "RGun")
+                    if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
                     {
                         StartCoroutine("OneShot");
                         return;
                     }
-                    if ((OVRInput.GetUp(OVRInput.RawButton.LIndexTrigger)) && !canShoot)
+                    if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
                     {
                         canShoot = true;
                         return;
                     }
-                    if ((OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)) && canShoot && currAmmo > 0 && tag == "RGun")
+                    if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
                     {
                         StartCoroutine("OneShot");
                         return;
                     }
-                    if ((OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) && !canShoot && tag == "RGun")
+                    if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
                     {
                         canShoot = true;
                         return;
@@ -210,7 +214,7 @@ public class GunTestVR : MonoBehaviour
                 Debug.Log("Out of Ammo");
             }
 
-            if (OVRInput.GetDown(OVRInput.RawButton.Y))
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
                 SwitchBullets();
                 if(isGreenFireMode==false)
@@ -241,18 +245,18 @@ public class GunTestVR : MonoBehaviour
         ammoChanged = true;
     }
 
-    void SwitchFireMode()
-    {
-        fullAutoMode = !fullAutoMode;
-        if (fullAutoMode == true)
-        {
-            shootTime = fullAutoTime;
-        }
-        else
-        {
-            shootTime = semiAutoTime;
-        }
-    }
+    //void SwitchFireMode()
+    //{
+    //    fullAutoMode = !fullAutoMode;
+    //    if (fullAutoMode == true)
+    //    {
+    //        shootTime = fullAutoTime;
+    //    }
+    //    else
+    //    {
+    //        shootTime = semiAutoTime;
+    //    }
+    //}
 
     void SwitchBullets()
     {
@@ -294,7 +298,7 @@ public class GunTestVR : MonoBehaviour
                     
                 }
             }
-            if (gameObject.name.Equals("Rifleobj_green"))
+            if (gameObject.name.Equals("Rifle obj_green"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
@@ -478,7 +482,7 @@ public class GunTestVR : MonoBehaviour
     {
         WeaponShoot();
         canShoot = false;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(3.0f);
         canShoot = true;
     }
 
