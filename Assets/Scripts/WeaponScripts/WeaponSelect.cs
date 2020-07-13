@@ -11,6 +11,7 @@ public class WeaponSelect : MonoBehaviour
     public WeaponSwitch GM;
     public GameObject Pistol;
     public GameObject Load;
+    public GameObject Text1, Text2;
     public bool PSelect = false;
     [Header("Current Weapons")]
     public GameObject CurrPistol;
@@ -47,6 +48,8 @@ public class WeaponSelect : MonoBehaviour
         {
             Pistol.SetActive(false);
             Load.SetActive(true);
+            Text1.SetActive(false);
+            Text2.SetActive(true);
             for (int i = 0; i < PrimSecIcon.Count; i++)
             {
                 PrimSecIcon[i].sprite = CurrLoadOut[i].GetComponent<GunTestVR>().WeapIcon;
@@ -61,6 +64,8 @@ public class WeaponSelect : MonoBehaviour
         {
             Pistol.SetActive(true);
             Load.SetActive(false);
+            Text1.SetActive(true);
+            Text2.SetActive(false);
             for (int i = 0; i < PistolChoices.Count; i++)
             {
                 PChoiImages[i].sprite = PistolChoices[i].GetComponent<GunTestVR>().WeapIcon;
