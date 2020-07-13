@@ -9,7 +9,7 @@ public class HighScore_Table : MonoBehaviour
     public static HighScore_Table highScore_Table;
     
     private Transform entryContainer;
-    private Transform entryTemplate;
+    public Transform entryTemplate;
     public int pScore;
     private List<Transform> highscoreEntryTransformList;
 
@@ -32,6 +32,17 @@ public class HighScore_Table : MonoBehaviour
             AddHighscoreEntry(30000, "RHT");
             AddHighscoreEntry(25000, "RDS");
             AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(15000, "JTR");
+            AddHighscoreEntry(10000, "RVB");
+            AddHighscoreEntry(9000, "TR");
+            AddHighscoreEntry(1000, "JR");
+            AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(20000, "TJR");
+            AddHighscoreEntry(20000, "TJR");
+
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -55,7 +66,8 @@ public class HighScore_Table : MonoBehaviour
         }
     }
 
-    private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList) {
+    private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList) 
+    {
         float templateHeight = .5f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
@@ -91,8 +103,11 @@ public class HighScore_Table : MonoBehaviour
             entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.green;
             entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.green;
         }
+        if (rank == 10)
+        {
+            transformList.RemoveAt(10);
+        }
 
-       
 
         transformList.Add(entryTransform);
     }

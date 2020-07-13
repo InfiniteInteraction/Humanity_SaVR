@@ -17,10 +17,6 @@ public class Damage : MonoBehaviour
     public void Update()
     {
         Mathf.Clamp(playerHealth, 0, 100);
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            SceneManager.LoadScene(1);
-        }        
     }
 
    public void PlayerDeath()
@@ -28,8 +24,6 @@ public class Damage : MonoBehaviour
         if (playerHealth == 0)
         {
             Audiomanager.audiomanager.Play("WaveFailed");
-            Debug.Log("Player Dead");
-            //SceneManager.LoadScene(0);
         }
     }
 }

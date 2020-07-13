@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
                 {
                     string WaveName = ScoreText.name.ToString();
                     //Debug.LogError(WaveName);
-                    ScoreText.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(WaveName, 0).ToString();
+                    //ScoreText.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(WaveName, 0).ToString();
                 }
             }
         }
@@ -126,8 +126,13 @@ public class GameManager : MonoBehaviour
         {
             DifficultySetting();
         }
+        if(Damage.damage.playerHealth<= 1)
+        {
+            PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
+            PlayerPrefs.Save();
+        }
 
-    } 
+    }
 
     public void BulletMisses()
     {
