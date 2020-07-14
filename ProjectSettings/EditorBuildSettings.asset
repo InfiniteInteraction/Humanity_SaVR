@@ -8,21 +8,27 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/OVRMenu.unity
     guid: 06813a3b7bab3764187f3d7e54dc1df6
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/WeapSelect.unity
+    guid: 209b76a63892b5342b0df8638f0c3248
+  - enabled: 1
+    path: Assets/Scenes/HowToPlay_New.unity
+    guid: 4b8ee9093ea2f8f469e29afb315744ac
+  - enabled: 1
+    path: Assets/Scenes/Credits_New.unity
+    guid: 3c0e53404bcd9ab42ae41b6ce469da1a
   - enabled: 1
     path: Assets/Scenes/Onslaught 1.unity
     guid: d59548dc6d487444bbda6665980ea07d
+  - enabled: 1
+    path: Assets/Scenes/DeathScene.unity
+    guid: 68a413a1063bf1043b1f72191c56fa7a
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Scenes/Onslaught 2.unity
-    guid: 2b4d6c5556b8c9c489bbe7a50527ea13
-  - enabled: 1
-    path: Assets/Scenes/DeathScene.unity
-    guid: 68a413a1063bf1043b1f72191c56fa7a
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

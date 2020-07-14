@@ -6,7 +6,7 @@ public class StartMenuFunctionality : MonoBehaviour
 {
     public void NewGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("WeapSelect");
     }
     public void OpenMenu(GameObject menu)
     {

@@ -29,20 +29,21 @@ public class WaveController : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
       
+        Cursor.lockState = CursorLockMode.None;     
+
         PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
         PlayerPrefs.Save();
+        GameManager.gameManager.saveWave += 1;
         if (ESpawner.eSpawner.isWaveOver == true)
         {
             ESpawner.eSpawner.waves++;
             ESpawner.eSpawner.isWaveOver = false;
+
         }
         if (ESpawner.eSpawner.waves <= 9)
         {
             Audiomanager.audiomanager.Play("WaveComplete");
         }
-        GameManager.gameManager.saveWave += 1;
-       
-
         //if (GameManager.gameManager.saveWave == 2)
         //{
 
