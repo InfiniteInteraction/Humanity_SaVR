@@ -25,7 +25,7 @@ public class ButtonPush : MonoBehaviour
       
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("PauseQuitButton"))
         {
-            SceneManager.LoadScene(0);           
+            SceneManager.LoadScene("OVRMenu");           
         }
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("NextWave"))
         {
@@ -33,11 +33,11 @@ public class ButtonPush : MonoBehaviour
         }
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("How"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("HowToPlay_New");
         }
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("PressAnyButton"))
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene("OVRMenu");
         }
 
     }
