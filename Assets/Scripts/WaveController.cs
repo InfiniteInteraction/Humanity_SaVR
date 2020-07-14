@@ -26,11 +26,7 @@ public class WaveController : MonoBehaviour
         ESpawner.eSpawner.isWaveOver = true;
         ESpawner.eSpawner.Wavescreen.SetActive(true);
         Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
-        if(ESpawner.eSpawner.waves <=9)
-        {
-            Audiomanager.audiomanager.Play("WaveComplete");
-        }           
+        Cursor.lockState = CursorLockMode.None;     
         PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
         PlayerPrefs.Save();
                
@@ -134,7 +130,11 @@ public class WaveController : MonoBehaviour
            ESpawner.eSpawner.isWaveOver = false;
                       
         }
-   }
+        if (ESpawner.eSpawner.waves <= 9)
+        {
+            Audiomanager.audiomanager.Play("WaveComplete");
+        }
+    }
 
     public void NextWave()
     {
