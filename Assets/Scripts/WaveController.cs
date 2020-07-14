@@ -24,26 +24,33 @@ public class WaveController : MonoBehaviour
    public void WaveComplete()
    {
         ESpawner.eSpawner.isWaveOver = true;
+
         ESpawner.eSpawner.Wavescreen.SetActive(true);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        if(ESpawner.eSpawner.waves <=9)
-        {
-            Audiomanager.audiomanager.Play("WaveComplete");
-        }           
+      
         PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
         PlayerPrefs.Save();
-               
-            
-        
+        if (ESpawner.eSpawner.isWaveOver == true)
+        {
+            ESpawner.eSpawner.waves++;
+            ESpawner.eSpawner.isWaveOver = false;
+        }
+        if (ESpawner.eSpawner.waves <= 9)
+        {
+            Audiomanager.audiomanager.Play("WaveComplete");
+        }
+        GameManager.gameManager.saveWave += 1;
+       
+
         //if (GameManager.gameManager.saveWave == 2)
         //{
-           
+
         //    if (GameManager.gameManager.score > PlayerPrefs.GetInt("Wave 2 Score", 0))
         //    {
         //        PlayerPrefs.SetInt("Wave 2 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-                
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 3)
@@ -53,7 +60,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 3 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 4)
@@ -63,7 +70,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 4 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 5)
@@ -73,7 +80,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 5 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 6)
@@ -83,7 +90,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 6 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 7)
@@ -93,7 +100,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 7 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 8)
@@ -103,7 +110,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 8 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-              
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 9)
@@ -113,7 +120,7 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 9 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-               
+
         //    }
         //}
         //if (GameManager.gameManager.saveWave == 10)
@@ -123,18 +130,10 @@ public class WaveController : MonoBehaviour
         //    {
         //        PlayerPrefs.SetInt("Wave 10 Score", GameManager.gameManager.score);
         //        PlayerPrefs.Save();
-                
+
         //    }
         //}
-
-        GameManager.gameManager.saveWave += 1;
-        if (ESpawner.eSpawner.isWaveOver == true)
-        {
-           ESpawner.eSpawner.waves++;
-           ESpawner.eSpawner.isWaveOver = false;
-                      
-        }
-   }
+    }
 
     public void NextWave()
     {

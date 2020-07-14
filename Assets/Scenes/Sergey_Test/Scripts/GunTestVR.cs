@@ -183,12 +183,12 @@ public class GunTestVR : MonoBehaviour
                 }
                 else
                 {
-                    if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
+                    if ((OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) && canShoot && currAmmo > 0)
                     {
                         StartCoroutine("OneShot");
                         return;
                     }
-                    else if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
+                    else if ((OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) && !canShoot)
                     {
                         canShoot = true;
                         return;
