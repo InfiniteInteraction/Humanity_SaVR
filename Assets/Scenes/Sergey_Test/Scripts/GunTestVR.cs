@@ -144,12 +144,10 @@ public class GunTestVR : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            WeaponShoot();
-        }
-
-
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    WeaponShoot();
+        //}
         string Actscene = FindObjectOfType<WeaponSwitch>().Actscene;
         if (Actscene != "WeapSelect")
         {
@@ -190,26 +188,26 @@ public class GunTestVR : MonoBehaviour
                         StartCoroutine("OneShot");
                         return;
                     }
-                    if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
+                    else if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
                     {
                         canShoot = true;
                         return;
                     }
-                    if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
-                    {
-                        StartCoroutine("OneShot");
-                        return;
-                    }
-                    if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
-                    {
-                        canShoot = true;
-                        return;
+                    //if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
+                    //{
+                    //    StartCoroutine("OneShot");
+                    //    return;
+                    //}
+                    //if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
+                    //{
+                    //    canShoot = true;
+                    //    return;
 
-                    }
+                    //}
                 }
             }
 
-            if (OVRInput.Get(OVRInput.Button.PrimaryIndexTrigger) && currAmmo <= 0)
+            if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) && currAmmo <= 0)
             {
                 Debug.Log("Out of Ammo");
             }
