@@ -349,10 +349,10 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_green/Mat_plazmaColor_red"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
                     mats[1] = temp;
 
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
+                    //detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
                 }
             }
             if (gameObject.name.Equals("Musket_DuskSky"))
