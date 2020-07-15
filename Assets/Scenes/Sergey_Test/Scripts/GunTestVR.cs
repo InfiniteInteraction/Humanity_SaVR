@@ -124,7 +124,7 @@ public class GunTestVR : MonoBehaviour
             redBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         }
-        if (gameObject.name.Equals("PlasmaGunVR"))
+        if (gameObject.name.Equals("PlasmaGunVR")|| gameObject.name.Equals("FNXScifi_Low"))
         {
             redBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
