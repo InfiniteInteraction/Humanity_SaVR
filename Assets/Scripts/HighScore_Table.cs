@@ -13,7 +13,7 @@ public class HighScore_Table : MonoBehaviour
     public int pScore;
     private List<Transform> highscoreEntryTransformList;
 
-    private void Awake() 
+    private void Start() 
     {
         highScore_Table = this;
         entryContainer = transform.Find("HSEntryTempContainer");

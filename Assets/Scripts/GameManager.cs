@@ -8,7 +8,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
-    public TextMeshProUGUI fScore;
 
     // public varibles for access by other classes
     #region Public 
@@ -117,9 +116,6 @@ public class GameManager : MonoBehaviour
         if(HighScore_Table.highScore_Table != null)
         {
             HighScore_Table.highScore_Table.pScore = score;
-            resultsBackground = GameObject.FindGameObjectWithTag("RBackground");
-            //fScore = 
-            //fScore.text = HighScore_Table.highScore_Table.pScore.ToString();
             
         }
         if (gHitCount >= 3)
@@ -135,11 +131,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
             PlayerPrefs.Save();
-        }
-    
-       
-        
-        
+        }      
     }
 
     public void BulletMisses()
