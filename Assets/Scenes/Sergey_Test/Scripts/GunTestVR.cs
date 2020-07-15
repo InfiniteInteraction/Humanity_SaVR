@@ -168,7 +168,7 @@ public class GunTestVR : MonoBehaviour
                     StartCoroutine("RifleWheelStop");
                 }
             }
-            if((gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("TommyGun")) && !fullAutoMode)
+            if((gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("TommyGun")|| gameObject.name.Equals("FNXScifi_Low")) && !fullAutoMode)
             {
                 fullAutoMode = true;
             }
