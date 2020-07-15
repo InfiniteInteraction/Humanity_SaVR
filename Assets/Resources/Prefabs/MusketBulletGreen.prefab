@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2245306240487786420}
   m_Layer: 11
   m_Name: MusketBulletGreen
-  m_TagString: RedBullet
+  m_TagString: GreenBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

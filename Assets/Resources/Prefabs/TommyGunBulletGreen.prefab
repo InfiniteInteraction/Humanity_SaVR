@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 2245306240487786420}
   m_Layer: 11
   m_Name: TommyGunBulletGreen
-  m_TagString: RedBullet
+  m_TagString: GreenBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4948,6 +4948,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1418517321614710429}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Name
+      value: PlasmaRing
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5017,21 +5032,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Name
-      value: PlasmaRing
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
