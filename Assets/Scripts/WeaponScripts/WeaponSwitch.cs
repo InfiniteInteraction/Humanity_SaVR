@@ -49,7 +49,7 @@ public class WeaponSwitch : MonoBehaviour
         }
         else
         {
-            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.Button.SecondaryHandTrigger))
+            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.Get(OVRInput.RawButton.RHandTrigger))
             {
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
                 WeaponPlace++;
@@ -63,21 +63,21 @@ public class WeaponSwitch : MonoBehaviour
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
                 //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
             }
-            foreach (KeyCode key in NumKeys)
-            {
+            //foreach (KeyCode key in NumKeys)
+            //{
                 //if(Input.GetKeyDown(key))
                 //{
                 //    Debug.Log(key);
                 //}
-                if (Input.GetKeyDown(key))
-                {
-                    AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
-                    WeaponPlace = NumKeys.IndexOf(key);
-                    CurrentWeapon = AvailableWeapons[WeaponPlace].name;
-                    AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+                //if (Input.GetKeyDown(key))
+                //{
+                //    AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
+                //    WeaponPlace = NumKeys.IndexOf(key);
+                //    CurrentWeapon = AvailableWeapons[WeaponPlace].name;
+                //    AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
                     //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
-                }
-            }
+                //}
+            //}
         }
         //if(Input.GetKeyDown(KeyCode.Alpha1))
         //{
