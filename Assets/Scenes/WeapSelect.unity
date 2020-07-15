@@ -29588,32 +29588,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5682762610276204969, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: WeapIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: a555b15db78ddc74aaeb53f55b76170a,
-        type: 3}
     - target: {fileID: 5479700858612243748, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: damageValue
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271832647787131992, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: WeapIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 14d4e3ac3733b934b9fba35e770a48d5,
-        type: 3}
-    - target: {fileID: 2271832647787131992, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: currAmmo
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 2271832647787131992, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: maxAmmo
-      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3514680125246538057, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
