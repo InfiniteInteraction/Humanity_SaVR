@@ -314,8 +314,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   damageValue: 0
-  currAmmo: 10
-  maxAmmo: 20
+  currAmmo: 999
+  maxAmmo: 999
   ammoReturn: 3
   canShoot: 1
   fullAutoMode: 0
@@ -334,7 +334,7 @@ MonoBehaviour:
   red: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
-  WeapIcon: {fileID: 21300000, guid: 70c5c19ee3bc392488f2f8dfa60e682b, type: 3}
+  WeapIcon: {fileID: 21300000, guid: 55c9db7baa5c5f948a93126cd3998484, type: 3}
 --- !u!1 &1000415484376545955
 GameObject:
   m_ObjectHideFlags: 0
@@ -14224,10 +14224,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4414045383535884894}
     m_Modifications:
-    - target: {fileID: 3292695964709422, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}
-      propertyPath: m_Name
-      value: AmmoCount
-      objectReference: {fileID: 0}
     - target: {fileID: 9206397351816121833, guid: 9ef6e37afac26c643802420ee6f19d16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14282,6 +14278,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3292695964709422, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}
+      propertyPath: m_Name
+      value: AmmoCount
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}

@@ -375,8 +375,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1024
   damageValue: 0
-  currAmmo: 10
-  maxAmmo: 20
+  currAmmo: 1000
+  maxAmmo: 1000
   ammoReturn: 3
   canShoot: 1
   fullAutoMode: 0
@@ -393,7 +393,7 @@ MonoBehaviour:
   red: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
-  WeapIcon: {fileID: 21300000, guid: 14d4e3ac3733b934b9fba35e770a48d5, type: 3}
+  WeapIcon: {fileID: 21300000, guid: aa39aeab36a632e4dafe2fc8405a97b3, type: 3}
 --- !u!1 &8418602961865770818
 GameObject:
   m_ObjectHideFlags: 0

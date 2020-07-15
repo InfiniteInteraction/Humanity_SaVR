@@ -39505,9 +39505,11 @@ MonoBehaviour:
   isGreenFireMode: 0
   redBullet: {fileID: 0}
   greenBullet: {fileID: 0}
+  green: {fileID: 0}
+  red: {fileID: 0}
   emissiveObjects: []
   wheelSpin: {fileID: 0}
-  WeapIcon: {fileID: 21300000, guid: 9961fe39967da7c48b05d680af510b28, type: 3}
+  WeapIcon: {fileID: 21300000, guid: 46190477ddb20f04abd09d4e1bb73503, type: 3}
 --- !u!1 &7331447806194845631
 GameObject:
   m_ObjectHideFlags: 0
