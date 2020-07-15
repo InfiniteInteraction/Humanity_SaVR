@@ -29,7 +29,7 @@ public class WeaponSelect : MonoBehaviour
     public List<Image> ARImages; //Holds the Images of the AR Buttons
     private int SelectedSlot;
     public string SceneName;
-    public Transform GunSpawn;
+    //public Transform GunSpawn; //Uncomment when Gunspawn is fixed
 
     void Awake()
     {
@@ -38,7 +38,7 @@ public class WeaponSelect : MonoBehaviour
         CurrPistol = GM.Pistol;
         CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
         CurrLoadOut = GM.LoadoutWeapons;
-        Instantiate(CurrPistol, GunSpawn);
+       //Instantiate(CurrPistol, GunSpawn);
     }
 
     public void LoadoutSelect()
@@ -75,17 +75,17 @@ public class WeaponSelect : MonoBehaviour
 
     public void Clicked()
     {
-        foreach(Transform child in GunSpawn.transform)
-        {
-            Destroy(child.gameObject);
-        }
+        //foreach(Transform child in GunSpawn.transform)
+        //{
+        //    Destroy(child.gameObject);
+        //}
 
         //Debug.Log(EventSystem.current.currentSelectedGameObject.name);       
         if(PSelect)
         {
             int Click = PistolButtons.IndexOf(EventSystem.current.currentSelectedGameObject);
             //Debug.Log("Pistol selected " + PistolChoices[Click].name);
-            Instantiate(PistolChoices[Click], GunSpawn);
+            //Instantiate(PistolChoices[Click], GunSpawn);
             GM.Pistol = PistolChoices[Click];
             GM.CurrPistol = PistolChoices[Click];           
         }
@@ -93,7 +93,7 @@ public class WeaponSelect : MonoBehaviour
         {
             int Click = ARButtons.IndexOf(EventSystem.current.currentSelectedGameObject);
             //Debug.Log("AR selected " + ARChoices[Click].name);
-            Instantiate(ARChoices[Click], GunSpawn);
+            //Instantiate(ARChoices[Click], GunSpawn);
             GM.LoadoutWeapons[SelectedSlot] = ARChoices[Click];
             GM.CurrLoad[SelectedSlot] = ARChoices[Click];
             PrimSecIcon[SelectedSlot].sprite = ARChoices[Click].GetComponent<GunTestVR>().WeapIcon;

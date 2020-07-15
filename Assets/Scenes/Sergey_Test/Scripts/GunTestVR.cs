@@ -168,7 +168,7 @@ public class GunTestVR : MonoBehaviour
                     StartCoroutine("RifleWheelStop");
                 }
             }
-            if(gameObject.name.Equals("Rifle obj_green") && !fullAutoMode)
+            if((gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("TommyGun")) && !fullAutoMode)
             {
                 fullAutoMode = true;
             }
@@ -538,7 +538,7 @@ public class GunTestVR : MonoBehaviour
     {
         WeaponShoot();
         canShoot = false;
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.22f);
         canShoot = true;
     }
 
