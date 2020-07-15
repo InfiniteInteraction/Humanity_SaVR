@@ -41,8 +41,8 @@ public class GunTestVR : MonoBehaviour
     //GameObject waveBullet;
     public List<GameObject> emissiveObjects = new List<GameObject>();
     public Animator wheelSpin;
-    AudioSource audioSource;
-    AudioClip pistolShot;
+    //AudioSource audioSource;
+    //AudioClip pistolShot;
 
     public Sprite WeapIcon;
 
@@ -74,8 +74,8 @@ public class GunTestVR : MonoBehaviour
         //greenRailgunBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         fullAutoTime = 0.1f;
         wheelSpin = gameObject.GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-        pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
+        //audioSource = GetComponent<AudioSource>();
+        //pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
         
     }
 
@@ -398,7 +398,8 @@ public class GunTestVR : MonoBehaviour
         {
             Instantiate(redBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
         }
-        audioSource.PlayOneShot(pistolShot);
+        StartCoroutine(PlayGunSound());
+        //audioSource.PlayOneShot(pistolShot);
         ReduceAmmo();
         currTime = 0;
     }
@@ -475,6 +476,55 @@ public class GunTestVR : MonoBehaviour
     void Timer()
     {
         rifleCharging += Time.fixedDeltaTime;
+    }
+
+    IEnumerator PlayGunSound()
+    {
+        if(gameObject.name.Equals("PlasmaGunVR"))
+        {
+            Audiomanager.audiomanager.Play("Pistol");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if(gameObject.name.Equals("TommyGun"))
+        {
+            Audiomanager.audiomanager.Play("TommyGun");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("RailGun_Chris"))
+        {
+            Audiomanager.audiomanager.Play("RailGun");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("FNXScifi_Low"))
+        {
+            Audiomanager.audiomanager.Play("SmallPistol");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("syfy_shotgun"))
+        {
+            Audiomanager.audiomanager.Play("Shotgun");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("Musket_DuskSky"))
+        {
+            Audiomanager.audiomanager.Play("Musket");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("Pistola22_green"))
+        {
+            Audiomanager.audiomanager.Play("Pistola");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("Rifle obj_green"))
+        {
+            Audiomanager.audiomanager.Play("Rifle");
+            yield return new WaitForSeconds(0.1f);
+        }
+        else if (gameObject.name.Equals("PlasmaRifleVR"))
+        {
+            Audiomanager.audiomanager.Play("PlasmaRifle");
+            yield return new WaitForSeconds(0.1f);
+        }
     }
 
     IEnumerator OneShot()

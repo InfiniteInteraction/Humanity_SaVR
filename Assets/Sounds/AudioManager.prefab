@@ -221,6 +221,78 @@ MonoBehaviour:
     volume: 0.3
     pitch: 1
     source: {fileID: 0}
+  - isMusic: 0
+    name: SmallPistol
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 8035fb83d4b2abf42a69c490814b77dd, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Rifle
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 2f2aed96294a362448d9ed195e84792e, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Musket
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 213a35c342a470445baccdc0a8485c6a, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Pistol
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: ecd2acf4ca378b6439729246dbdca5db, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: RailGun
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: d5457d3c8c5bc9047bd3f32180d3326f, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Shotgun
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 115be24782bc8604184230f75508c5b9, type: 3}
+    volume: 0.3
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: Pistola
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 5410d2b30797f054889b57fad8ab9e64, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: TommyGun
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: cbb1469142a35b6419f4d73c80cb4c75, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: PlasmaRifle
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 5757ed9e44fedee40b042ce3ccc408cb, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!81 &2108238091807722721
 AudioListener:
   m_ObjectHideFlags: 0
