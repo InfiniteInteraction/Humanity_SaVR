@@ -29281,7 +29281,7 @@ PrefabInstance:
     - target: {fileID: 432243155150123964, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8840530296383857545, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
@@ -29353,6 +29353,10 @@ PrefabInstance:
       objectReference: {fileID: 707416950}
     - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: EnableLinearMovement
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 430123011550259630, guid: ce816f2e6abb0504092c23ed9b970dfd,
@@ -29590,17 +29594,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: a555b15db78ddc74aaeb53f55b76170a,
         type: 3}
-    - target: {fileID: 2437555835700539781, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: WeapIcon
-      value: 
-      objectReference: {fileID: 21300000, guid: 82acb0cec9bd9094b8c4ff98225cb02d,
-        type: 3}
-    - target: {fileID: 2437555835700539781, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: fullAutoMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5479700858612243748, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: damageValue

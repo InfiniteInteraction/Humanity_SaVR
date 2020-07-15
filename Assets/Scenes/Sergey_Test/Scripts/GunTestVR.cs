@@ -538,7 +538,7 @@ public class GunTestVR : MonoBehaviour
     {
         WeaponShoot();
         canShoot = false;
-        yield return new WaitForSeconds(.22f);
+        yield return new WaitForSeconds(.2f);
         canShoot = true;
     }
 
