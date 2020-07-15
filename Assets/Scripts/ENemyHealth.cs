@@ -102,7 +102,7 @@ public class ENemyHealth : Health
         bulletType = collision.collider.gameObject;
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
         {
-            TakeDamage(51);
+            TakeDamage(GunTestVR.gunTestVR.damageValue);
             //AudioSource.PlayClipAtPoint(redDamage, transform.position, 1f);
             Audiomanager.audiomanager.Play("RedDamage");
             enemyHit = true;
