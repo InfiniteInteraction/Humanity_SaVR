@@ -109,6 +109,6 @@ public class WeaponSwitch : MonoBehaviour
         AvailableWeapons.Add(Pistol);
         AvailableWeapons.Add(LoadoutWeapons[0]);
         AvailableWeapons.Add(LoadoutWeapons[1]);
-        AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+        AvailableWeapons[0].gameObject.SetActive(true);
     }
 }

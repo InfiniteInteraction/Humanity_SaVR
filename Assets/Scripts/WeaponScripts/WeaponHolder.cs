@@ -5,6 +5,7 @@ using UnityEngine;
 public class WeaponHolder : MonoBehaviour
 {
     public List<GameObject> Weapons;
+    public GameObject RightController;
     public WeaponSwitch WGM;
 
     public void Start()
@@ -40,6 +41,7 @@ public class WeaponHolder : MonoBehaviour
                 }
             }
         }
+        WGM.WeapSelector = RightController;
         WGM.Swap();
     }
 }

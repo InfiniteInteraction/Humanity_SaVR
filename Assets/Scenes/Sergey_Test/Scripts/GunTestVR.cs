@@ -176,7 +176,7 @@ public class GunTestVR : MonoBehaviour
             {
                 if (fullAutoMode)
                 {
-                    if (OVRInput.Get(OVRInput.Button.SecondaryIndexTrigger) && canShoot && currAmmo > 0)
+                    if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) && canShoot && currAmmo > 0)
                     {
                         StartCoroutine("AutoShot");
                     }
@@ -538,7 +538,7 @@ public class GunTestVR : MonoBehaviour
     {
         WeaponShoot();
         canShoot = false;
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(.25f);
         canShoot = true;
     }
 

@@ -29823,6 +29823,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 6550015246970149527, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: RightController
+      value: 
+      objectReference: {fileID: 2126576444}
     m_RemovedComponents:
     - {fileID: 430123011550259630, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
     - {fileID: 4460683200213746854, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
