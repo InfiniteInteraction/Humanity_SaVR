@@ -32,9 +32,9 @@ public class WeaponSelect : MonoBehaviour
     //public Transform GunSpawn; //Uncomment when Gunspawn is fixed
 
     public void Start()
-    {       
-        LoadoutSelect();
+    {
         GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
+        LoadoutSelect();       
         CurrPistol = GM.Pistol;
         CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
         CurrLoadOut = GM.LoadoutWeapons;
