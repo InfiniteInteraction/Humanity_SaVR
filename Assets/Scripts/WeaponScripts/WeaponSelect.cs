@@ -31,10 +31,10 @@ public class WeaponSelect : MonoBehaviour
     public string SceneName;
     //public Transform GunSpawn; //Uncomment when Gunspawn is fixed
 
-    void Awake()
-    {
-        GM = FindObjectOfType<WeaponSwitch>();
+    public void Start()
+    {       
         LoadoutSelect();
+        GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
         CurrPistol = GM.Pistol;
         CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
         CurrLoadOut = GM.LoadoutWeapons;
