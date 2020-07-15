@@ -36,12 +36,7 @@ public class HighScore_Table : MonoBehaviour
             AddHighscoreEntry(10000, "RVB");
             AddHighscoreEntry(9000, "TR");
             AddHighscoreEntry(1000, "JR");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(20000, "TJR");
+            
 
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
@@ -105,7 +100,7 @@ public class HighScore_Table : MonoBehaviour
         }
         if (rank == 10)
         {
-            transformList.RemoveAt(10);
+            transformList.RemoveAt(11);
         }
 
 

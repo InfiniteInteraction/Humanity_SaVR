@@ -39,6 +39,8 @@ TagManager:
   - PressAnyButton
   - How
   - HUD
+  - fScore
+  - RBackground
   layers:
   - Default
   - TransparentFX

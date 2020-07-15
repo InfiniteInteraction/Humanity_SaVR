@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.AI;
 using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager gameManager;
+    public TextMeshProUGUI fScore;
 
     // public varibles for access by other classes
     #region Public 
@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
     public GameObject resultsBackground;
     
     #region Difficulty adjuster
-    public ENemyHealth ehealth;
     public int pD1;
     public int pD2;
     public int pDA2;
@@ -72,6 +71,7 @@ public class GameManager : MonoBehaviour
         enemyATKCooldown = 4;
         CTime = 12;
         gHitCount = 0;
+        
     }
     public void PlayButtonReturn()
     {
@@ -93,8 +93,6 @@ public class GameManager : MonoBehaviour
                 foreach(GameObject ScoreText in WScore.WaveScoreText)
                 {
                     string WaveName = ScoreText.name.ToString();
-                    //Debug.LogError(WaveName);
-                    //ScoreText.GetComponent<TextMeshProUGUI>().text = PlayerPrefs.GetInt(WaveName, 0).ToString();
                 }
             }
         }
@@ -107,15 +105,22 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
-        eHealth = GameObject.FindObjectsOfType<ENemyHealth>();
         if (Waves != null)
         {
             waveName = ESpawner.eSpawner.waves.ToString();
         }
-        //CalculateAccuracy();
         if (ScoreManager.scoreManager != null)
         {
             score = ScoreManager.scoreManager.currScore;
+        }
+            
+        if(HighScore_Table.highScore_Table != null)
+        {
+            HighScore_Table.highScore_Table.pScore = score;
+            resultsBackground = GameObject.FindGameObjectWithTag("RBackground");
+            //fScore = 
+            //fScore.text = HighScore_Table.highScore_Table.pScore.ToString();
+            
         }
         if (gHitCount >= 3)
         {
@@ -131,7 +136,10 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
             PlayerPrefs.Save();
         }
-
+    
+       
+        
+        
     }
 
     public void BulletMisses()
@@ -146,7 +154,7 @@ public class GameManager : MonoBehaviour
 
     public void Starsystem()
     {
-            StarCalculation();
+        StarCalculation();
         HighScore_Table.highScore_Table.AddHighscoreEntry(score, "SaVR");
     }
 
@@ -336,17 +344,6 @@ public class GameManager : MonoBehaviour
     }
     public void Checks()
     {
-        if (resultsBackground != null)
-        {
-            resultsBackground.SetActive(false);
-            Debug.Log("resultsBackground works");
-        }
-
-        ehealth = FindObjectOfType<ENemyHealth>();
-        if (ehealth == null)
-        {
-            Debug.Log("ehealth is null");
-        }
         Waves = FindObjectOfType<ESpawner>();
         if (Waves != null)
         {

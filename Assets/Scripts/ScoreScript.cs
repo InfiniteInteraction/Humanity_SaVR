@@ -19,6 +19,5 @@ public class ScoreScript : MonoBehaviour
     public void Multi(int points)
     {
         scoreManager.currScore += points;     
-        HighScore_Table.highScore_Table.pScore = scoreManager.currScore;
     }
 }
