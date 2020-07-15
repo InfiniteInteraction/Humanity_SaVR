@@ -15,7 +15,7 @@ public class StartMenuFunctionality : MonoBehaviour
   
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits_New");
     }
     public void ExitGame()
     {
