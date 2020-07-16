@@ -210,7 +210,7 @@ public class GunTestVR : MonoBehaviour
             if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) && currAmmo <= 0)
             {
                 Debug.Log("Out of Ammo");
-                //Needs Audio if Ammo is 0
+                Audiomanager.audiomanager.Play("OutOfAmmo");
             }
 
             if (OVRInput.GetDown(OVRInput.RawButton.B))

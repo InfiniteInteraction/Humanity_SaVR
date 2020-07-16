@@ -34,6 +34,7 @@ public class Audiomanager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loopSound;
             s.source.playOnAwake = s.playAwake;
+            
         }
     }
 
@@ -45,6 +46,13 @@ public class Audiomanager : MonoBehaviour
         Sounds s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
         Debug.Log("Play ssound");
+    }
+
+    public void Stop(string name)
+    {
+        Sounds s = Array.Find(sounds, sound => sound.name == name);
+        s.source.Stop();
+        Debug.Log("Stop Sound");
     }
 }
 

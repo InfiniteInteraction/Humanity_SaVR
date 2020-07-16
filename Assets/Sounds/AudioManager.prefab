@@ -266,7 +266,7 @@ MonoBehaviour:
     loopSound: 0
     playAwake: 0
     clip: {fileID: 8300000, guid: 115be24782bc8604184230f75508c5b9, type: 3}
-    volume: 0.3
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
@@ -291,6 +291,14 @@ MonoBehaviour:
     playAwake: 0
     clip: {fileID: 8300000, guid: 5757ed9e44fedee40b042ce3ccc408cb, type: 3}
     volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: OutOfAmmo
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: 171e9075f4074f54e9afa5f481d977f1, type: 3}
+    volume: 0.7
     pitch: 1
     source: {fileID: 0}
 --- !u!81 &2108238091807722721

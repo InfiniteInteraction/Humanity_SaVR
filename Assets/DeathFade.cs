@@ -29,6 +29,8 @@ public class DeathFade : MonoBehaviour
         GunTestVR.gunTestVR.canShoot = false;
         fadeOut.color = Color.Lerp(fadeOut.color, Color.black, fadeTime * Time.deltaTime);
         GameObject.FindGameObjectWithTag("HUD").SetActive(false);
+        //GameObject.FindGameObjectWithTag("MusicBox").SetActive(false);
+        Audiomanager.audiomanager.Stop("SomewhereInGhana");
         yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("DeathScene");
         
