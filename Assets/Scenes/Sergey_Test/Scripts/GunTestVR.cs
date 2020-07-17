@@ -52,14 +52,14 @@ public class GunTestVR : MonoBehaviour
         green = GetComponentInChildren<ID_Green>().gameObject;
         if (green != null)
         {
-            Debug.Log("green is found.");
+            //Debug.Log("green is found.");
             green.SetActive(false);
         }
        
         red = GetComponentInChildren<ID_Red>().gameObject;
         if (red != null)
         {
-            Debug.Log("red in GunTestVR found.");
+            //Debug.Log("red in GunTestVR found.");
             red.SetActive(true);
         }
         //greenPistolBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
@@ -212,7 +212,7 @@ public class GunTestVR : MonoBehaviour
                 Debug.Log("Out of Ammo");
                 Audiomanager.audiomanager.Play("OutOfAmmo");
             }
-
+            
             if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
                 SwitchBullets();
@@ -288,7 +288,7 @@ public class GunTestVR : MonoBehaviour
                     Material[] mats = detail.GetComponent<Renderer>().materials;
                     Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_green/Mat_plazmaColor_green"), typeof(Material)) as Material;
                     mats[1] = temp;
-
+                    detail.GetComponent<Renderer>().materials = mats;
                     //detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_green/Mat_plazmaColor_green"), typeof(Material)) as Material;
                 }
             }
@@ -352,7 +352,7 @@ public class GunTestVR : MonoBehaviour
                     Material[] mats = detail.GetComponent<Renderer>().materials;
                     Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
                     mats[1] = temp;
-
+                    detail.GetComponent<Renderer>().materials = mats;
                     //detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
                 }
             }

@@ -49,7 +49,7 @@ public class WeaponSwitch : MonoBehaviour
         }
         else
         {
-            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.Get(OVRInput.RawButton.RHandTrigger))
+            if (/*Input.GetKeyDown(KeyCode.E) || */OVRInput.GetDown(OVRInput.RawButton.RHandTrigger))
             {
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
                 WeaponPlace++;
