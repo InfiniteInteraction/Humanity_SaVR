@@ -34,9 +34,9 @@ public class GameManager : MonoBehaviour
     #region Private 
     public int score;
     private float misses;
-    
-    #endregion
 
+    #endregion
+    
     public GameObject[] stars;
     public GameObject resultsBackground;
     
@@ -104,6 +104,7 @@ public class GameManager : MonoBehaviour
         {
             PlayerPrefs.DeleteAll();
         }
+        eHealth = GameObject.FindObjectsOfType<ENemyHealth>();
         if (Waves != null)
         {
             waveName = ESpawner.eSpawner.waves.ToString();
