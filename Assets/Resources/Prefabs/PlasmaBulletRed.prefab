@@ -214,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 1418517321962571728}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9213318, y: 0.9213318, z: 0.9213318}
+  m_LocalScale: {x: 3.3948314, y: 0.9213318, z: -0.47800538}
   m_Children: []
   m_Father: {fileID: 1418517321614710429}
   m_RootOrder: 0
@@ -850,7 +850,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0.42
+    radiusThickness: 0
     donutRadius: 0.1
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -990,7 +990,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -1667,7 +1667,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: c03c72978d15ecb4d91060d3a10d14f0, type: 3}
+    - sprite: {fileID: 21300002, guid: f6e6acbe07068e448ada3d7aaeb72562, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

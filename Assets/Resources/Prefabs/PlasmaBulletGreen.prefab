@@ -124,7 +124,7 @@ Transform:
   m_GameObject: {fileID: 5869237512887177494}
   m_LocalRotation: {x: -0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 4.0107, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5869237511908163121}
   m_RootOrder: 1
@@ -138,13 +138,13 @@ ParticleSystem:
   m_GameObject: {fileID: 5869237512887177494}
   serializedVersion: 6
   lengthInSec: 1
-  simulationSpeed: 5
+  simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -319,7 +319,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.990566, b: 0.23709252, a: 1}
+      maxColor: {r: 0.10457456, g: 0.8867924, b: 0.1761188, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -381,7 +381,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -646,7 +646,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.034906585
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -697,7 +697,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 50
+    maxNumParticles: 12
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -756,11 +756,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 17
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0
     donutRadius: 0.1
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -843,7 +843,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -900,7 +900,7 @@ ParticleSystem:
           m_PostInfinity: 2
           m_RotationOrder: 4
     arc:
-      value: 360
+      value: 0
       mode: 0
       spread: 0
       speed:
@@ -962,7 +962,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 200
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1577,7 +1577,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: c47945c92819e41d584c4aff1694e68f, type: 3}
+    - sprite: {fileID: 21300000, guid: f6e6acbe07068e448ada3d7aaeb72562, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -1691,7 +1691,7 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1850,7 +1850,7 @@ ParticleSystem:
     orbitalZ:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 2
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3974,8 +3974,8 @@ ParticleSystem:
         m_RotationOrder: 4
     maxLights: 20
   TrailModule:
-    enabled: 1
-    mode: 0
+    enabled: 0
+    mode: 1
     ratio: 0.1
     lifetime:
       serializedVersion: 2
@@ -4108,7 +4108,7 @@ ParticleSystem:
     widthOverTrail:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.01
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4805,8 +4805,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 68b5d8e33dab6f240866451a40387ccc, type: 2}
-  - {fileID: 2100000, guid: 68b5d8e33dab6f240866451a40387ccc, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4948,6 +4948,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5869237511908163121}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Name
+      value: PlasmaRing
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5002,21 +5017,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Name
-      value: PlasmaRing
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 0df5fbeae169aa44fb513b5611002ac0,
-        type: 3}
-      propertyPath: m_Layer
-      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0df5fbeae169aa44fb513b5611002ac0,
         type: 3}
