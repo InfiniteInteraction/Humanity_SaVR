@@ -37,7 +37,7 @@ public class ENemyHealth : Health
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        currHealth = 10;
+        currHealth = 4;
         if (gameObject.tag == ("GreenEnemy"))
         {
             currHealth = 1; 
