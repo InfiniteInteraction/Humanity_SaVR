@@ -61,6 +61,7 @@ public class WeaponSwitch : MonoBehaviour
 
                 CurrentWeapon = AvailableWeapons[WeaponPlace].name;
                 AvailableWeapons[WeaponPlace].gameObject.SetActive(true);
+                GameManager.gameManager.RECHARGE();
                 //Icon.sprite = AvailableWeapons[WeaponPlace].GetComponent<GunTestVR>().WeapIcon;
             }
             //foreach (KeyCode key in NumKeys)
@@ -110,5 +111,6 @@ public class WeaponSwitch : MonoBehaviour
         AvailableWeapons.Add(LoadoutWeapons[0]);
         AvailableWeapons.Add(LoadoutWeapons[1]);
         AvailableWeapons[0].gameObject.SetActive(true);
+        GameManager.gameManager.AmmoReset();
     }
 }

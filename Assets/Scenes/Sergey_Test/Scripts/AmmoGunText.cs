@@ -15,12 +15,12 @@ public class AmmoGunText : MonoBehaviour
         if (gtScript = FindObjectOfType<GunTest>())
             gtScript = FindObjectOfType<GunTest>();
         numMat = GetComponent<Renderer>().material;
-        gtScriptVR.ammoChanged = true;
+        //gtScriptVR.ammoChanged = true;
     }
     private void FixedUpdate()
     {
-        if (gtScriptVR.ammoChanged)
-        {
+        //if (gtScriptVR.ammoChanged)
+        //{
             int ag = gtScriptVR.currAmmo;
             int ag1 = ag / 100;
             int ag1to2 = ag - ag1 * 100;
@@ -40,13 +40,13 @@ public class AmmoGunText : MonoBehaviour
                 numMat = Resources.Load(("Materials/NumsT/" + ag3), typeof(Material)) as Material;
             }
             GetComponent<Renderer>().material = numMat;
-            StartCoroutine("Wait");
-        }
+            //StartCoroutine("Wait");
+        //}
     }
 
-    IEnumerator Wait()
-    {
-        yield return new WaitForEndOfFrame();
-        gtScriptVR.ammoChanged = false;
-    }
+    //IEnumerator Wait()
+    //{
+    //    yield return new WaitForEndOfFrame();
+    //    gtScriptVR.ammoChanged = false;
+    //}
 }

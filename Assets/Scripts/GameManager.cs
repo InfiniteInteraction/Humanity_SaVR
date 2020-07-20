@@ -28,6 +28,13 @@ public class GameManager : MonoBehaviour
     public float eSpeed = 3.5f;
     public int saveWave = 1;
     public int gHitCount;
+    [Header("Refill Ammo")]
+    public List<bool> GunAmmo = new List<bool>
+    {
+       false,
+       false,
+       false
+    };
     #endregion
 
     // private varibles not access by other classes
@@ -36,10 +43,10 @@ public class GameManager : MonoBehaviour
     private float misses;
 
     #endregion
-    
+
     public GameObject[] stars;
     public GameObject resultsBackground;
-    
+
     #region Difficulty adjuster
     public int pD1;
     public int pD2;
@@ -64,13 +71,13 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);     
+            Destroy(gameObject);
         }
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 12;
         gHitCount = 0;
-        
+
     }
     public void PlayButtonReturn()
     {
@@ -87,9 +94,9 @@ public class GameManager : MonoBehaviour
         if (SceneManager.sceneCount == 1)
         {
             WaveHolder WScore = FindObjectOfType<WaveHolder>();
-            if(WScore != null)
+            if (WScore != null)
             {
-                foreach(GameObject ScoreText in WScore.WaveScoreText)
+                foreach (GameObject ScoreText in WScore.WaveScoreText)
                 {
                     string WaveName = ScoreText.name.ToString();
                 }
@@ -113,11 +120,11 @@ public class GameManager : MonoBehaviour
         {
             score = ScoreManager.scoreManager.currScore;
         }
-            
-        if(HighScore_Table.highScore_Table != null)
+
+        if (HighScore_Table.highScore_Table != null)
         {
             HighScore_Table.highScore_Table.pScore = score;
-            
+
         }
         if (gHitCount >= 3)
         {
@@ -128,11 +135,11 @@ public class GameManager : MonoBehaviour
         {
             DifficultySetting();
         }
-        if(Damage.damage.playerHealth<= 1)
+        if (Damage.damage.playerHealth <= 1)
         {
             PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
             PlayerPrefs.Save();
-        }      
+        }
     }
 
     public void BulletMisses()
@@ -142,7 +149,7 @@ public class GameManager : MonoBehaviour
 
     public void CalculateAccuracy()
     {
-        accuracy = hits / shotsFired *100;
+        accuracy = hits / shotsFired * 100;
     }
 
     public void Starsystem()
@@ -236,7 +243,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
-                enemyATK =2;
+                enemyATK = 2;
                 CTime = 10;
                 break;
             case "2":
@@ -332,7 +339,7 @@ public class GameManager : MonoBehaviour
                 enemyATK = 2;
                 enemyATKCooldown = 1.5f;
                 break;
-            
+
         }
     }
     public void Checks()
@@ -341,6 +348,33 @@ public class GameManager : MonoBehaviour
         if (Waves != null)
         {
             waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
+        }
+    }
+
+    public void AmmoGain()
+    {
+        for (int i = 0; i < GunAmmo.Count; i++)
+        {
+            GunAmmo[i] = true;
+            Debug.Log(GunAmmo[i]);
+        }       
+    }
+    public void AmmoReset()
+    {
+        for (int i = 0; i < GunAmmo.Count; i++)
+        {
+            GunAmmo[i] = false;
+            Debug.Log(GunAmmo[i]);
+        }
+    }
+    public void RECHARGE()
+    {
+        int RechTemp = GetComponent<WeaponSwitch>().WeaponPlace;
+        if (GunAmmo[RechTemp] == true)
+        {
+            GunTestVR Gunny = FindObjectOfType<GunTestVR>();
+            Gunny.RegainAmmo();
+            GunAmmo[RechTemp] = false;
         }
     }
 }
