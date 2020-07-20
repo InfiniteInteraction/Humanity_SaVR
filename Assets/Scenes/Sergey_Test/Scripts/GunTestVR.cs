@@ -55,7 +55,7 @@ public class GunTestVR : MonoBehaviour
             //Debug.Log("green is found.");
             green.SetActive(false);
         }
-       
+
         red = GetComponentInChildren<ID_Red>().gameObject;
         if (red != null)
         {
@@ -76,19 +76,19 @@ public class GunTestVR : MonoBehaviour
         wheelSpin = gameObject.GetComponent<Animator>();
         //audioSource = GetComponent<AudioSource>();
         //pistolShot = Resources.Load(("SFX/Pistol_Shot"), typeof(AudioClip)) as AudioClip;
-        
+
     }
 
     void Start()
     {
-       
+        damageValue = 2;
         //green.SetActive(false);
         if (gameObject.name.Equals("PlasmaRifleVR"))
         {
             damageValue = 4;
             foreach (GameObject detail in emissiveObjects)
             {
-                detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;               
+                detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;
             }
 
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
@@ -111,29 +111,29 @@ public class GunTestVR : MonoBehaviour
 
             redBullet = Resources.Load(("Prefabs/TommyGunBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/TommyGunBulletGreen"), typeof(GameObject)) as GameObject;
-            damageValue = 2;
+
         }
         if (gameObject.name.Equals("Musket_DuskSky"))
         {
             damageValue = 4;
             redBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
-            greenBullet =  Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Pistola22_green"))
         {
-            damageValue = 2;
+
             redBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         }
-        if (gameObject.name.Equals("PlasmaGunVR")|| gameObject.name.Equals("FNXScifi_Low"))
+        if (gameObject.name.Equals("PlasmaGunVR") || gameObject.name.Equals("FNXScifi_Low"))
         {
-            damageValue = 2;
+
             redBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Rifleobj_green"))
         {
-            damageValue = 2;
+
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/Rifle_GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
@@ -172,7 +172,7 @@ public class GunTestVR : MonoBehaviour
                     StartCoroutine("RifleWheelStop");
                 }
             }
-            if((gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("TommyGun")|| gameObject.name.Equals("FNXScifi_Low")) && !fullAutoMode)
+            if ((gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("TommyGun") || gameObject.name.Equals("FNXScifi_Low")) && !fullAutoMode)
             {
                 fullAutoMode = true;
             }
@@ -216,11 +216,11 @@ public class GunTestVR : MonoBehaviour
                 Debug.Log("Out of Ammo");
                 Audiomanager.audiomanager.Play("OutOfAmmo");
             }
-            
+
             if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
                 SwitchBullets();
-                if(isGreenFireMode==false)
+                if (isGreenFireMode == false)
                 {
                     isGreenFireMode = true;
                 }
@@ -228,7 +228,7 @@ public class GunTestVR : MonoBehaviour
                 {
                     isGreenFireMode = false;
                 }
-               
+
             }
         }
     }
@@ -302,7 +302,7 @@ public class GunTestVR : MonoBehaviour
                 {
                     Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_green/Mat_beamWire_green"), typeof(Material)) as Material;
                     detail.GetComponent<Renderer>().material = temp;
-                    
+
                 }
             }
             if (gameObject.name.Equals("Rifle obj_green"))
@@ -370,7 +370,7 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_red/Mat_beamWire_red"), typeof(Material)) as Material;
-                    detail.GetComponent<Renderer>().material = temp;               
+                    detail.GetComponent<Renderer>().material = temp;
                 }
             }
             if (gameObject.name.Equals("Rifleobj_green"))
@@ -419,75 +419,75 @@ public class GunTestVR : MonoBehaviour
         currTime = 0;
     }
 
-  //  void Shoot()
-  //  {
-  //      RaycastHit hit;
-  //      if (Physics.Raycast(spawnPoint.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
-  //      {
-  //          if (green.activeSelf)
-  //          {
-  //              if (gameObject.name.Equals("PlasmaRifleVR"))
-  //              {
-  //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //              }
-  //              else
-  //              {
-  //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //                  audioSource.PlayOneShot(pistolShot);
-  //              }
-  //          }
-  //          if (red.activeSelf)
-  //          {
-  //              if (gameObject.name.Equals("PlasmaRifleVR"))
-  //              {
-  //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //              }
-  //              else
-  //              {
-  //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //                  audioSource.clip = pistolShot;
-  //                  audioSource.PlayOneShot(pistolShot);
-  //              }
-  //          }
-  //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-  //          ReduceAmmo();
-  //          Debug.Log("Did Hit");
-  //      }
-  //      else
-  //      {
-  //          if (green.activeSelf)
-  //          {
-  //              if (gameObject.name.Equals("PlasmaRifleVR"))
-  //              {
-  //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //              }
-  //              else
-  //              {
-  //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //                  audioSource.PlayOneShot(pistolShot);
-  //              }
-  //          }
-  //          if (red.activeSelf)
-  //          {
-  //              if (gameObject.name.Equals("PlasmaRifleVR"))
-  //              {
-  //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //              }
-  //              else
-  //              {
-  //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
-  //                  audioSource.clip = pistolShot;
-  //                  audioSource.PlayOneShot(pistolShot);
-  //              }
-  //          }
-  //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
-  //          ReduceAmmo();
-  //          Debug.Log("Did not Hit");
-  //
-  //          //RailgunBulletsStartHere
-   //     }
-  //      currTime = 0;
-   // }
+    //  void Shoot()
+    //  {
+    //      RaycastHit hit;
+    //      if (Physics.Raycast(spawnPoint.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layerMask))
+    //      {
+    //          if (green.activeSelf)
+    //          {
+    //              if (gameObject.name.Equals("PlasmaRifleVR"))
+    //              {
+    //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //              }
+    //              else
+    //              {
+    //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //                  audioSource.PlayOneShot(pistolShot);
+    //              }
+    //          }
+    //          if (red.activeSelf)
+    //          {
+    //              if (gameObject.name.Equals("PlasmaRifleVR"))
+    //              {
+    //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //              }
+    //              else
+    //              {
+    //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //                  audioSource.clip = pistolShot;
+    //                  audioSource.PlayOneShot(pistolShot);
+    //              }
+    //          }
+    //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+    //          ReduceAmmo();
+    //          Debug.Log("Did Hit");
+    //      }
+    //      else
+    //      {
+    //          if (green.activeSelf)
+    //          {
+    //              if (gameObject.name.Equals("PlasmaRifleVR"))
+    //              {
+    //                  Instantiate(greenRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //              }
+    //              else
+    //              {
+    //                  Instantiate(greenPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //                  audioSource.PlayOneShot(pistolShot);
+    //              }
+    //          }
+    //          if (red.activeSelf)
+    //          {
+    //              if (gameObject.name.Equals("PlasmaRifleVR"))
+    //              {
+    //                  Instantiate(redRifleBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //              }
+    //              else
+    //              {
+    //                  Instantiate(redPistolBullet, spawnPoint.position, transform.rotation * Quaternion.Euler(0, 90, 0));
+    //                  audioSource.clip = pistolShot;
+    //                  audioSource.PlayOneShot(pistolShot);
+    //              }
+    //          }
+    //          Debug.DrawRay(spawnPoint.position, transform.TransformDirection(Vector3.forward) * 1000, Color.red);
+    //          ReduceAmmo();
+    //          Debug.Log("Did not Hit");
+    //
+    //          //RailgunBulletsStartHere
+    //     }
+    //      currTime = 0;
+    // }
     void Timer()
     {
         rifleCharging += Time.fixedDeltaTime;
