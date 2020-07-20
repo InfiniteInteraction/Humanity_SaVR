@@ -40,10 +40,9 @@ public class WeaponSwitch : MonoBehaviour
     }
     public void Update()
     {
-        Actscene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+       
         if (Actscene == "WeapSelect")
         {
-            AvailableWeapons[WeaponPlace].gameObject.SetActive(false);
             WeapSelector.SetActive(true);
             //Debug.LogError(Actscene);
         }
@@ -110,7 +109,15 @@ public class WeaponSwitch : MonoBehaviour
         AvailableWeapons.Add(Pistol);
         AvailableWeapons.Add(LoadoutWeapons[0]);
         AvailableWeapons.Add(LoadoutWeapons[1]);
-        AvailableWeapons[0].gameObject.SetActive(true);
+        Actscene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        if (Actscene == "WeapSelect")
+        {
+            AvailableWeapons[0].gameObject.SetActive(false);
+        }
+        else
+        {
+            AvailableWeapons[0].gameObject.SetActive(true);
+        }
         GameManager.gameManager.AmmoReset();
     }
 }

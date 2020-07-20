@@ -32,7 +32,7 @@ public class PlasmaBullet : MonoBehaviour
         if (FindObjectOfType<CameraMovement>())
             camRot = FindObjectOfType<CameraMovement>().gameObject.transform.rotation;
 
-        StartCoroutine("RecalculateAccuracy");
+        //StartCoroutine("RecalculateAccuracy");
     }
     private void Start()
     {
@@ -82,11 +82,11 @@ public class PlasmaBullet : MonoBehaviour
         if (rb)
         {
             rb.AddForce(transform.right * -150);
-            if(gameObject.tag == "PR")
-            {
+            //if(gameObject.tag == "PR")
+            //{
 
-            }
-            //StartCoroutine("Countdown");
+            //}
+            StartCoroutine("Countdown");
         }
     }
 
@@ -110,7 +110,7 @@ public class PlasmaBullet : MonoBehaviour
         Destroy(gameObject.GetComponentInChildren<ParticleSystem>());
         yield return new WaitForSeconds(0.15f);
         collisionPos = null;
-        Debug.Log("COLLISION");
+        //Debug.Log("COLLISION");
         Destroy(gameObject);
     }
 
@@ -118,28 +118,27 @@ public class PlasmaBullet : MonoBehaviour
     {
         collisionPos = transform;
         yield return new WaitForSeconds(3f);
-        if (tag.Equals("GreenBullet"))
-        {
-            GameObject splash = Resources.Load(("Prefabs/GreenSplashEffect"), typeof(GameObject)) as GameObject;
-            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
-        }
-        else
-        {
-
-            //GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
-            //Debug.Log(splash);
-            ////Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity); 
-        }
+        //if (tag.Equals("GreenBullet"))
+        //{
+        //    GameObject splash = Resources.Load(("Prefabs/GreenSplashEffect"), typeof(GameObject)) as GameObject;
+        //    //Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
+        //}
+        //else
+        //{
+        //    GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
+        //    //Debug.Log(splash);
+        //    //Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity); 
+        //}
         collisionPos = null;
-        Debug.Log("TIMED OUT");
-        //Destroy(gameObject);
+        //Debug.Log("TIMED OUT");
+        Destroy(gameObject);
     }
 
-    IEnumerator RecalculateAccuracy()
-    {
-        yield return new WaitForSeconds(2f);
-        ehScript.enemyHit = true;
-        yield return new WaitForSeconds(0.1f);
-        ehScript.enemyHit = false;
-    }
+    //IEnumerator RecalculateAccuracy()
+    //{
+    //    yield return new WaitForSeconds(2f);
+    //    ehScript.enemyHit = true;
+    //    yield return new WaitForSeconds(0.1f);
+    //    ehScript.enemyHit = false;
+    //}
 }
