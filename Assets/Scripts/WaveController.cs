@@ -31,8 +31,6 @@ public class WaveController : MonoBehaviour
       
         Cursor.lockState = CursorLockMode.None;     
 
-        PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
-        PlayerPrefs.Save();
         GameManager.gameManager.saveWave += 1;
         if (ESpawner.eSpawner.isWaveOver == true)
         {
@@ -44,6 +42,8 @@ public class WaveController : MonoBehaviour
         {
             Audiomanager.audiomanager.Play("WaveComplete");
         }
+        PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
+        PlayerPrefs.Save();
         //if (GameManager.gameManager.saveWave == 2)
         //{
 
