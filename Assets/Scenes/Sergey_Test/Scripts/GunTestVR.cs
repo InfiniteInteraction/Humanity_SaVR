@@ -310,7 +310,7 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_10_-_SciFi Rifle_/Mat_Rifle_Green"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Weapon_10 -_SciFi Rifle_/Mat_Rifle_Green"), typeof(Material)) as Material;
                     mats[1] = temp;
                     detail.GetComponent<Renderer>().materials = mats;
 
@@ -378,7 +378,7 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_10_-_SciFi Rifle_/Mat_Rifle_Red"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Weapon_10 -_SciFi Rifle_/Mat_Rifle_Red"), typeof(Material)) as Material;
                     mats[1] = temp;
                     detail.GetComponent<Renderer>().materials = mats;
 

@@ -4085,6 +4085,7 @@ GameObject:
   - component: {fileID: 4019684939761188916}
   - component: {fileID: 827978645198774258}
   - component: {fileID: 6122804907289573094}
+  - component: {fileID: 2683460844743193498}
   m_Layer: 0
   m_Name: g_pCylinder42_pCylinder42
   m_TagString: Untagged
@@ -4152,6 +4153,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2683460844743193498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6305117753147958801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6384220541337329768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5341,6 +5354,7 @@ GameObject:
   - component: {fileID: 5032156236375102341}
   - component: {fileID: 3234637881249463429}
   - component: {fileID: 5137924113403135609}
+  - component: {fileID: 7401163001948182916}
   m_Layer: 0
   m_Name: g_pCylinder51_pCylinder51
   m_TagString: Untagged
@@ -5408,6 +5422,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &7401163001948182916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8874241823749108843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9191405363212989350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +5519,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7155152956469897544}
     m_Modifications:
+    - target: {fileID: 3292695964709422, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}
+      propertyPath: m_Name
+      value: AmmoCount
+      objectReference: {fileID: 0}
     - target: {fileID: 9206397351816121833, guid: 9ef6e37afac26c643802420ee6f19d16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5562,10 +5592,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.20000018
-      objectReference: {fileID: 0}
-    - target: {fileID: 3292695964709422, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}
-      propertyPath: m_Name
-      value: AmmoCount
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef6e37afac26c643802420ee6f19d16, type: 3}
