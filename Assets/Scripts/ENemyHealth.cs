@@ -117,6 +117,7 @@ public class ENemyHealth : Health
             Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
             //GunTestVR.gunTestVR.RegainAmmo();
             GameManager.gameManager.AmmoGain();
+            GameManager.gameManager.RECHARGE();
             DeathEffect();
             CallMulti();
             eSpawner.KillStreak();

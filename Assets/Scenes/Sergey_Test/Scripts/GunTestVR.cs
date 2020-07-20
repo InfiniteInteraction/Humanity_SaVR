@@ -238,14 +238,14 @@ public class GunTestVR : MonoBehaviour
     {
         currAmmo--;
         currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
-        ammoChanged = true;
+        //ammoChanged = true;
     }
 
     public void RegainAmmo()
     {
         currAmmo = maxAmmo;
         currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
-        ammoChanged = true;
+        //ammoChanged = true;
     }
 
     //void SwitchFireMode()
