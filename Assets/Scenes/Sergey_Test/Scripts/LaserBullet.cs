@@ -12,12 +12,12 @@ public class LaserBullet : MonoBehaviour
     Vector3 posOffset = new Vector3(0, 0, -0.1f);
     Rigidbody rb;
     GameManager gmScript;
-    ENemyHealth ehScript;
+   //ENemyHealth ehScript;
 
     private void Awake()
     {
         gmScript = FindObjectOfType<GameManager>();
-        ehScript = FindObjectOfType<ENemyHealth>();
+        //ehScript = FindObjectOfType<ENemyHealth>();
         rb = GetComponent<Rigidbody>();
         if (FindObjectOfType<GunTest>())
         {
@@ -70,11 +70,7 @@ public class LaserBullet : MonoBehaviour
 
             }
         }
-        else
-        {
-
-        }
-
+       
     }
 
     void BulletGo()
@@ -99,14 +95,13 @@ public class LaserBullet : MonoBehaviour
         {
             GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
             Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
-
         }
         Destroy(gameObject.GetComponent<Rigidbody>());
         Destroy(gameObject.GetComponent<BoxCollider>());
         Destroy(gameObject.GetComponentInChildren<ParticleSystem>());
         yield return new WaitForSeconds(0.15f);
         collisionPos = null;
-        Debug.Log("COLLISION");
+        //Debug.Log("COLLISION");
         Destroy(gameObject);
     }
 
@@ -114,18 +109,18 @@ public class LaserBullet : MonoBehaviour
     {
         collisionPos = transform;
         yield return new WaitForSeconds(3f);
-        if (tag.Equals("GreenBullet"))
-        {
-            GameObject splash = Resources.Load(("Prefabs/GreenSplashEffect"), typeof(GameObject)) as GameObject;
-            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
-        }
-        else
-        {
-            GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
-            Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
-        }
+        //if (tag.Equals("GreenBullet"))
+        //{
+        //    GameObject splash = Resources.Load(("Prefabs/GreenSplashEffect"), typeof(GameObject)) as GameObject;
+        //    Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
+        //}
+        //else
+        //{
+        //    GameObject splash = Resources.Load(("Prefabs/RedSplashEffect"), typeof(GameObject)) as GameObject;
+        //    Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
+        //}
         collisionPos = null;
-        Debug.Log("TIMED OUT");
+        //Debug.Log("TIMED OUT");
         Destroy(gameObject);
     }
 
