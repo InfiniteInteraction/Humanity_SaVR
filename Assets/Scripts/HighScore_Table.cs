@@ -63,7 +63,7 @@ public class HighScore_Table : MonoBehaviour
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList) 
     {
-        float templateHeight = .5f;
+        float templateHeight = .45f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
         entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
@@ -94,9 +94,9 @@ public class HighScore_Table : MonoBehaviour
         
         // Highlight First
         if (rank == 1) {
-            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.green;
-            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.green;
-            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.green;
+            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.yellow;
+            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.yellow;
+            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.yellow;
         }
         if (rank == 10)
         {
