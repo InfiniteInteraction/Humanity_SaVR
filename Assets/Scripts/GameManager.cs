@@ -134,6 +134,7 @@ public class GameManager : MonoBehaviour
             }
             else if(Damage.damage.playerHealth == 0)
             {
+
                 Damage.damage.PlayerDeath();
                 Damage.damage.playerHealth -= enemyATK;
             }
