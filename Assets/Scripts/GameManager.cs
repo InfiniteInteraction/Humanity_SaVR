@@ -128,8 +128,15 @@ public class GameManager : MonoBehaviour
         }
         if (gHitCount >= 3)
         {
-            Damage.damage.playerHealth = 0;
-            Damage.damage.PlayerDeath();
+            if (Damage.damage.playerHealth >= 1)
+            {
+                Damage.damage.playerHealth = 0;
+            }
+            else if(Damage.damage.playerHealth == 0)
+            {
+                Damage.damage.PlayerDeath();
+                Damage.damage.playerHealth -= enemyATK;
+            }
         }
         if (Waves != null)
         {
