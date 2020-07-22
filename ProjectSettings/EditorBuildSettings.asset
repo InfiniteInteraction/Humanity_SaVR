@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/LoreScene.unity
+    guid: dd5bca818783d9a42a31d5b57597f723
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

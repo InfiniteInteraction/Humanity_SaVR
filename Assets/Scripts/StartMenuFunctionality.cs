@@ -13,6 +13,11 @@ public class StartMenuFunctionality : MonoBehaviour
         menu.SetActive(true);
     }
   
+    public void LoreScene()
+    {
+        SceneManager.LoadScene("LoreScene");
+    }
+
     public void Credits()
     {
         SceneManager.LoadScene("Credits_New");
