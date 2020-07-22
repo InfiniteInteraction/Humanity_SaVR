@@ -94,9 +94,9 @@ public class HighScore_Table : MonoBehaviour
         
         // Highlight First
         if (rank == 1) {
-            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.red;
-            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.red;
-            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.red;
+            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.blue;
+            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.blue;
+            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.blue;
         }
         if (rank == 10)
         {

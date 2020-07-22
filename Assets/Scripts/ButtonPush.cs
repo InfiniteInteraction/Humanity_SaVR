@@ -39,6 +39,10 @@ public class ButtonPush : MonoBehaviour
         {
             SceneManager.LoadScene("OVRMenu");
         }
+        if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("Lore"))
+        {
+            SceneManager.LoadScene("Lore");
+        }
 
     }
 }
