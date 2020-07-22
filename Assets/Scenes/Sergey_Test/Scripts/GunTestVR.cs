@@ -290,7 +290,7 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_green/Mat_plazmaColor_green"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Materials/Mat_plazmaColor_green"), typeof(Material)) as Material;
                     mats[1] = temp;
                     detail.GetComponent<Renderer>().materials = mats;
                     //detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_green/Mat_plazmaColor_green"), typeof(Material)) as Material;
@@ -300,7 +300,7 @@ public class GunTestVR : MonoBehaviour
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_green/Mat_beamWire_green"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Materials/Mat_beamWire_green"), typeof(Material)) as Material;
                     detail.GetComponent<Renderer>().material = temp;
 
                 }
@@ -309,26 +309,28 @@ public class GunTestVR : MonoBehaviour
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_10 -_SciFi Rifle_/Mat_Rifle_Green"), typeof(Material)) as Material;
-                    mats[1] = temp;
-                    detail.GetComponent<Renderer>().materials = mats;
-
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_10 - _SciFi Rifle_/Mat_Rifle_Green"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_Rifle_Green"), typeof(Material)) as Material;
                 }
             }
             if (gameObject.name.Equals("Pistola22_green"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_2(Pistol-_Pistohla_)/pistol2tex/Mat_ScifiPistolEmmissionMat_green"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_SciFiPistolEmmissionMat_green"), typeof(Material)) as Material;
                 }
             }
             if (gameObject.name.Equals("FNXScifi_Low"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_8_FNX_Scifi/Mat_FNX_Green"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_FNX_Green"), typeof(Material)) as Material;
+                }
+            }
+            if(gameObject.name.Equals("PlasmaGunVR"))
+            {
+                foreach (GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Gun 1"), typeof(Material)) as Material;
                 }
             }
         }
@@ -359,7 +361,7 @@ public class GunTestVR : MonoBehaviour
                 foreach (GameObject detail in emissiveObjects)
                 {
                     Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Materials/Mat_plazmaColor_red"), typeof(Material)) as Material;
                     mats[1] = temp;
                     detail.GetComponent<Renderer>().materials = mats;
                     //detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_6_scifi_shotgun/Materials_shotgun_red/Mat_plazmaColor_red"), typeof(Material)) as Material;
@@ -369,34 +371,36 @@ public class GunTestVR : MonoBehaviour
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    Material temp = Resources.Load(("Weapon_7_sci-fiMusket/musket_redBad_DuskSky/Musket_materials_red/Mat_beamWire_red"), typeof(Material)) as Material;
+                    Material temp = Resources.Load(("Materials/Mat_beamWire_red"), typeof(Material)) as Material;
                     detail.GetComponent<Renderer>().material = temp;
                 }
             }
-            if (gameObject.name.Equals("Rifleobj_green"))
+            if (gameObject.name.Equals("Rifle obj_green"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    Material[] mats = detail.GetComponent<Renderer>().materials;
-                    Material temp = Resources.Load(("Weapon_10 -_SciFi Rifle_/Mat_Rifle_Red"), typeof(Material)) as Material;
-                    mats[1] = temp;
-                    detail.GetComponent<Renderer>().materials = mats;
-
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_10 - _SciFi Rifle_/Mat_Rifle_Red"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_Rifle_Red"), typeof(Material)) as Material;
                 }
             }
             if (gameObject.name.Equals("Pistola22_green"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_2(Pistol-_Pistohla_)/pistol2tex/Mat_ScifiPistolEmmissionMat_red"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_SciFiPistolEmmissionMat_red"), typeof(Material)) as Material;
                 }
             }
             if (gameObject.name.Equals("FNXScifi_Low"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
-                    detail.GetComponent<Renderer>().material = Resources.Load(("Weapon_8_FNX_Scifi/Mat_FNX_Red"), typeof(Material)) as Material;
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_FNX_Red"), typeof(Material)) as Material;
+                }
+            }
+            if(gameObject.name.Equals("PlasmaGunVR"))
+            {
+                foreach(GameObject detail in emissiveObjects)
+                {
+                    detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Gun"), typeof(Material)) as Material;
                 }
             }
         }

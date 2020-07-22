@@ -39521,6 +39521,7 @@ GameObject:
   - component: {fileID: 6936547189795002738}
   - component: {fileID: 8652829963928262646}
   - component: {fileID: 8614421341380472518}
+  - component: {fileID: 5896180154583701397}
   m_Layer: 0
   m_Name: PlasmaPistolBase_2Glass
   m_TagString: Untagged
@@ -39567,7 +39568,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 440c6fde5d3b8fe428cc7d44099eed15, type: 2}
+  - {fileID: 2100000, guid: 65a1736d5c33fd841b53bf0fd61ad2d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -39588,6 +39589,18 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5896180154583701397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7331447806194845631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74665fe9441384e47857f0e76c75f39d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7676005129483063293
 GameObject:
   m_ObjectHideFlags: 0
