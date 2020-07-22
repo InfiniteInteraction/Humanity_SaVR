@@ -79,45 +79,45 @@ public class ESpawner : MonoBehaviour
     {
         switch (streakCount)
         {
-            case 10:
-                Audiomanager.audiomanager.Play("Ridiculousness");
+            case 7:
+                Audiomanager.audiomanager.Play("Work it");
                 break;
 
-            case 20:
-                Audiomanager.audiomanager.Play("Thats20");
+            case 14:
+                Audiomanager.audiomanager.Play("Sick");
                 break;
 
-            case 30:
-                Audiomanager.audiomanager.Play("Spectacular");
+            case 21:
+                Audiomanager.audiomanager.Play("SaVR Spree");
                 break;
 
-            case 40:
-                Audiomanager.audiomanager.Play("KillGrind");
+            case 28:
+                Audiomanager.audiomanager.Play("Savior Spree");
                 break;
 
-            case 50:
-                Audiomanager.audiomanager.Play("BulletStorm"); 
+            case 35:
+                Audiomanager.audiomanager.Play("Savage SaVR Spree"); 
                 break;
 
-            case 60:
-                Audiomanager.audiomanager.Play("Overachiever");
+            case 42:
+                Audiomanager.audiomanager.Play("Savage Savior Spree");
                 break;
 
-            case 70:
-                Audiomanager.audiomanager.Play("HahshfalahThis");
+            case 49:
+                Audiomanager.audiomanager.Play("Maximum Execution");
                 break;
 
-            case 80:
-                Audiomanager.audiomanager.Play("MoreBulletsLessProblems");
+            case 56:
+                Audiomanager.audiomanager.Play("Emaculate Execution");
                 break;
 
-            case 90:
-                Audiomanager.audiomanager.Play("LethalProtector");
+            case 63:
+                Audiomanager.audiomanager.Play("Difinitive Domination");
                 break;
 
-            case 100:
-                Audiomanager.audiomanager.Play("InvincibleKillingMachine");
-                break;
+            //case 100:
+            //    Audiomanager.audiomanager.Play("InvincibleKillingMachine");
+            //    break;
         }
     }
 
