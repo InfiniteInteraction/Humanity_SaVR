@@ -275,6 +275,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 60582871}
   m_CullTransparentMesh: 0
+--- !u!1001 &65954071
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9191956764155929514, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_Name
+      value: SpaceDebri
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -42
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 202
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.64150786
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7671165
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9191956764155929493, guid: 6c3e34eb79e87094fa0d2550235db2aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c3e34eb79e87094fa0d2550235db2aa, type: 3}
 --- !u!1001 &73573443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3991,7 +4060,7 @@ GameObject:
   - component: {fileID: 2074498082}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: How
+  m_TagString: Lore
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
