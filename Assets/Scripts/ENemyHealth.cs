@@ -72,7 +72,12 @@ public class ENemyHealth : Health
             eSpawner.SpawnGreen();
             CallMulti();
             //DeathEffect();
+            Audiomanager.audiomanager.Play("RedDeath");
             Destroy(gameObject);
+        }
+        else
+        {
+            Audiomanager.audiomanager.Play("RedDamage");
         }
         if (floatingTextPrefab)
         {
@@ -104,7 +109,6 @@ public class ENemyHealth : Health
         {
             TakeDamage(GunTestVR.gunTestVR.damageValue);
             //AudioSource.PlayClipAtPoint(redDamage, transform.position, 1f);
-            Audiomanager.audiomanager.Play("RedDamage");
             enemyHit = true;
         }
         else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")

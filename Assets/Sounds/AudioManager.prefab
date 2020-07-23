@@ -46,74 +46,74 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - isMusic: 0
-    name: Ridiculousness
+    name: Work it
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: b6b310fc751496347a89931d4dd32803, type: 3}
+    clip: {fileID: 8300000, guid: 3834ccdb47d70214f88e304cc5590803, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: Thats20
+    name: Sick
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 53aa118ce568d0d44bc59eb57c4c29bf, type: 3}
+    clip: {fileID: 8300000, guid: bd3d245f458940b4699027b8c76cbbfb, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: Spectacular
+    name: SaVR Spree
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 83180bf2e4559da4dbb74644a8278081, type: 3}
+    clip: {fileID: 8300000, guid: d9d907810cce162428a1c778d2d83d86, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: KillGrind
+    name: Savior Spree
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 6100cc6ce2d814540938fa75f54d0fcd, type: 3}
+    clip: {fileID: 8300000, guid: 1f2b1ad815b234246abe0af3b40371ab, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: BulletStorm
+    name: Savage SaVR Spree
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: a9354d37f059fe74882bff226808822f, type: 3}
+    clip: {fileID: 8300000, guid: 5bf64c9f63502d74eaa541d139dc6f55, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: Overachiever
+    name: Savage Savior Spree
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: fb2cad84708102c4bb98ea23ad584bae, type: 3}
+    clip: {fileID: 8300000, guid: 0346ec01652904044812b0176d099941, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: HahshfalahThis
+    name: Maximum Execution
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 49d161da49ed9b14eb709ab7cbf6ab3c, type: 3}
+    clip: {fileID: 8300000, guid: e95b89ff8d799104d95cbe563e062b55, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: MoreBulletsLessProblems
+    name: Emaculate Execution
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 582081d334107dc4397a3371e47dfc86, type: 3}
+    clip: {fileID: 8300000, guid: bca79db8d8d0a5141995b52271f12f9e, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
-    name: LethalProtector
+    name: Difinitive Domination
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: b406ed181d612d24c807c4c8e6dc6a1e, type: 3}
+    clip: {fileID: 8300000, guid: a95833a5abaaf7d4d820bc11c39fdbff, type: 3}
     volume: 1
     pitch: 1
     source: {fileID: 0}
@@ -193,7 +193,7 @@ MonoBehaviour:
     name: Health80
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: ac5fb4b693e5ded48bcf62ab568fd89f, type: 3}
+    clip: {fileID: 8300000, guid: 1dc49f2774ac8734ebdf7331c1e17ea5, type: 3}
     volume: 0.4
     pitch: 1
     source: {fileID: 0}
@@ -201,7 +201,7 @@ MonoBehaviour:
     name: Health60
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: ab88ff64ed1996b428b66bea5de5736a, type: 3}
+    clip: {fileID: 8300000, guid: 797c5bbf4faf27644bb453882a033abd, type: 3}
     volume: 0.4
     pitch: 1
     source: {fileID: 0}
@@ -209,7 +209,7 @@ MonoBehaviour:
     name: Health40
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: b62dc3227eb610648876558de88b419e, type: 3}
+    clip: {fileID: 8300000, guid: c3064b4e8c6ffca4daabab00bb30ed6b, type: 3}
     volume: 0.2
     pitch: 1
     source: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
     name: Health20
     loopSound: 0
     playAwake: 0
-    clip: {fileID: 8300000, guid: 985fd0f641b21ca428a7d59a771f1e5e, type: 3}
+    clip: {fileID: 8300000, guid: abaefa630cb84a34ba4d7bd03045232c, type: 3}
     volume: 0.3
     pitch: 1
     source: {fileID: 0}
@@ -299,6 +299,14 @@ MonoBehaviour:
     playAwake: 0
     clip: {fileID: 8300000, guid: 171e9075f4074f54e9afa5f481d977f1, type: 3}
     volume: 0.7
+    pitch: 1
+    source: {fileID: 0}
+  - isMusic: 0
+    name: RedDeath
+    loopSound: 0
+    playAwake: 0
+    clip: {fileID: 8300000, guid: c47d9ea788e720342a4f1a65e5f191a7, type: 3}
+    volume: 0.4
     pitch: 1
     source: {fileID: 0}
 --- !u!81 &2108238091807722721
