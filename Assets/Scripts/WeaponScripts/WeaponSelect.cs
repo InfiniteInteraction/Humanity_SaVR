@@ -35,9 +35,7 @@ public class WeaponSelect : MonoBehaviour
     {
         GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
         LoadoutSelect();       
-        CurrPistol = GM.Pistol;
-        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
-        CurrLoadOut = GM.LoadoutWeapons;
+       
        //Instantiate(CurrPistol, GunSpawn);
     }
 
@@ -71,6 +69,9 @@ public class WeaponSelect : MonoBehaviour
                 PChoiImages[i].sprite = PistolChoices[i].GetComponent<GunTestVR>().WeapIcon;
             }
         }
+        CurrPistol = GM.Pistol;
+        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
+        CurrLoadOut = GM.LoadoutWeapons;
     }
 
     public void Clicked()
