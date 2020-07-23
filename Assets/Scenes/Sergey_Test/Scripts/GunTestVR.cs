@@ -81,7 +81,6 @@ public class GunTestVR : MonoBehaviour
 
     void Start()
     {
-        damageValue = 2;
         //green.SetActive(false);
         if (gameObject.name.Equals("PlasmaRifleVR"))
         {
@@ -104,6 +103,7 @@ public class GunTestVR : MonoBehaviour
         }
         if (gameObject.name.Equals("TommyGun"))
         {
+            damageValue = 2;
             foreach (Transform child in transform)
             {
                 child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
@@ -121,19 +121,19 @@ public class GunTestVR : MonoBehaviour
         }
         if (gameObject.name.Equals("Pistola22_green"))
         {
-
+            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("PlasmaGunVR") || gameObject.name.Equals("FNXScifi_Low"))
         {
-
+            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Rifleobj_green"))
         {
-
+            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/Rifle_GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
