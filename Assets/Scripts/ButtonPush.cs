@@ -41,7 +41,7 @@ public class ButtonPush : MonoBehaviour
         }
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("Lore"))
         {
-            SceneManager.LoadScene("Lore");
+            SceneManager.LoadScene("LoreScene");
         }
 
     }
