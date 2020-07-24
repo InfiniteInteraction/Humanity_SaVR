@@ -583,7 +583,7 @@ public class GunTestVR : MonoBehaviour
 
     IEnumerator RifleWheelStop()
     {
-        if (rifleCharging >= 0.5f)
+        if (rifleCharging >= 0.5f && currAmmo > 0)
             WeaponShoot();
         rifleCharging = 0;
         if (green.activeSelf)
