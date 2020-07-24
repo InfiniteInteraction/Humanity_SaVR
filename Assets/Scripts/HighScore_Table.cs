@@ -66,7 +66,7 @@ public class HighScore_Table : MonoBehaviour
         float templateHeight = .45f;
         Transform entryTransform = Instantiate(entryTemplate, container);
         RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-        entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count);
+        entryRectTransform.anchoredPosition = new Vector2(0, -templateHeight * transformList.Count -.2f);
         entryTransform.gameObject.SetActive(true);
 
         int rank = transformList.Count + 1;
