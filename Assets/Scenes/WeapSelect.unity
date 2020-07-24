@@ -40812,18 +40812,6 @@ MonoBehaviour:
   m_Spacing: {x: -164.3, y: -128}
   m_Constraint: 1
   m_ConstraintCount: 3
---- !u!114 &1980984028 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2566400634616183304, guid: 92e6ff5101a4f584183fa702d19701b0,
-    type: 3}
-  m_PrefabInstance: {fileID: 136083183}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d6ab1b90af7369479b519da3b561451, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2021364901
 GameObject:
   m_ObjectHideFlags: 0
@@ -45844,6 +45832,7 @@ GameObject:
   - component: {fileID: 2126572578}
   - component: {fileID: 2126572577}
   - component: {fileID: 2126572576}
+  - component: {fileID: 2126572580}
   m_Layer: 5
   m_Name: MenuBack
   m_TagString: Untagged
@@ -45929,8 +45918,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1980984028}
-        m_MethodName: MainMenu
+      - m_Target: {fileID: 2126572580}
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45976,6 +45965,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126572574}
   m_CullTransparentMesh: 0
+--- !u!114 &2126572580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126572574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700587be0b0929045a66e241906b19cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sMU: {fileID: 0}
 --- !u!1 &2126576444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3108530945912851554, guid: ce816f2e6abb0504092c23ed9b970dfd,

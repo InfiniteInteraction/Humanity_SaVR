@@ -31,9 +31,15 @@ public class WeaponSelect : MonoBehaviour
     public string SceneName;
     //public Transform GunSpawn; //Uncomment when Gunspawn is fixed
 
+    private void OnEnable()
+    {
+        StartCoroutine("GMWait");
+    }
     public void Start()
     {
-        GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
+        CurrPistol = GM.Pistol;
+        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
+        CurrLoadOut = GM.LoadoutWeapons;
         LoadoutSelect();       
        
        //Instantiate(CurrPistol, GunSpawn);
@@ -69,9 +75,7 @@ public class WeaponSelect : MonoBehaviour
                 PChoiImages[i].sprite = PistolChoices[i].GetComponent<GunTestVR>().WeapIcon;
             }
         }
-        CurrPistol = GM.Pistol;
-        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
-        CurrLoadOut = GM.LoadoutWeapons;
+       
     }
 
     public void Clicked()
@@ -120,5 +124,10 @@ public class WeaponSelect : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene(SceneName);
+    }
+    IEnumerator GMWait()
+    {
+        GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
+        yield return new WaitUntil(() => GM != null);
     }
 }

@@ -45,4 +45,8 @@ public class ButtonPush : MonoBehaviour
         }
 
     }
+    public void Menu()
+    {
+        SceneManager.LoadScene("OVRMenu");
+    }
 }
