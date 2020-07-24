@@ -154,7 +154,7 @@ MonoBehaviour:
     loopSound: 0
     playAwake: 0
     clip: {fileID: 8300000, guid: f9fc817070d36644c9661a773c3e1672, type: 3}
-    volume: 0.6
+    volume: 0.35
     pitch: 1
     source: {fileID: 0}
   - isMusic: 0
@@ -306,7 +306,7 @@ MonoBehaviour:
     loopSound: 0
     playAwake: 0
     clip: {fileID: 8300000, guid: c47d9ea788e720342a4f1a65e5f191a7, type: 3}
-    volume: 0.4
+    volume: 0.3
     pitch: 1
     source: {fileID: 0}
 --- !u!81 &2108238091807722721
