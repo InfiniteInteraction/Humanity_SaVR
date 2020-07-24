@@ -4676,7 +4676,7 @@ PrefabInstance:
     - target: {fileID: 8886087254668463251, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8886087254668463250, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
@@ -4853,31 +4853,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 361420068, guid: 3a1fc961c48951b419d84ac527e9ad4c, type: 3}
       propertyPath: m_fontSize
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 361420068, guid: 3a1fc961c48951b419d84ac527e9ad4c, type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2677677630167860312, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_fontSize
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2677677630167860312, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 28435667193166083, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_fontSize
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 28435667193166083, guid: 3a1fc961c48951b419d84ac527e9ad4c,
         type: 3}
       propertyPath: m_fontSizeBase
-      value: 0.14
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1fc961c48951b419d84ac527e9ad4c, type: 3}
@@ -25532,6 +25532,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Results Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 2441016557954822069, guid: 5bee8098eca43a645b98466fe4952033,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2441016557954822068, guid: 5bee8098eca43a645b98466fe4952033,
         type: 3}
