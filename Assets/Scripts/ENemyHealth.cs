@@ -22,12 +22,12 @@ public class ENemyHealth : Health
     public Gun pewpew;
     public GameObject pointPopUp;
     GameObject canvas;
-    public int greenHit;
-
+    //public int greenHit;
+    public int gHitCount;
     //public AudioClip redDamage;
     //public AudioClip greenDamage;
-    
-    
+
+
     #region
 
     #endregion
@@ -53,7 +53,7 @@ public class ENemyHealth : Health
         enemyHit = false;
         pHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         pewpew = FindObjectOfType<Gun>();
-        
+        gHitCount = 0;
     }
 
     public override void TakeDamage(float damageAmount)
@@ -94,6 +94,19 @@ public class ENemyHealth : Health
     private void Update()
     {
         pointTimer += 1 * Time.deltaTime;
+        if (gHitCount >= 3)
+        {
+            if (Damage.damage.playerHealth >= 1)
+            {
+                Damage.damage.playerHealth = 0;
+            }
+            else if (Damage.damage.playerHealth == 0)
+            {
+
+                Damage.damage.PlayerDeath();
+                Damage.damage.playerHealth -= GameManager.gameManager.enemyATK;
+            }
+        }
     }
 
     private void FixedUpdate()
@@ -134,7 +147,7 @@ public class ENemyHealth : Health
         if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
         {
             Damage.damage.playerHealth -= 1;
-            GameManager.gameManager.gHitCount++;
+            gHitCount++;
         }
     }
 

@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public int CTime;
     public float eSpeed = 3.5f;
     public int saveWave = 1;
-    public int gHitCount;
+    
     [Header("Refill Ammo")]
     public List<bool> GunAmmo = new List<bool>
     {
@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         enemyATK = 1;
         enemyATKCooldown = 4;
         CTime = 12;
-        gHitCount = 0;
+        //gHitCount = 0;
 
     }
     public void PlayButtonReturn()
@@ -126,19 +126,7 @@ public class GameManager : MonoBehaviour
             HighScore_Table.highScore_Table.pScore = score;
 
         }
-        if (gHitCount >= 3)
-        {
-            if (Damage.damage.playerHealth >= 1)
-            {
-                Damage.damage.playerHealth = 0;
-            }
-            else if(Damage.damage.playerHealth == 0)
-            {
-
-                Damage.damage.PlayerDeath();
-                Damage.damage.playerHealth -= enemyATK;
-            }
-        }
+        
         if (Waves != null)
         {
             DifficultySetting();
