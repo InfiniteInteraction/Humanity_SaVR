@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -31,20 +29,19 @@ public class WeaponSelect : MonoBehaviour
     public string SceneName;
     //public Transform GunSpawn; //Uncomment when Gunspawn is fixed
 
-    private void OnEnable()
-    {
-        StartCoroutine("GMWait");
-    }
     public void Start()
     {
-        CurrPistol = GM.Pistol;
-        CurrPImage.sprite = CurrPistol.GetComponent<GunTestVR>().WeapIcon;
-        CurrLoadOut = GM.LoadoutWeapons;
-        LoadoutSelect();       
-       
-       //Instantiate(CurrPistol, GunSpawn);
+        if (GM == null)
+        {
+            GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
+            CurrPistol = GM.Pistol;
+            //Debug.LogError(CurrPistol);
+            CurrLoadOut = GM.LoadoutWeapons;            
+            //Debug.LogError(CurrPistol);
+            LoadoutSelect();
+            //Debug.LogError(CurrPistol);           
+        }
     }
-
     public void LoadoutSelect()
     {
         PSelect = !PSelect;
@@ -70,10 +67,14 @@ public class WeaponSelect : MonoBehaviour
             Load.SetActive(false);
             Text1.SetActive(true);
             Text2.SetActive(false);
+            
             for (int i = 0; i < PistolChoices.Count; i++)
             {
                 PChoiImages[i].sprite = PistolChoices[i].GetComponent<GunTestVR>().WeapIcon;
             }
+            //Debug.LogError(GM.Pistol.GetComponent<GunTestVR>().WeapIcon);
+            CurrPImage.sprite = GM.Pistol.GetComponent<GunTestVR>().WeapIcon;
+            //Debug.LogError(CurrPImage);
         }
        
     }
@@ -124,10 +125,5 @@ public class WeaponSelect : MonoBehaviour
     public void StartButton()
     {
         SceneManager.LoadScene(SceneName);
-    }
-    IEnumerator GMWait()
-    {
-        GM = GameManager.gameManager.GetComponent<WeaponSwitch>();
-        yield return new WaitUntil(() => GM != null);
     }
 }

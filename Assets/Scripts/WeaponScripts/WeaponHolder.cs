@@ -8,7 +8,7 @@ public class WeaponHolder : MonoBehaviour
     public GameObject RightController;
     public WeaponSwitch WGM;
 
-    public void Start()
+    public void OnEnable()
     {
         for (int i = 0; i < Weapons.Count; i++)
         {
@@ -16,7 +16,6 @@ public class WeaponHolder : MonoBehaviour
         }
         WeapLoad();
     }
-
     public void WeapLoad()
     {        
         WGM = GameManager.gameManager.GetComponent<WeaponSwitch>();

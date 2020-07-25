@@ -84,68 +84,68 @@ public class GunTestVR : MonoBehaviour
         //green.SetActive(false);
         if (gameObject.name.Equals("PlasmaRifleVR"))
         {
-            damageValue = 4;
             foreach (GameObject detail in emissiveObjects)
             {
                 detail.GetComponent<Renderer>().material = Resources.Load(("Materials/PlasmaRifleBarrelEmissionRed"), typeof(Material)) as Material;
             }
-
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("RailGun_Chris"))
         {
-            damageValue = 4;
             GetComponent<Renderer>().material = Resources.Load(("Materials/RailGunChris_MatR"), typeof(Material)) as Material;
-
             redBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("TommyGun"))
         {
-            damageValue = 2;
             foreach (Transform child in transform)
             {
                 child.GetComponent<Renderer>().material = Resources.Load(("Materials/TommyGunR"), typeof(Material)) as Material;
             }
-
             redBullet = Resources.Load(("Prefabs/TommyGunBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/TommyGunBulletGreen"), typeof(GameObject)) as GameObject;
-
         }
         if (gameObject.name.Equals("Musket_DuskSky"))
         {
-            damageValue = 4;
             redBullet = Resources.Load(("Prefabs/RailgunBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/RailgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("Pistola22_green"))
         {
-            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/LaserBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/LaserBulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("PlasmaGunVR") || gameObject.name.Equals("FNXScifi_Low"))
         {
-            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/PlasmaBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/PlasmaBulletGreen"), typeof(GameObject)) as GameObject;
         }
-        if (gameObject.name.Equals("Rifleobj_green"))
+        if (gameObject.name.Equals("Rifle obj_green"))
         {
-            damageValue = 2;
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/Rifle_GreenRifleBullet"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("syfy_shotgun"))
         {
-            damageValue = 4;
             redBullet = Resources.Load(("Prefabs/syfy_shotgunBulletRed"), typeof(GameObject)) as GameObject;
             greenBullet = Resources.Load(("Prefabs/syfy_shotgunBulletGreen"), typeof(GameObject)) as GameObject;
         }
-
+        canShoot = true;
     }
-
+    public void OnEnable()
+    {
+        if (gameObject.name.Equals("Rifle obj_green") || gameObject.name.Equals("PlasmaGunVR") || gameObject.name.Equals("FNXScifi_Low") || 
+            gameObject.name.Equals("Pistola22_green") || gameObject.name.Equals("TommyGun"))
+        {
+            damageValue = 2.0f;
+        }
+        else
+        {
+            damageValue = 4.0f;
+        }       
+        canShoot = true;
+    }
     void Update()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
@@ -176,40 +176,39 @@ public class GunTestVR : MonoBehaviour
             {
                 fullAutoMode = true;
             }
-            else
-            {
-                if (fullAutoMode)
-                {
-                    if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) && canShoot && currAmmo > 0)
-                    {
-                        StartCoroutine("AutoShot");
-                    }
-                }
-                else
-                {
-                    if ((OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) && canShoot && currAmmo > 0)
-                    {
-                        StartCoroutine("OneShot");
-                        return;
-                    }
-                    else if ((OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) && !canShoot)
-                    {
-                        canShoot = true;
-                        return;
-                    }
-                    //if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
-                    //{
-                    //    StartCoroutine("OneShot");
-                    //    return;
-                    //}
-                    //if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
-                    //{
-                    //    canShoot = true;
-                    //    return;
 
-                    //}
+            if (fullAutoMode)
+            {
+                if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) && canShoot && currAmmo > 0)
+                {
+                    StartCoroutine("AutoShot");
                 }
             }
+            else
+            {
+                if ((OVRInput.Get(OVRInput.RawButton.RIndexTrigger)) && canShoot && currAmmo > 0)
+                {
+                    StartCoroutine("OneShot");
+                    return;
+                }
+                else if ((OVRInput.GetUp(OVRInput.RawButton.RIndexTrigger)) && !canShoot)
+                {
+                    canShoot = true;
+                    return;
+                }
+                //if ((OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger)) && canShoot && currAmmo > 0)
+                //{
+                //    StartCoroutine("OneShot");
+                //    return;
+                //}
+                //if ((OVRInput.GetUp(OVRInput.Button.SecondaryIndexTrigger)) && !canShoot)
+                //{
+                //    canShoot = true;
+                //    return;
+
+                //}
+            }
+
 
             if (OVRInput.Get(OVRInput.RawButton.RIndexTrigger) && currAmmo <= 0)
             {
@@ -326,7 +325,7 @@ public class GunTestVR : MonoBehaviour
                     detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_FNX_Green"), typeof(Material)) as Material;
                 }
             }
-            if(gameObject.name.Equals("PlasmaGunVR"))
+            if (gameObject.name.Equals("PlasmaGunVR"))
             {
                 foreach (GameObject detail in emissiveObjects)
                 {
@@ -396,9 +395,9 @@ public class GunTestVR : MonoBehaviour
                     detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Mat_FNX_Red"), typeof(Material)) as Material;
                 }
             }
-            if(gameObject.name.Equals("PlasmaGunVR"))
+            if (gameObject.name.Equals("PlasmaGunVR"))
             {
-                foreach(GameObject detail in emissiveObjects)
+                foreach (GameObject detail in emissiveObjects)
                 {
                     detail.GetComponent<Renderer>().material = Resources.Load(("Materials/Gun"), typeof(Material)) as Material;
                 }
