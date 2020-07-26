@@ -90,6 +90,10 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            SceneManager.LoadScene("Test Credits");
+        }
         Checks();
         if (SceneManager.sceneCount == 1)
         {

@@ -20,7 +20,7 @@ public class StartMenuFunctionality : MonoBehaviour
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits_New");
+        SceneManager.LoadScene("Test Credits");
     }
     public void ExitGame()
     {
