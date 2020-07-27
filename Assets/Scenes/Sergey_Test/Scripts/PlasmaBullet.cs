@@ -58,7 +58,7 @@ public class PlasmaBullet : MonoBehaviour
     {
         collided = true;
         collisionPos = transform;
-        if (collision.collider.gameObject.layer.Equals("Alien"))
+        if (collision.collider.gameObject.layer.Equals("Alien") && GameManager.gameManager.pause.isPaused == false)
         {
             if (gtScript)
             {
@@ -70,11 +70,6 @@ public class PlasmaBullet : MonoBehaviour
 
             }
         }
-        else
-        {
-
-        }
-
     }
 
     void BulletGo()

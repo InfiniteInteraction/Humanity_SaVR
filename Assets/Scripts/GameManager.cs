@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public int CTime;
     public float eSpeed = 3.5f;
     public int saveWave = 1;
-    
+    [HideInInspector] public PauseMenu pause;
     [Header("Refill Ammo")]
     public List<bool> GunAmmo = new List<bool>
     {
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
             stars[2].SetActive(true);
             stars[3].SetActive(true);
             stars[4].SetActive(true);
-            Debug.LogError("5 star rating");
+           //Debug.LogError("5 star rating");
 
         }
         else if (accuracy >= 40 && score >= 28621 && greenDeaths >= 28)
@@ -181,7 +181,7 @@ public class GameManager : MonoBehaviour
             stars[3].SetActive(true);
             stars[4].SetActive(false);
 
-            Debug.LogError("4 star rating");
+            //Debug.LogError("4 star rating");
 
         }
         else if (accuracy >= 25 && score >= 19081 && greenDeaths >= 21)
@@ -192,7 +192,7 @@ public class GameManager : MonoBehaviour
             stars[2].SetActive(true);
             stars[3].SetActive(false);
             stars[4].SetActive(false);
-            Debug.LogError("3 star rating");
+            //Debug.LogError("3 star rating");
 
         }
         else if (accuracy >= 10 && score >= 9541 && greenDeaths >= 14)
@@ -203,7 +203,7 @@ public class GameManager : MonoBehaviour
             stars[2].SetActive(false);
             stars[3].SetActive(false);
             stars[4].SetActive(false);
-            Debug.LogError("2 star rating");
+            //Debug.LogError("2 star rating");
         }
         else
         {
@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
             stars[4].SetActive(false);
 
 
-            Debug.LogError("1 star rating");
+            //Debug.LogError("1 star rating");
         }
     }
 
@@ -349,6 +349,11 @@ public class GameManager : MonoBehaviour
         {
             waveScreen = Waves.Wavescreen.transform.GetChild(waveNumber).gameObject;
         }
+        pause = FindObjectOfType<PauseMenu>();
+        if(pause == null)
+        {
+            return;
+        }
     }
 
     public void AmmoGain()
@@ -356,7 +361,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < GunAmmo.Count; i++)
         {
             GunAmmo[i] = true;
-            Debug.Log(GunAmmo[i]);
+            //Debug.Log(GunAmmo[i]);
         }       
     }
     public void AmmoReset()
@@ -364,7 +369,7 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < GunAmmo.Count; i++)
         {
             GunAmmo[i] = false;
-            Debug.Log(GunAmmo[i]);
+            //Debug.Log(GunAmmo[i]);
         }
     }
     public void RECHARGE()

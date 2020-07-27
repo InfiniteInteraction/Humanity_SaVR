@@ -25,12 +25,12 @@ public class PauseMenu : MonoBehaviour
         if (!isPaused)
         {
             Panel.SetActive(false);
-            Time.timeScale = 1.0f;
+            //Time.timeScale = 1.0f;
         }
         else
         {
             Panel.SetActive(true);
-            Time.timeScale = 0.0f;
+            //Time.timeScale = 0.0f;
         }
     }
     public void Resume()

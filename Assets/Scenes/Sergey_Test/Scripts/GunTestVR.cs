@@ -235,9 +235,12 @@ public class GunTestVR : MonoBehaviour
 
     void ReduceAmmo()
     {
-        currAmmo--;
-        currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
-        //ammoChanged = true;
+        if (GameManager.gameManager.pause.isPaused == false)
+        {
+            currAmmo--;
+            currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
+            //ammoChanged = true;
+        }
     }
 
     public void RegainAmmo()
