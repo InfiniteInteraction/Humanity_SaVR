@@ -124,7 +124,7 @@ public class GunTestVR : MonoBehaviour
         if (gameObject.name.Equals("Rifle obj_green"))
         {
             redBullet = Resources.Load(("Prefabs/Rifle_BulletRed"), typeof(GameObject)) as GameObject;
-            greenBullet = Resources.Load(("Prefabs/Rifle_GreenRifleBullet"), typeof(GameObject)) as GameObject;
+            greenBullet = Resources.Load(("Prefabs/Rifle_BulletGreen"), typeof(GameObject)) as GameObject;
         }
         if (gameObject.name.Equals("syfy_shotgun"))
         {
