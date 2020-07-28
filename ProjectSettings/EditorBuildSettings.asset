@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/HowToPlay_New.unity
     guid: 4b8ee9093ea2f8f469e29afb315744ac
   - enabled: 1
+    path: Assets/Scenes/LoreScene.unity
+    guid: dd5bca818783d9a42a31d5b57597f723
+  - enabled: 1
     path: Assets/Scenes/Lore.unity
     guid: 507b8f56f36cf6f4dae3303ed9565a62
   - enabled: 1
@@ -38,9 +41,6 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/LoreScene.unity
-    guid: dd5bca818783d9a42a31d5b57597f723
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
