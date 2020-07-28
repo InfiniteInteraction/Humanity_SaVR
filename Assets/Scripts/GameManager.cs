@@ -150,12 +150,13 @@ public class GameManager : MonoBehaviour
     public void CalculateAccuracy()
     {
         accuracy = hits / shotsFired * 100;
+        HighScore_Table.highScore_Table.AddHighscoreEntry(HighScore_Table.highScore_Table.pScore, "SaVR");
     }
 
     public void Starsystem()
     {
         StarCalculation();
-        HighScore_Table.highScore_Table.AddHighscoreEntry(score, "SaVR");
+        
     }
 
     public void StarCalculation()
