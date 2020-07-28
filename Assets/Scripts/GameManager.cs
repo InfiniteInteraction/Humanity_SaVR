@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public ENemyHealth[] eHealth;
     public int waveNumber = 1;
     public int CTime;
-    public float eSpeed = 3.5f;
+    public float eSpeed = 3f;
     public int saveWave = 1;
     [HideInInspector] public PauseMenu pause;
     [Header("Refill Ammo")]
