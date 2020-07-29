@@ -38,8 +38,8 @@ public class PlasmaBullet : MonoBehaviour
     {
         gmScript.shotsFired++;
 
-        if (gtScript)
-            transform.rotation = camRot * Quaternion.Euler(0, 90, 0);
+        //if (gtScript)
+        //    transform.rotation = camRot * Quaternion.Euler(0, 90, 0);
     }
 
     private void FixedUpdate()
