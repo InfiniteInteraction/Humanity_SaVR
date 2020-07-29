@@ -26,16 +26,16 @@ public class HighScore_Table : MonoBehaviour
         if (highscores == null) {
             // There's no stored table, initialize
            
-            AddHighscoreEntry(45000, "BIL");
-            AddHighscoreEntry(40000, "SER");
-            AddHighscoreEntry(35000, "DON");
-            AddHighscoreEntry(30000, "RHT");
-            AddHighscoreEntry(25000, "RDS");
-            AddHighscoreEntry(20000, "TJR");
-            AddHighscoreEntry(15000, "JTR");
-            AddHighscoreEntry(10000, "RVB");
-            AddHighscoreEntry(9000, "TR");
-            AddHighscoreEntry(1000, "JR");
+            AddHighscoreEntry(22000, "BIL");
+            AddHighscoreEntry(19000, "SER");
+            AddHighscoreEntry(18000, "DON");
+            AddHighscoreEntry(17000, "RHT");
+            AddHighscoreEntry(16000, "RDS");
+            AddHighscoreEntry(15000, "TJR");
+            AddHighscoreEntry(14000, "JTR");
+            AddHighscoreEntry(13000, "RVB");
+            AddHighscoreEntry(12000, "TR");
+            AddHighscoreEntry(10000, "JR");
             
 
             // Reload
