@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
     public void StarCalculation()
     {
         CalculateAccuracy();
-        if (accuracy >= 60 && score >= 38161 && greenDeaths >= 35)
+        if (accuracy >= 45 && score >= 15920 && greenDeaths >= 10)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -173,7 +173,7 @@ public class GameManager : MonoBehaviour
            //Debug.LogError("5 star rating");
 
         }
-        else if (accuracy >= 40 && score >= 28621 && greenDeaths >= 28)
+        else if (accuracy >= 30 && score >= 11940 && greenDeaths >= 7)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -185,7 +185,7 @@ public class GameManager : MonoBehaviour
             //Debug.LogError("4 star rating");
 
         }
-        else if (accuracy >= 25 && score >= 19081 && greenDeaths >= 21)
+        else if (accuracy >= 10 && score >= 7960 && greenDeaths >= 4)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
@@ -196,7 +196,7 @@ public class GameManager : MonoBehaviour
             //Debug.LogError("3 star rating");
 
         }
-        else if (accuracy >= 10 && score >= 9541 && greenDeaths >= 14)
+        else if (accuracy >= 5 && score >= 3980 && greenDeaths >= 1)
         {
             resultsBackground.SetActive(true);
             stars[0].SetActive(true);
