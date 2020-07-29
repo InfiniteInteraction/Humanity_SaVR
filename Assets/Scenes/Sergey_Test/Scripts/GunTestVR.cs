@@ -176,6 +176,10 @@ public class GunTestVR : MonoBehaviour
             {
                 fullAutoMode = true;
             }
+            else
+            {
+                fullAutoMode = false;
+            }
 
             if (fullAutoMode)
             {
@@ -235,10 +239,13 @@ public class GunTestVR : MonoBehaviour
 
     void ReduceAmmo()
     {
-        if (GameManager.gameManager.pause.isPaused == false)
+        if (GameManager.gameManager.pause != null)
         {
-            currAmmo--;
-            currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
+            if (GameManager.gameManager.pause.isPaused == false)
+            {
+                currAmmo--;
+                currAmmo = Mathf.Clamp(currAmmo, 0, maxAmmo);
+            }
             //ammoChanged = true;
         }
     }

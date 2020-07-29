@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9f338034892c44ebb62d97894772f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usePerEyeCameras: 0
+  usePerEyeCameras: 1
   useFixedUpdateForTracking: 0
   disableEyeAnchorCameras: 0
 --- !u!114 &11400002
@@ -796,6 +796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 462066}
     m_Modifications:
+    - target: {fileID: 158226, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
+      propertyPath: m_Name
+      value: LocalAvatar
+      objectReference: {fileID: 0}
     - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -839,10 +843,6 @@ PrefabInstance:
     - target: {fileID: 463470, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 158226, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
-      propertyPath: m_Name
-      value: LocalAvatar
       objectReference: {fileID: 0}
     - target: {fileID: 11437430, guid: 84c8b8609f9bb434eaf5248f17ff1293, type: 3}
       propertyPath: EnableHands
@@ -1150,21 +1150,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.090377375
       objectReference: {fileID: 0}
-    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.882
-      objectReference: {fileID: 0}
-    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.060052
-      objectReference: {fileID: 0}
-    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.71046
-      objectReference: {fileID: 0}
     - target: {fileID: 6259209724600464739, guid: 000d5ca004b6534409d461ae68944bbf,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -1179,6 +1164,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.060052
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485365419095771156, guid: 000d5ca004b6534409d461ae68944bbf,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.71046
       objectReference: {fileID: 0}
     - target: {fileID: -2243563382626518502, guid: 000d5ca004b6534409d461ae68944bbf,
         type: 3}
@@ -1812,11 +1812,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.2
       objectReference: {fileID: 0}
-    - target: {fileID: 6038154069205276452, guid: 65e7c5f37a8cd1143bdde29caf961aca,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 60b552a69e803c44e9256e2569489f51, type: 2}
     - target: {fileID: 2875270627003935807, guid: 65e7c5f37a8cd1143bdde29caf961aca,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1827,11 +1822,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.157
       objectReference: {fileID: 0}
-    - target: {fileID: 7118081720945284545, guid: 65e7c5f37a8cd1143bdde29caf961aca,
+    - target: {fileID: 6038154069205276452, guid: 65e7c5f37a8cd1143bdde29caf961aca,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 60b552a69e803c44e9256e2569489f51, type: 2}
     - target: {fileID: 2163391977480735148, guid: 65e7c5f37a8cd1143bdde29caf961aca,
         type: 3}
       propertyPath: maxAmmo
@@ -1841,6 +1836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: currAmmo
       value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118081720945284545, guid: 65e7c5f37a8cd1143bdde29caf961aca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65e7c5f37a8cd1143bdde29caf961aca, type: 3}
@@ -1863,6 +1863,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 400006}
     m_Modifications:
+    - target: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
+      propertyPath: m_Name
+      value: UIHelpers
+      objectReference: {fileID: 0}
     - target: {fileID: 4897607310870066, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1907,10 +1911,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1732808951507650, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
-      propertyPath: m_Name
-      value: UIHelpers
-      objectReference: {fileID: 0}
     - target: {fileID: 114043904411177872, guid: a9d2de84afb308a4796cc671d3432b4d,
         type: 3}
       propertyPath: rayTransform
@@ -1931,6 +1931,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4471613377008970}
     m_Modifications:
+    - target: {fileID: 5183831400178487263, guid: 3b25b2118f79cc4419f7241039b322e7,
+        type: 3}
+      propertyPath: m_Name
+      value: syfy_shotgun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5183831400178487263, guid: 3b25b2118f79cc4419f7241039b322e7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8190907432272231884, guid: 3b25b2118f79cc4419f7241039b322e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2000,16 +2010,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.3876848
-      objectReference: {fileID: 0}
-    - target: {fileID: 5183831400178487263, guid: 3b25b2118f79cc4419f7241039b322e7,
-        type: 3}
-      propertyPath: m_Name
-      value: syfy_shotgun
-      objectReference: {fileID: 0}
-    - target: {fileID: 5183831400178487263, guid: 3b25b2118f79cc4419f7241039b322e7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4500541471574474906, guid: 3b25b2118f79cc4419f7241039b322e7,
         type: 3}
