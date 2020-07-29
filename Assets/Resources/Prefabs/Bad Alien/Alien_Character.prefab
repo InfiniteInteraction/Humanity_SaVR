@@ -108,9 +108,7 @@ MonoBehaviour:
   enemyHit: 0
   pewpew: {fileID: 0}
   pointPopUp: {fileID: 0}
-  greenHit: 0
-  redDamage: {fileID: 8300000, guid: 76aaf1f0ace1ac04b9f39daeb90d2df8, type: 3}
-  greenDamage: {fileID: 8300000, guid: 05de23ac02b75884697c66c4306825d1, type: 3}
+  gHitCount: 0
 --- !u!114 &8884351211609652562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,13 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 0}
-  Points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Points: []
   Epsilon: 0.5
 --- !u!114 &658156186069202571
 MonoBehaviour:

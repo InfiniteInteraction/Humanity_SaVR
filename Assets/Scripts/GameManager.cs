@@ -353,6 +353,7 @@ public class GameManager : MonoBehaviour
         pause = FindObjectOfType<PauseMenu>();
         if(pause == null)
         {
+            //Debug.LogError("PauseMenu not found");
             return;
         }
     }

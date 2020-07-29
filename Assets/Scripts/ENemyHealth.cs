@@ -117,37 +117,40 @@ public class ENemyHealth : Health
 
     private void OnCollisionEnter(Collision collision)
     {
-        bulletType = collision.collider.gameObject;
-        if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
+        if (GameManager.gameManager.pause.isPaused == false)
         {
-            TakeDamage(GunTestVR.gunTestVR.damageValue);
-            //AudioSource.PlayClipAtPoint(redDamage, transform.position, 1f);
-            enemyHit = true;
-        }
-        else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")
-        {
-            //AudioSource.PlayClipAtPoint(greenDamage, transform.position, 1f);
-            Audiomanager.audiomanager.Play("GreenDamage");
-            enemyHit = true;
-            GameManager.gameManager.greenDeaths++;                             
-            Damage.damage.playerHealth += 100;
-            Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
-            //GunTestVR.gunTestVR.RegainAmmo();
-            GameManager.gameManager.AmmoGain();
-            GameManager.gameManager.RECHARGE();
-            DeathEffect();
-            CallMulti();
-            eSpawner.KillStreak();
-            Destroy(gameObject);  
-        }
-        if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
-        {
-            Damage.damage.playerHealth -= 1;
-        }
-        if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
-        {
-            Damage.damage.playerHealth -= 1;
-            gHitCount++;
+            bulletType = collision.collider.gameObject;
+            if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "RedEnemy")
+            {
+                TakeDamage(FindObjectOfType<GunTestVR>().damageValue);
+                //AudioSource.PlayClipAtPoint(redDamage, transform.position, 1f);
+                enemyHit = true;
+            }
+            else if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "GreenEnemy")
+            {
+                //AudioSource.PlayClipAtPoint(greenDamage, transform.position, 1f);
+                Audiomanager.audiomanager.Play("GreenDamage");
+                enemyHit = true;
+                GameManager.gameManager.greenDeaths++;
+                Damage.damage.playerHealth += 100;
+                Damage.damage.playerHealth = Mathf.Clamp(Damage.damage.playerHealth, 0, 100);
+                //GunTestVR.gunTestVR.RegainAmmo();
+                GameManager.gameManager.AmmoGain();
+                GameManager.gameManager.RECHARGE();
+                DeathEffect();
+                CallMulti();
+                eSpawner.KillStreak();
+                Destroy(gameObject);
+            }
+            if (collision.collider.CompareTag("GreenBullet") && gameObject.tag == "RedEnemy")
+            {
+                Damage.damage.playerHealth -= 1;
+            }
+            if (collision.collider.CompareTag("RedBullet") && gameObject.tag == "GreenEnemy")
+            {
+                Damage.damage.playerHealth -= 1;
+                gHitCount++;
+            }
         }
     }
 

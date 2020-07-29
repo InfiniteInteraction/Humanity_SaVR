@@ -70739,6 +70739,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1128008332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1137864907 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4811325959578275565, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1261550717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1142684184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71629,6 +71635,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114437608515495994, guid: 949cac64006073b489556d076d0c3696,
+        type: 3}
+      propertyPath: _trackedObject
+      value: 
+      objectReference: {fileID: 1816460405}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 949cac64006073b489556d076d0c3696, type: 3}
 --- !u!20 &1249214624 stripped
@@ -72321,6 +72332,26 @@ PrefabInstance:
       propertyPath: maxAmmo
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 9017151756122700162, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: currAmmo
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 9017151756122700162, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682762610276204969, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: currAmmo
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682762610276204969, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: maxAmmo
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 3001908874137148680, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: currAmmo
@@ -72336,16 +72367,6 @@ PrefabInstance:
       propertyPath: canShoot
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5682762610276204969, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: currAmmo
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5682762610276204969, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: maxAmmo
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2437555835700539781, guid: ce816f2e6abb0504092c23ed9b970dfd,
         type: 3}
       propertyPath: currAmmo
@@ -72355,16 +72376,6 @@ PrefabInstance:
         type: 3}
       propertyPath: maxAmmo
       value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 9017151756122700162, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: currAmmo
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 9017151756122700162, guid: ce816f2e6abb0504092c23ed9b970dfd,
-        type: 3}
-      propertyPath: maxAmmo
-      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 430123011550259630, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
@@ -104199,7 +104210,7 @@ PrefabInstance:
     - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
       propertyPath: Pistol
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1137864907}
     - target: {fileID: 1049003920, guid: 92e6ff5101a4f584183fa702d19701b0, type: 3}
       propertyPath: LoadoutWeapons.Array.data[0]
       value: 

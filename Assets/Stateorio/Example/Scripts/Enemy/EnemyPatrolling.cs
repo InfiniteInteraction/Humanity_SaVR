@@ -49,8 +49,22 @@ public class EnemyPatrolling : FsmState {
 
 	// Update is called once per frame
 	void Update () {
-		if (Points.Length > 1 && !agent.pathPending && agent.remainingDistance < Epsilon)
-			gotoNextPoint ();
+		if (GameManager.gameManager.pause.isPaused == false)
+		{
+			agent.isStopped = false;
+			GetComponent<Animator>().SetBool("isMoving", true);
+			GetComponent<Animator>().SetBool("isIdle", false);
+			if (Points.Length > 1 && !agent.pathPending && agent.remainingDistance < Epsilon)
+			{
+				gotoNextPoint();
+			}			
+		}
+		else
+		{
+			GetComponent<Animator>().SetBool("isIdle", true);
+			GetComponent<Animator>().SetBool("isMoving", false);
+			agent.isStopped = true;
+		}
 	}
 
 	public override void OnStateEnter () {

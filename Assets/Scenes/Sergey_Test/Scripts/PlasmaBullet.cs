@@ -58,18 +58,22 @@ public class PlasmaBullet : MonoBehaviour
     {
         collided = true;
         collisionPos = transform;
-        if (collision.collider.gameObject.layer.Equals("Alien") && GameManager.gameManager.pause.isPaused == false)
-        {
-            if (gtScript)
-            {
-                collision.collider.GetComponent<Health>().TakeDamage(gtScript.damageValue);
-            }
-            if (gtScriptVR)
-            {
-                collision.collider.GetComponent<Health>().TakeDamage(gtScriptVR.damageValue);
+        //if (GameManager.gameManager.pause.isPaused == false)
+        //{
+        //    //Debug.LogError("Damage Dealt by Plasma");
+        //    if (collision.collider.gameObject.layer.Equals("Alien"))
+        //    {
+        //        if (gtScript)
+        //        {
+        //            collision.collider.GetComponent<Health>().TakeDamage(gtScript.damageValue);
+        //        }
+        //        if (gtScriptVR)
+        //        {
+        //            collision.collider.GetComponent<Health>().TakeDamage(gtScriptVR.damageValue);
 
-            }
-        }
+        //        }
+        //    }
+        //}      
     }
 
     void BulletGo()
@@ -100,6 +104,7 @@ public class PlasmaBullet : MonoBehaviour
             Instantiate(splash, collisionPos.position + posOffset, Quaternion.identity);
 
         }
+
         Destroy(gameObject.GetComponent<Rigidbody>());
         Destroy(gameObject.GetComponent<BoxCollider>());
         Destroy(gameObject.GetComponentInChildren<ParticleSystem>());

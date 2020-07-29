@@ -26,7 +26,7 @@ public class DeathFade : MonoBehaviour
 
     IEnumerator fadeImage()
     {
-        GunTestVR.gunTestVR.canShoot = false;
+        FindObjectOfType<GunTestVR>().canShoot = false;
         fadeOut.color = Color.Lerp(fadeOut.color, Color.black, fadeTime * Time.deltaTime);
         GameObject.FindGameObjectWithTag("HUD").SetActive(false);
         //GameObject.FindGameObjectWithTag("MusicBox").SetActive(false);

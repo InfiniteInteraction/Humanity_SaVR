@@ -44,18 +44,21 @@ public class EnemyAttacking : FsmState {
 	// Update is called once per frame
 	void Update () 
     {
-        cntdwn -= Time.deltaTime;
-
-        if (cntdwn <= 0) 
+        if (GameManager.gameManager.pause.isPaused == false)
         {
-            NormMat.material = yellowMat;
-            agent.SetDestination(Player.transform.position);
-            transform.LookAt(Player.transform);
-            agent.stoppingDistance = 7;
-            place = transform.position;
-            
-            Invoke("Attack", 3);
-		}
+            cntdwn -= Time.deltaTime;
+
+            if (cntdwn <= 0)
+            {
+                NormMat.material = yellowMat;
+                agent.SetDestination(Player.transform.position);
+                transform.LookAt(Player.transform);
+                agent.stoppingDistance = 7;
+                place = transform.position;
+
+                Invoke("Attack", 3);
+            }
+        }
 	}
 
     void Attack()
