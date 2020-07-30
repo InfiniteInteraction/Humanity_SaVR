@@ -14,6 +14,7 @@ public class ESpawner : MonoBehaviour
 
     public GameObject[] spawners;
     public bool isWaveOver;
+    public GameObject[] stars;
 
 
     //Spawners area 
@@ -45,7 +46,9 @@ public class ESpawner : MonoBehaviour
         GameManager.gameManager.DifficultySetting();       
         enemySpeed = GameManager.gameManager.eSpeed;    
         Wavescreen.SetActive(false);
+        GameManager.gameManager.resultsBackground = Results;
         Results.SetActive(false);
+        GameManager.gameManager.stars = stars;
         waveCount.text = waves.ToString();
         enemiesNeeded = totalToSpawn;
         DoSpawn();
@@ -69,6 +72,7 @@ public class ESpawner : MonoBehaviour
     }
     void wave10Complete()
     {
+        
         Wavescreen.SetActive(false);
         Results.SetActive(true);
         Audiomanager.audiomanager.Play("LevelComplete");
@@ -133,6 +137,8 @@ public class ESpawner : MonoBehaviour
                 
                 if (waves == 10)
                 {
+                   
+                    
                     wave10Complete();
                 }
             }

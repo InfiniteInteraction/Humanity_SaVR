@@ -13,9 +13,14 @@ public class HighScore_Table : MonoBehaviour
     public int pScore;
     private List<Transform> highscoreEntryTransformList;
 
-    private void Start() 
+    private void Awake()
     {
         highScore_Table = this;
+    }
+
+    public void Start() 
+    {
+       
         entryContainer = transform.Find("HSEntryTempContainer");
         entryTemplate = entryContainer.Find("HSEntryTemp");
         entryTemplate.gameObject.SetActive(false);
@@ -26,17 +31,17 @@ public class HighScore_Table : MonoBehaviour
         if (highscores == null) {
             // There's no stored table, initialize
            
-            AddHighscoreEntry(22000, "BIL");
-            AddHighscoreEntry(19000, "SER");
-            AddHighscoreEntry(18000, "DON");
-            AddHighscoreEntry(17000, "RHT");
+            AddHighscoreEntry(23000, "BIL");
+            AddHighscoreEntry(20000, "SER");
+            AddHighscoreEntry(19000, "DON");
+            AddHighscoreEntry(18000, "RHT");
             AddHighscoreEntry(16000, "RDS");
             AddHighscoreEntry(15000, "TJR");
             AddHighscoreEntry(14000, "JTR");
             AddHighscoreEntry(13000, "RVB");
             AddHighscoreEntry(12000, "TR");
             AddHighscoreEntry(10000, "JR");
-            
+
 
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
@@ -98,9 +103,12 @@ public class HighScore_Table : MonoBehaviour
             entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.blue;
             entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.blue;
         }
-        if (rank == 10)
+        if (rank >=  11)
         {
-            transformList.RemoveAt(11);
+            entryTransform.Find("WaveText").GetComponent<TextMeshProUGUI>().color = Color.clear;
+            entryTransform.Find("ScoreText").GetComponent<TextMeshProUGUI>().color = Color.clear;
+            entryTransform.Find("NameText").GetComponent<TextMeshProUGUI>().color = Color.clear;
+            return;
         }
 
 
@@ -131,7 +139,7 @@ public class HighScore_Table : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private class Highscores {
+    public class Highscores {
         public List<HighscoreEntry> highscoreEntryList;
     }
 

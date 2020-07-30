@@ -90,10 +90,6 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            SceneManager.LoadScene("Test Credits");
-        }
         Checks();
         if (SceneManager.sceneCount == 1)
         {
@@ -128,18 +124,22 @@ public class GameManager : MonoBehaviour
         if (HighScore_Table.highScore_Table != null)
         {
             HighScore_Table.highScore_Table.pScore = score;
-
+        }
+        if(resultsBackground == null)
+        {
+            GameObject.FindGameObjectWithTag("RBackground");
         }
         
         if (Waves != null)
         {
-            DifficultySetting();
+            DifficultySetting();           
         }
         if (Damage.damage.playerHealth <= 1)
         {
             PlayerPrefs.SetInt("PlayerScore", HighScore_Table.highScore_Table.pScore);
             PlayerPrefs.Save();
         }
+        
     }
 
     public void BulletMisses()
@@ -149,14 +149,13 @@ public class GameManager : MonoBehaviour
 
     public void CalculateAccuracy()
     {
-        accuracy = hits / shotsFired * 100;
-        HighScore_Table.highScore_Table.AddHighscoreEntry(HighScore_Table.highScore_Table.pScore, "SaVR");
+        accuracy = hits / shotsFired * 100;      
     }
 
     public void Starsystem()
     {
-        StarCalculation();
-        
+        HighScore_Table.highScore_Table.AddHighscoreEntry(HighScore_Table.highScore_Table.pScore, "SaVR");
+        StarCalculation();       
     }
 
     public void StarCalculation()
