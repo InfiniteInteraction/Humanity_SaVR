@@ -22,7 +22,13 @@ public class ButtonPush : MonoBehaviour
         {
             sMU.ExitGame();
         }
-      
+        if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("ResumeButton"))
+        {
+            PauseMenu Pause = GameObject.FindObjectOfType<PauseMenu>();
+            Pause.Panel.SetActive(false);
+            Pause.isPaused = false;        
+        }
+
         if ((other.tag == "RedBullet" || other.tag == "GreenBullet") && gameObject.tag == ("PauseQuitButton"))
         {
             SceneManager.LoadScene("OVRMenu");           
