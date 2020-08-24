@@ -39,10 +39,10 @@ public class EnemyMovement : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rend = GetComponentInChildren<Renderer>();
         startColor = rend.material.color;
-        speed += ESpawner.eSpawner.waves;
+        speed += 1.6f;
         eRB = GetComponent<Rigidbody>();
         gotoPoints = GameObject.FindGameObjectsWithTag("Points");
-        stoppingDis = 5;
+        stoppingDis = 10;
         randomPath = Random.Range(1, 3);
         randomPoint = Random.Range(0, 4);
         

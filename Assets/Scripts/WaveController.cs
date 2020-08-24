@@ -40,13 +40,13 @@ public class WaveController : MonoBehaviour
     {
         ESpawner.eSpawner.isWaveOver = false;
         ESpawner.eSpawner.Wavescreen.SetActive(false);
-        ESpawner.eSpawner.totalToSpawn = 5 * ESpawner.eSpawner.waves ;
+        ESpawner.eSpawner.totalToSpawn = 4 * ESpawner.eSpawner.waves ;
         GameManager.gameManager.DifficultySetting();
         ESpawner.eSpawner.streakCount = 0;
         ESpawner.eSpawner.killCount = 0;
         ESpawner.eSpawner.enemyCount = 0;
         ESpawner.eSpawner.enemiesNeeded = ESpawner.eSpawner.totalToSpawn;
-        GameManager.gameManager.eSpeed += .5f;
+        GameManager.gameManager.eSpeed += .45f;
         ESpawner.eSpawner.DoSpawn();
     }
 
