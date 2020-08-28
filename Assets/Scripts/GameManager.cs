@@ -233,6 +233,7 @@ public class GameManager : MonoBehaviour
                 pD4 = 19;
                 spawnTime = 0.5f;
                 repeatTime = 1.5f;
+                eSpeed = 3f;
                 break;
             case "1":
                 pD1 = 10;
